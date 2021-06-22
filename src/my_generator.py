@@ -23,7 +23,6 @@ def initPblocksU250(formator, tcl):
             create_pblock pblock_X{0}_Y{y}
             resize_pblock pblock_X{0}_Y{y} -add CLOCKREGION_X0Y{0+y*NUM_PER_SLR_HORIZONTAL}:CLOCKREGION_X3Y{3+y*NUM_PER_SLR_HORIZONTAL}
           endgroup
-
           startgroup
             create_pblock pblock_X{1}_Y{y}
             resize_pblock pblock_X{1}_Y{y} -add CLOCKREGION_X{right_half_start}Y{0+y*NUM_PER_SLR_HORIZONTAL}:CLOCKREGION_X6Y{3+y*NUM_PER_SLR_HORIZONTAL}
@@ -42,14 +41,13 @@ def initPblocksU250(formator, tcl):
             create_pblock pblock_X{0}_Y{y}
             resize_pblock pblock_X{0}_Y{y} -add CLOCKREGION_X0Y{0+y*NUM_PER_SLR_HORIZONTAL}:CLOCKREGION_X3Y{3+y*NUM_PER_SLR_HORIZONTAL}
           endgroup
-
-          startgroup 
+          startgroup
             create_pblock pblock_X1_Y{y}
             resize_pblock pblock_X1_Y{y} -add {{
               SLICE_X140Y{SLICE_height[0]}:SLICE_X205Y{SLICE_height[1]}
-              DSP48E2_X18Y{DSP48E2_height[0]}:DSP48E2_X29Y{DSP48E2_height[1]} 
-              RAMB18_X9Y{RAMB18_height[0]}:RAMB18_X11Y{RAMB18_height[1]} 
-              RAMB36_X9Y{RAMB36_height[0]}:RAMB36_X11Y{RAMB36_height[1]} 
+              DSP48E2_X18Y{DSP48E2_height[0]}:DSP48E2_X29Y{DSP48E2_height[1]}
+              RAMB18_X9Y{RAMB18_height[0]}:RAMB18_X11Y{RAMB18_height[1]}
+              RAMB36_X9Y{RAMB36_height[0]}:RAMB36_X11Y{RAMB36_height[1]}
               URAM288_X3Y{URAM288_height[0]}:URAM288_X4Y{URAM288_height[1]}
             }}
           endgroup
@@ -72,12 +70,39 @@ def initPblocksU280(formator, tcl):
       create_pblock pblock_X1_Y2
       resize_pblock pblock_X1_Y2 -add {SLICE_X117Y480:SLICE_X205Y719 DSP48E2_X16Y186:DSP48E2_X29Y281 LAGUNA_X16Y360:LAGUNA_X27Y599 RAMB18_X8Y192:RAMB18_X11Y287 RAMB36_X8Y96:RAMB36_X11Y143 URAM288_X2Y128:URAM288_X4Y191}
     endgroup
-
     startgroup
       create_pblock pblock_X1_Y1
       resize_pblock pblock_X1_Y1 -add {SLICE_X117Y240:SLICE_X205Y479 DSP48E2_X16Y90:DSP48E2_X29Y185 LAGUNA_X16Y120:LAGUNA_X27Y359 RAMB18_X8Y96:RAMB18_X11Y191 RAMB36_X8Y48:RAMB36_X11Y95 URAM288_X2Y64:URAM288_X4Y127}
     endgroup
+    startgroup
+      create_pblock pblock_X1_Y0
+      resize_pblock pblock_X1_Y0 -add {SLICE_X117Y0:SLICE_X205Y239 DSP48E2_X16Y0:DSP48E2_X29Y89 LAGUNA_X16Y0:LAGUNA_X27Y119 RAMB18_X8Y0:RAMB18_X11Y95 RAMB36_X8Y0:RAMB36_X11Y47 URAM288_X2Y0:URAM288_X4Y63}
+      resize_pblock pblock_X1_Y0 -add {SLICE_X206Y0:SLICE_X232Y59 DSP48E2_X30Y0:DSP48E2_X31Y17 PCIE4CE4_X1Y0:PCIE4CE4_X1Y0 RAMB18_X12Y0:RAMB18_X13Y23 RAMB36_X12Y0:RAMB36_X13Y11}
+    endgroup
+  \n''')
 
+def initPblocksU200(formator, tcl):
+  NUM_PER_SLR_HORIZONTAL = 4
+  for y in range(formator.SLR_CNT):
+    if (formator.column[y] == 2):
+      # column X4 is DDR; X7 is static region
+      # if the DDR is not instantiated, add X4 to the right half
+      # adding X4Y0 to the left half seems to violate PR DRC rules
+      tcl.write(f'''
+        startgroup
+          create_pblock pblock_X{0}_Y{y}
+          resize_pblock pblock_X{0}_Y{y} -add CLOCKREGION_X0Y{0+y*NUM_PER_SLR_HORIZONTAL}:CLOCKREGION_X3Y{3+y*NUM_PER_SLR_HORIZONTAL}
+        endgroup
+      \n''')
+  tcl.write('''
+    startgroup
+      create_pblock pblock_X1_Y2
+      resize_pblock pblock_X1_Y2 -add {SLICE_X117Y480:SLICE_X205Y719 DSP48E2_X16Y186:DSP48E2_X29Y281 LAGUNA_X16Y360:LAGUNA_X27Y599 RAMB18_X8Y192:RAMB18_X11Y287 RAMB36_X8Y96:RAMB36_X11Y143 URAM288_X2Y128:URAM288_X4Y191}
+    endgroup
+    startgroup
+      create_pblock pblock_X1_Y1
+      resize_pblock pblock_X1_Y1 -add {SLICE_X117Y240:SLICE_X205Y479 DSP48E2_X16Y90:DSP48E2_X29Y185 LAGUNA_X16Y120:LAGUNA_X27Y359 RAMB18_X8Y96:RAMB18_X11Y191 RAMB36_X8Y48:RAMB36_X11Y95 URAM288_X2Y64:URAM288_X4Y127}
+    endgroup
     startgroup
       create_pblock pblock_X1_Y0
       resize_pblock pblock_X1_Y0 -add {SLICE_X117Y0:SLICE_X205Y239 DSP48E2_X16Y0:DSP48E2_X29Y89 LAGUNA_X16Y0:LAGUNA_X27Y119 RAMB18_X8Y0:RAMB18_X11Y95 RAMB36_X8Y0:RAMB36_X11Y47 URAM288_X2Y0:URAM288_X4Y63}
@@ -89,7 +114,7 @@ def output_Sub_SLRConstraint(formator, assignment, tcl):
   for y in range(formator.SLR_CNT):
     for x in range(formator.column[y]):
       names = assignment[y][x]
-      
+
       # the command cannot take empty inputs
       if (len(names) == 0):
         continue
@@ -106,7 +131,7 @@ def outputSLRConstraint(formator, assignment, tcl):
     for y in range(formator.SLR_CNT):
       for x in range(formator.column[y]):
         names = assignment[y][x]
-        
+
         # the command cannot take empty inputs
         if (len(names) == 0):
           continue
@@ -115,14 +140,14 @@ def outputSLRConstraint(formator, assignment, tcl):
         tcl.write(f'add_cells_to_pblock [get_pblocks pblock_dynamic_SLR{y}] [get_cells -regexp {{\n')
         for v in names:
           tcl.write(f'\tpfm_top_i/dynamic_region/.*/inst/{v}\n')
-        tcl.write('}] -clear_locs \n') 
+        tcl.write('}] -clear_locs \n')
 
-  # if the assignment is 1d dict   
-  except:      
+  # if the assignment is 1d dict
+  except:
     print(' *** WARNING: encounter SLR-level assignment *** ')
     for y in range(formator.SLR_CNT):
       names = assignment[y]
-      
+
       # the command cannot take empty inputs
       if (len(names) == 0):
         continue
@@ -135,7 +160,7 @@ def outputSLRConstraint(formator, assignment, tcl):
 def constraintModules(formator, vertices, tcl):
   # collect modules for each sub-SLR pblock
   assignment_v_sub = defaultdict(lambda: defaultdict(list))
-  
+
   for v in vertices:
     # here we do not consider axi modules
     if ('_axi' not in v.name):
@@ -152,12 +177,12 @@ def constraintAxiModules(formator, vertices, tcl):
   for v in vertices:
     if ('_axi' in v.name):
       assignment_axi[v.slr_loc][v.slr_sub_loc].append(v.name)
-  
+
   # in U280 the SLR0 is divided according to the two HBM banks
   if ('280' in formator.board_name):
     output_Sub_SLRConstraint(formator, assignment_axi, tcl)
   elif (formator.AssignAxiSubSLR):
-    output_Sub_SLRConstraint(formator, assignment_axi, tcl)  
+    output_Sub_SLRConstraint(formator, assignment_axi, tcl)
   else:
     outputSLRConstraint(formator, assignment_axi, tcl)
 
@@ -195,7 +220,7 @@ def constraintMarkedEdges(formator, edges, assignment_e):
 
     # example: src = (0, 1); dst = (1, 3)
     # then there will be six units, separated in
-    # (0, 1) -> (0, 2) -> (0, 2) -> (0, 3) -> (0, 3) -> (1, 3) 
+    # (0, 1) -> (0, 2) -> (0, 2) -> (0, 3) -> (0, 3) -> (1, 3)
     # range_inclusive_y = [1, 2, 3]
     # range_inclusive_x = [0, 1]
     # y_crossing = 2, x_crossing = 1
@@ -216,7 +241,7 @@ def constraintMarkedEdges(formator, edges, assignment_e):
         next_y = range_inclusive_y[i+1]
         assignment_e[curr_y][src_x].append(f'{e.name}/inst.*{i*2}.*unit')
         assignment_e[next_y][src_x].append(f'{e.name}/inst.*{i*2+1}.*unit')
-      
+
       # then travel in x direction
       else :
         i_adjust = i - y_crossing
@@ -260,6 +285,8 @@ def generateConstraint_2D(formator, vertices, edges):
     initPblocksU250(formator, tcl)
   elif (formator.board_name == 'u280'):
     initPblocksU280(formator, tcl)
+  elif (formator.board_name == 'u200'):
+    initPblocksU200(formator, tcl)
   else :
     print('unsupported board!')
     exit
@@ -278,7 +305,7 @@ def generateConstraint_2D(formator, vertices, edges):
   # HLS generated designs need extra care with the reset signals
   if (type(formator) == FormatHLS):
     constraintReset(formator, tcl)
-  else: 
+  else:
     removeUnusedPblock(formator, assignment_v, assignment_e, tcl)
 
 #########################################
@@ -287,14 +314,14 @@ def generateConstraint_2D(formator, vertices, edges):
 # Top func for generating the new top rtl
 #
 def generateTopHdl(formator, top_mod_ast, vertices_dict: Dict, edges_dict : Dict):
-  
+
   # specific to HLS generate design
   if (type(formator) == FormatHLS):
     level_traverse(formator, top_mod_ast, addSeparateReset, vertices_dict, edges_dict)
 
   # convert marked edges to relay stations
   level_traverse(formator, top_mod_ast, addRelayStation, edges_dict)
-  
+
   # every module should be marked as keep_hierarchy to avoid hierarchy reconstruction
   level_traverse(formator, top_mod_ast, addPragmaKeepHier, edges_dict)
 
@@ -323,12 +350,12 @@ def outputTopContents(formator, file_name, top_mod_ast):
     # hls ad-hoc fifos will be replaced by the same fifo template
     if (type(formator) == FormatHLS):
       new_top.write(relay_station_template.general_fifo_template)
-  elif (formator.relay_station_template == 'reg'): 
+  elif (formator.relay_station_template == 'reg'):
     new_top.write(relay_station_template.reg_based_relay_station_template)
     # hls ad-hoc fifos will be replaced by the same fifo template
     if (type(formator) == FormatHLS):
       new_top.write(relay_station_template.general_fifo_template)
-  elif (formator.relay_station_template == 'reg_srl_fifo'): 
+  elif (formator.relay_station_template == 'reg_srl_fifo'):
     new_top.write(relay_station_template.reg_srl_fifo_relay_station_template)
   else:
     print('[codegen] ERROR: fifo template')
@@ -339,11 +366,11 @@ def outputTopContents(formator, file_name, top_mod_ast):
 def addRelayStation(formator, node, edges_dict):
   # only considers fifo/rs instances
   if (not formator.isFIFOInstanceList(node)):
-    return 
+    return
 
   edge_name = formator.getFIFONameFromInstanceList(node)
   e = edges_dict[edge_name]
-  
+
   if (e.mark):
     node.module = 'relay_station'
 
@@ -360,7 +387,7 @@ def addRelayStation(formator, node, edges_dict):
       c.parameterlist = params
 
     # print(f'[codegen] update rs to {edge_name} -> {node.module}')
-  
+
   # replace the ad-hoc fifos by hls
   # add the depth used for balancing reconvergent paths
   else :
@@ -382,16 +409,16 @@ def addRelayStation(formator, node, edges_dict):
 def addPragmaKeepHier(formator, node, edges):
   #non fifo modules
   if (not formator.isInstanceList(node)):
-    return     
+    return
 
   if (formator.only_keep_rs_hierarchy):
     if ('relay_station' not in node.module):
       return
-      
+
   node.module = f'(* keep_hierarchy = "yes" *) {node.module}'
   for c in node.instances:
     c.module = f'(* keep_hierarchy = "yes" *) {c.module}'
-  
+
   # print(f'[codegen] add keep_hierarchy to {node.module}')
 
 #
@@ -399,7 +426,7 @@ def addPragmaKeepHier(formator, node, edges):
 #
 def addSeparateReset(formator, node, vertices_dict, edges_dict):
   if (not formator.isInstanceList(node)):
-    return    
+    return
 
   #lambda getInstanceName = node : node.instances[0].name
 
@@ -438,7 +465,7 @@ def level_traverse(formator, node, func, *arg):
 
 def generateHLSPackXO(formator):
   pack_xo = open('pack_xo.tcl', 'w')
-  
+
   if(formator.board_name == 'u250'):
     pack_xo.write(f'''
       open_project {formator.top_name}
@@ -449,7 +476,7 @@ def generateHLSPackXO(formator):
       config_dataflow -strict_mode warning
       config_sdx -target xocc
       export_design -rtl verilog -format ip_catalog -xo {formator.top_name}_tlp.xo
-      exit    
+      exit
     ''')
   elif(formator.board_name == 'u280'):
     pack_xo.write(f'''
@@ -461,8 +488,20 @@ def generateHLSPackXO(formator):
       config_dataflow -strict_mode warning
       config_sdx -target xocc
       export_design -rtl verilog -format ip_catalog -xo {formator.top_name}_tlp.xo
-      exit    
-    ''')      
+      exit
+    ''')
+  elif(formator.board_name == 'u200'):
+    pack_xo.write(f'''
+      open_project {formator.top_name}
+      open_solution "solution"
+      set_part {{xcu200-fsgd2104-2-e}}
+      create_clock -period 3.33 -name default
+      config_compile -name_max_length 50  -pipeline_loops 0 -unsafe_math_optimizations
+      config_dataflow -strict_mode warning
+      config_sdx -target xocc
+      export_design -rtl verilog -format ip_catalog -xo {formator.top_name}_tlp.xo
+      exit
+    ''')
 
 #########################################
 
@@ -473,7 +512,7 @@ def constraintModulesTaskBased(formator, vertices, tcl):
     for x in range(formator.column[y]):
       for v in vertices:
         if (v.isLIS and v.slr_sub_loc == x and v.slr_loc == y):
-          assignment_v_sub[y][x].append(v.name_orig + '_kernel')          
+          assignment_v_sub[y][x].append(v.name_orig + '_kernel')
           # assignment_v_sub[y][x].append(v.name_orig + '_kernel' \
           #                               if v.slr_loc != v.parent.slr_loc or v.slr_sub_loc != v.parent.slr_sub_loc\
           #                               else v.name_orig)
@@ -482,7 +521,7 @@ def constraintModulesTaskBased(formator, vertices, tcl):
   for y in range(formator.SLR_CNT):
     for x in range(formator.column[y]):
       names = assignment_v_sub[y][x]
-      
+
       # the command cannot take empty inputs
       if (len(names) == 0):
         continue
@@ -505,6 +544,8 @@ def generateConstraintTaskBased(formator, vertices, edges):
     initPblocksU250(formator, tcl)
   elif (formator.board_name == 'u280'):
     initPblocksU280(formator, tcl)
+  elif (formator.board_name == 'u200'):
+    initPblocksU200(formator, tcl)
   else :
     print('unsupported board!')
     exit
@@ -517,3 +558,4 @@ def generateConstraintTaskBased(formator, vertices, edges):
     assignment_e = defaultdict(lambda: defaultdict(list))
 
   removeUnusedPblock(formator, assignment_v, assignment_e, tcl)
+

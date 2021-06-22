@@ -1,7 +1,7 @@
 AUTOBRIDGE_DIR=kernel0_u280_autobridge
 
 # change according to your environment
-source /opt/tools/xilinx/Vitis/2019.2/settings64.sh 
+source /xilinx/software/Vitis/2019.2/settings64.sh 
 
 # change according to your environment
 #

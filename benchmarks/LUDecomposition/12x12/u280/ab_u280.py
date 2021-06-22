@@ -67,11 +67,11 @@ constraint_edge = True # whether to add constraints to rs and FIFO
 constraint_marked_edge = True
 only_keep_rs_hierarchy = False
 max_search_time = 1200
-board_name = 'u280'
+board_name = 'u200'
 NaiveBalance = True
 #-----------------------------
 
-target_dir = './kernel0_u280_autobridge'
+target_dir = './kernel0_u200_autobridge'
 
 
 formator = FormatHLS(

@@ -38,14 +38,35 @@ class U280:
   SLR_AREA['BRAM'][0] = 768
   SLR_AREA['DSP'][0] = 1536
   SLR_AREA['FF'][0] = 433920
-  SLR_AREA['LUT'][0] = 216960  
+  SLR_AREA['LUT'][0] = 216960
   SLR_AREA['URAM'][0] = 128
-  
+
   SLR_AREA['BRAM'][1] = 384
   SLR_AREA['DSP'][1] = 1344
   SLR_AREA['FF'][1] = 330240
-  SLR_AREA['LUT'][1] = 165120  
+  SLR_AREA['LUT'][1] = 165120
   SLR_AREA['URAM'][1] = 192
+
+class U200:
+  SLR_CNT = 3
+  SLR_AREA = defaultdict(lambda: defaultdict(list))
+  SLR_AREA['BRAM'][0] = 638
+  SLR_AREA['DSP'][0] = 2265
+  SLR_AREA['FF'][0] = 723372
+  SLR_AREA['LUT'][0] = 354831
+  SLR_AREA['URAM'][0] = 320
+
+  SLR_AREA['BRAM'][1] = 326
+  SLR_AREA['DSP'][1] = 1317
+  SLR_AREA['FF'][1] = 331711
+  SLR_AREA['LUT'][1] = 159854
+  SLR_AREA['URAM'][1] = 160
+
+  SLR_AREA['BRAM'][1] = 638
+  SLR_AREA['DSP'][1] = 2265
+  SLR_AREA['FF'][1] = 723353
+  SLR_AREA['LUT'][1] = 354962
+  SLR_AREA['URAM'][1] = 320
 
 class FormatHLS:
   # either xxxx__dout or xxxx_dout
@@ -59,8 +80,8 @@ class FormatHLS:
       hls_sche_path,
       top_hdl_path,
       top_name,
-      DDR_loc_2d_x, 
-      DDR_loc_2d_y, 
+      DDR_loc_2d_x,
+      DDR_loc_2d_y,
       DDR_enable,
       max_usage_ratio_2d,
       board_name,
@@ -87,29 +108,31 @@ class FormatHLS:
     self.DDR_loc_2d_y = DDR_loc_2d_y
     self.DDR_enable = DDR_enable
     self.max_usage_ratio_2d = max_usage_ratio_2d
-    
+
     if board_name == 'u250':
       self.column = [2, 2, 2, 2]
     elif board_name == 'u280':
+      self.column = [2, 2, 2]
+    elif board_name == 'u200':
       self.column = [2, 2, 2]
     else:
       assert False, 'unsupported board'
 
     self.board_name = board_name
     self.eight_way_partition = eight_way_partition
-    
+
     # [obsolete]
     self.coorinate_expansion_ratio = coorinate_expansion_ratio
-    
+
     # maximum allowed SLR crossing
     self.max_width_threshold = max_width_threshold
-    
+
     # how many rows (vertical height) are there in one SLR
     self.NUM_PER_SLR_HORIZONTAL = NUM_PER_SLR_HORIZONTAL
-    
+
     # whether to treat horizontal crossing with less penalty
     self.horizontal_cross_weight = horizontal_cross_weight
-    
+
     self.target_dir = target_dir
 
     # for each crossing, how many relay stations to allocate
@@ -137,7 +160,7 @@ class FormatHLS:
 
     # in iterative divide and conquer, if a region is packed too full, there is the possibility that a further divide is infeasible as a function could not be split apart
     # thus we allow some increase in the max_usage_ratio to accommodate the situation
-    self.max_usage_ratio_delta = max_usage_ratio_delta 
+    self.max_usage_ratio_delta = max_usage_ratio_delta
 
     if (board_name == 'u250'):
       self.SLR_CNT = U250.SLR_CNT
@@ -160,10 +183,18 @@ class FormatHLS:
           for sub_slr in range(2):
             self.SLR_AREA[item][slr][sub_slr] = U250.SLR_AREA[item][sub_slr]
 
+    elif (board_name == 'u200'):
+      self.SLR_CNT = U200.SLR_CNT
+      self.SLR_AREA = defaultdict(lambda: defaultdict(dict))
+      for item in ['BRAM', 'DSP', 'FF', 'LUT', 'URAM']:
+        for slr in range(len(self.column)):
+          for sub_slr in range(2):
+            self.SLR_AREA[item][slr][sub_slr] = U250.SLR_AREA[item][sub_slr]
+
     else:
       print(f'unsupported board name: {board_name}')
       exit()
-         
+
     self.safety_check()
 
   def safety_check(self):
@@ -171,7 +202,7 @@ class FormatHLS:
     # assert len(self.DDR_loc_2d_y) >= sum(self.DDR_enable) + 2, f'each M_AXI corresponds to 2 IO modules; there are also 2 S_AXI IO modules'
     assert any('control_s_axi' in key for key in self.DDR_loc_2d_y.keys()), f'no constraint found for the control_s_axi'
     # assert any('entry' in key for key in self.DDR_loc_2d_y.keys()), f'no constraint found for the entry module connected with the control_s_axi'
-    
+
   # for non-dataflow use
   def init_taskbased(
       self,
@@ -195,12 +226,12 @@ class FormatHLS:
     self.max_usage_ratio_2d = max_usage_ratio_2d
     self.SLR_CNT = SLR_CNT
     self.column = column
-    self.SLR_AREA = SLR_AREA   
+    self.SLR_AREA = SLR_AREA
     self.board_name = board_name
     self.coorinate_expansion_ratio = coorinate_expansion_ratio
     self.max_width_threshold = max_width_threshold
     self.NUM_PER_SLR_HORIZONTAL = NUM_PER_SLR_HORIZONTAL
-    
+
   # {top_name}_Control.v -> Control.verbose.sched.rpt
   def getScheFile(self, mod_type:str):
     former = mod_type[:len(self.top_name)+1]
@@ -208,7 +239,7 @@ class FormatHLS:
     print(former, latter)
     assert(former == f'{self.top_name}_')
     return f'{self.hls_sche_path}/{latter}.verbose.sched.rpt'
-    
+
   # module name : Control_0 -> rpt name: Control_csynth.rpt
   def getRptFile(self, v):
     mod_type = v.type
@@ -224,13 +255,13 @@ class FormatHLS:
     elif ('_din' in name_raw):
       return re.search(FormatHLS.fifo_din_format, name_raw).group(1)
     else:
-      return None    
+      return None
 
   # fifo xxx (.DATA_WIDTH(16)) -> 16
   # fifo_w32_d2_A xxx -> 32
   def extractFIFOWidth(self, node):
     mod_type = node.module
-    
+
     if (mod_type == 'async_mmap'):
       width_acc = 0 # for async_mmap, we need to count both data width and addr width
       for paramarg in node.parameterlist:
@@ -239,54 +270,54 @@ class FormatHLS:
 
         if ( formal == 'DataWidth' or formal == 'AddrWidth'):
           width_acc += 2 * int(actual) # from and to
-      
+
       assert(width_acc != 0)
-      return width_acc  
+      return width_acc
 
     if ('fifo' in mod_type and node.parameterlist): # for TLP
       width_acc = 0 # for async_mmap, we need to count both data width and addr width
       for paramarg in node.parameterlist:
         formal = paramarg.paramname
         actual = paramarg.argname.value
-      
-        if( formal == 'DATA_WIDTH'): 
+
+        if( formal == 'DATA_WIDTH'):
           return int(actual)
 
     else: # for HLS
       match = re.search('_w(\d+)_d(\d+)_', mod_type)
       if (match):
         return int(match.group(1)) # group 1
-      
+
     print('FIFO width error')
 
   def extractFIFODepth(self, node):
     mod_type = node.module
     if (mod_type == 'async_mmap'):
       return 64
-    
+
     if (node.parameterlist): # for TLP
       for paramarg in node.parameterlist:
         formal = paramarg.paramname
         actual = paramarg.argname.value
-        if( 'DEPTH' in formal): 
+        if( 'DEPTH' in formal):
           return int(actual)
 
     else: # for HLS
       match = re.search('_w(\d+)_d(\d+)_', mod_type)
       if (match):
         return int(match.group(2)) # group 2
-      
+
     print('FIFO depth error')
 
   def isFIFO(self, node):
     return 'fifo' in node.module
-  
+
   def isValidInstance(self, node):
     return isinstance(node, ast.Instance) and 'start_for' not in node.name #and '_axi' not in node.name
-  
+
   def isFIFOInstanceList(self, node):
     return isinstance(node, ast.InstanceList) and 'fifo' in node.module
-  
+
   def getFIFONameFromInstanceList(self, node):
     assert(len(node.instances) == 1)
     return node.instances[0].name
@@ -309,19 +340,18 @@ class FormatTLP(FormatHLS):
     # print(former, latter)
     assert(former == latter)
     return f'{self.hls_sche_path}/{former}.verbose.sched.rpt'
-    
+
   # module name : Control_0 -> rpt name: Control_csynth.rpt
   def getRptFile(self, v):
     mod_name = v.name
     if (re.search('_\d+[ ]*$', mod_name)):
       mod_name = re.sub('_\d+[ ]*$', '', mod_name)
     return f'{self.rpt_path}/{mod_name}_csynth.rpt'
-    
+
   def isFIFO(self, node):
     return  'fifo' in node.module or \
             'relay_station' in node.module
 
   def isAsyncMmap(self, node):
     return 'async_mmap' in node.module
-
 

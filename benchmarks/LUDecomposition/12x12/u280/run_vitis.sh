@@ -1,7 +1,7 @@
 #!/bin/bash
 src_dir=$(pwd)
 TOP=kernel0
-PLATFORM=xilinx_u280_xdma_201920_3
+PLATFORM=xilinx_u200_xdma_201830_2
 XO="${src_dir}/kernel0.xo"
 STRATEGY="Default"
 output_dir="$(pwd)/vitis_run_400"
@@ -15,7 +15,7 @@ fi
 
 # VIV_VER=2019.2 vivado_hls -f pack_xo.tcl
 
-source /opt/tools/xilinx/Vitis/2019.2/settings64.sh 
+source /xilinx/software/Vitis/2019.2/settings64.sh 
 env LC_ALL=C v++ \
   --link \
   --output "${output_dir}/${TOP}_${PLATFORM}.xclbin" \
@@ -29,8 +29,8 @@ env LC_ALL=C v++ \
   --max_memory_ports ${TOP} \
   --save-temps \
   ${XO} \
-  --connectivity.sp ${TOP}_1.A:HBM[0] \
-  --connectivity.sp ${TOP}_1.L:HBM[1] \
-  --connectivity.sp ${TOP}_1.U:HBM[2] \
+  --connectivity.sp ${TOP}_1.A:DDR[0] \
+  --connectivity.sp ${TOP}_1.L:DDR[1] \
+  --connectivity.sp ${TOP}_1.U:DDR[2] \
   --kernel_frequency 400 \
   --vivado.prop run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=$CONSTRAINT

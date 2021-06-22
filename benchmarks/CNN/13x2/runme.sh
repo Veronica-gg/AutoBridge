@@ -1,7 +1,7 @@
 AUTOBRIDGE_DIR=kernel3_u250_autobridge_impl
 
 # change according to your environment
-source /opt/tools/xilinx/Vitis/2019.2/settings64.sh 
+source /xilinx/software/Vitis/2019.2/settings64.sh 
 
 # You may need to install Gurobi @ https://www.gurobi.com/academia/academic-program-and-licenses/
 # export GUROBI_HOME="/home/einsx7/pr/solver/gurobi902/linux64"

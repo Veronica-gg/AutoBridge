@@ -1,5 +1,3 @@
-#!/usr/bin/python3.6
-
 import collections
 from mip import *
 #from graph import *
@@ -16,7 +14,7 @@ def addUserConstraint(m, mods_p, formator):
     if (v.name in formator.DDR_loc_2d_y):
       print(f'[AssignSLR] user specified module {v.name} to be in Y {formator.DDR_loc_2d_y[v.name]}')
       m += mod_p['Y'] == formator.DDR_loc_2d_y[v.name]
-  
+
   # assert that user specified modules are valid
   for mod in formator.DDR_loc_2d_x.keys():
     if not any(v.name == mod for v in mods_p.keys()):
@@ -43,20 +41,20 @@ def assignSLR(vertices : List, edges : List, formator):
   # append an vertex id to make names unique
   mods_x = {} # str -> [mip_var]
   for i, v in enumerate(vertices):
-    new_mod_x = [ [m.add_var(var_type=BINARY, name=f'{v.name}_{i}_x_{y}_{x}') for x in range(column[y]) ]  for y in range(SLR_CNT)] 
+    new_mod_x = [ [m.add_var(var_type=BINARY, name=f'{v.name}_{i}_x_{y}_{x}') for x in range(column[y]) ]  for y in range(SLR_CNT)]
     mods_x[v.name] = new_mod_x # m[y][x] *** first index the y dimension
 
   # [var] the location of a module
   mods_p = {} # Vertex -> mip_var
-  for i, v in enumerate(vertices): 
+  for i, v in enumerate(vertices):
     new_mod_p = {'Y' : m.add_var(var_type=INTEGER, name=f'{v.name}_{i}_p_y'), 'X' : m.add_var(var_type=INTEGER, name=f'{v.name}_{i}_p_x') }
     mods_p[v] = new_mod_p
-  
+
   # [var] distance of each edge
   d_x = [m.add_var(var_type=INTEGER, name=f'd_x_{e.name}_{i}') for i, e in enumerate(edges)]
   d_y = [m.add_var(var_type=INTEGER, name=f'd_y_{e.name}_{i}') for i, e in enumerate(edges)]
 
-  # [goal] 
+  # [goal]
   m.objective = minimize(xsum(d_x[i] * edge.width for i, edge in enumerate(edges) ) + \
                          xsum(d_y[i] * edge.width for i, edge in enumerate(edges) )  )
 
@@ -70,7 +68,7 @@ def assignSLR(vertices : List, edges : List, formator):
   # | R1|R2 |
   # |-------|
   # the x coordinates of R1 and R2 are 0 and 2 respectively
-  # the x of R0 is ** 1 ** so that it is of equatal distance to all other regions 
+  # the x of R0 is ** 1 ** so that it is of equatal distance to all other regions
   # the y coordinates of R0 - R2 is 2, 0, 0 correspondingly.
   # we can apply some weights if we prefer h/v crossing
   for mod_x, mod_p in zip(mods_x.values(), mods_p.values()):
@@ -162,7 +160,7 @@ def splitHorizontalHelper(formator, vertices, edges):
         area_horizontal[slr][sub_slr][item] =  formator.SLR_AREA[item][slr][sub_slr] * (formator.max_usage_ratio_2d[slr][sub_slr] + relax_ratio)
         print(f'[splitHorizontalHelper] area_horizontal[{slr}][{sub_slr}][{item}] = {area_horizontal[slr][sub_slr][item]}')
 
-  loc_func_horizontal = lambda mod_x : mod_x 
+  loc_func_horizontal = lambda mod_x : mod_x
 
   user_constraint_horizontal = defaultdict()
   for name, loc_x in formator.DDR_loc_2d_x.items():
@@ -188,7 +186,7 @@ def splitHorizontal(
 
   mods_x = {} # str -> [mip_var]
   for i, v in enumerate(vertices):
-    mods_x[v.name] = m.add_var(var_type=BINARY, name=f'{v.name}_{i}_x') 
+    mods_x[v.name] = m.add_var(var_type=BINARY, name=f'{v.name}_{i}_x')
 
   # d = e.src.x xor e.dst.x
   # attention here d_x is declared as binary
@@ -236,13 +234,19 @@ def splitQuarterHelper(formator, vertices, edges):
   # second vertical cut
   area_quarter = defaultdict(lambda: defaultdict(list))
   for item in ['BRAM', 'DSP', 'FF', 'LUT', 'URAM']:
-    
+
     if (formator.board_name == 'u250'):
       for slr in range(4):
         area_quarter[slr][item] =   formator.SLR_AREA[item][slr][0] * formator.max_usage_ratio_2d[slr][0] \
                                   + formator.SLR_AREA[item][slr][1] * formator.max_usage_ratio_2d[slr][1]
 
     elif (formator.board_name == 'u280'):
+      for slr in range(3):
+        area_quarter[slr][item] =   formator.SLR_AREA[item][slr][0] * formator.max_usage_ratio_2d[slr][0] \
+                                  + formator.SLR_AREA[item][slr][1] * formator.max_usage_ratio_2d[slr][1]
+      area_quarter[3][item] =  0
+
+    elif (formator.board_name == 'u200'):
       for slr in range(3):
         area_quarter[slr][item] =   formator.SLR_AREA[item][slr][0] * formator.max_usage_ratio_2d[slr][0] \
                                   + formator.SLR_AREA[item][slr][1] * formator.max_usage_ratio_2d[slr][1]
@@ -255,7 +259,7 @@ def splitQuarterHelper(formator, vertices, edges):
 
   user_constraint_quarter = defaultdict()
   for name, loc_y in formator.DDR_loc_2d_y.items():
-    user_constraint_quarter[name] = loc_y == 1 or loc_y == 3   
+    user_constraint_quarter[name] = loc_y == 1 or loc_y == 3
 
   result = splitQuarter(formator, vertices, edges, area_quarter, loc_func_quarter, user_constraint_quarter)
   for v, loc in result.items():
@@ -275,7 +279,7 @@ def splitQuarter(
 
   mods_x = {} # str -> [mip_var]
   for i, v in enumerate(vertices):
-    mods_x[v.name] = m.add_var(var_type=BINARY, name=f'{v.name}_{i}_x') 
+    mods_x[v.name] = m.add_var(var_type=BINARY, name=f'{v.name}_{i}_x')
 
   # d = e.src.x xor e.dst.x
   d_x = [m.add_var(var_type=INTEGER, name=f'd_x_{e.name}_{i}') for i, e in enumerate(edges)]
@@ -299,7 +303,7 @@ def splitQuarter(
       if v.vertical_cut[0] == 0:
         cmd += f' + (mods_x["{v.name}"]) * {getattr(v.area, item)}'
     cmd += f'<= {area[1][item]}'
-    exec(cmd)    
+    exec(cmd)
 
     # for slr 2
     cmd = 'm += 0'
@@ -312,10 +316,10 @@ def splitQuarter(
     # for slr 3
     cmd = 'm += 0'
     for v in vertices:
-      if v.vertical_cut[0] == 1:    
+      if v.vertical_cut[0] == 1:
         cmd += f' + (mods_x["{v.name}"]) * {getattr(v.area, item)}'
     cmd += f'<= {area[3][item]}'
-    exec(cmd)    
+    exec(cmd)
 
   # user constraints
   for mod_name, loc in user_constraint.items():
@@ -323,7 +327,7 @@ def splitQuarter(
     m += mods_x[mod_name] == loc
 
   m.objective = minimize(xsum(d_x[i] * edge.width for i, edge in enumerate(edges) ) )
-  
+
   # m.write('splitQuarter.lp')
   status = m.optimize(max_seconds=formator.max_search_time)
   assert status == OptimizationStatus.OPTIMAL or status == OptimizationStatus.FEASIBLE, 'failed to find optimal solution in the second (split into SLRs) 2-way partitioning floorplan process'
@@ -350,7 +354,10 @@ def splitHalfHelper(formator, vertices, edges):
                     + formator.SLR_AREA[item][3][1] * formator.max_usage_ratio_2d[3][1]
     elif (formator.board_name == 'u280'):
       area[1][item] = formator.SLR_AREA[item][2][0] * formator.max_usage_ratio_2d[2][0] \
-                    + formator.SLR_AREA[item][2][1] * formator.max_usage_ratio_2d[2][1]   
+                    + formator.SLR_AREA[item][2][1] * formator.max_usage_ratio_2d[2][1]
+    elif (formator.board_name == 'u200'):
+      area[1][item] = formator.SLR_AREA[item][2][0] * formator.max_usage_ratio_2d[2][0] \
+                    + formator.SLR_AREA[item][2][1] * formator.max_usage_ratio_2d[2][1]
 
     else :
       print(f'[splitHalfHelper] unsupported board name {formator.board_name}')
@@ -362,7 +369,7 @@ def splitHalfHelper(formator, vertices, edges):
 
   user_constraint = defaultdict()
   for name, loc_y in formator.DDR_loc_2d_y.items():
-    user_constraint[name] = loc_y >= 2 
+    user_constraint[name] = loc_y >= 2
 
   result = splitHalf(formator, vertices, edges, area, loc_func, user_constraint)
 
@@ -402,7 +409,7 @@ def splitHalf(
 
   mods_x = {} # str -> [mip_var]
   for i, v in enumerate(vertices):
-    mods_x[v.name] = m.add_var(var_type=BINARY, name=f'{v.name}_{i}_x') 
+    mods_x[v.name] = m.add_var(var_type=BINARY, name=f'{v.name}_{i}_x')
 
   # d = e.src.x xor e.dst.x
   d_x = [m.add_var(var_type=INTEGER, name=f'd_x_{e.name}_{i}') for i, e in enumerate(edges)]
@@ -425,7 +432,7 @@ def splitHalf(
     for v in vertices:
       cmd += f' + (1 - mods_x["{v.name}"]) * {getattr(v.area, item)}'
     cmd += f'<= {area[0][item]}'
-    exec(cmd)    
+    exec(cmd)
 
   # user constraints
   for mod_name, loc in user_constraint.items():
@@ -466,7 +473,7 @@ def showAssignResult(vertices : List, edges : List, formator):
       all = []
 
       if (column[y] == 2):
-        print(f'SLR_[{y}] part {x} includes:\n')        
+        print(f'SLR_[{y}] part {x} includes:\n')
         for v in vertices:
           if (v.slr_sub_loc == x and v.slr_loc == y):
             print(f'  {v.name} -> {v.area}')
@@ -478,7 +485,7 @@ def showAssignResult(vertices : List, edges : List, formator):
           if (v.slr_sub_loc == 0.5 and v.slr_loc == y):
             print(f'  {v.name} -> {v.area}')
             all.append(v.area)
-        
+
       print(f'\n    BRAM usage: {sum(int(v[0]) for v in all)} / {formator.SLR_AREA["BRAM"][y][x]} = { (sum(int(v[0]) for v in all)) / (formator.SLR_AREA["BRAM"][y][x]) }')
       print(f'    DSP usage: {sum(int(v[1]) for v in all)} / {formator.SLR_AREA["DSP"][y][x]} = { (sum(int(v[1]) for v in all)) / (formator.SLR_AREA["DSP"][y][x]) }')
       print(f'    FF usage: {sum(int(v[2]) for v in all)} / {formator.SLR_AREA["FF"][y][x]} = { (sum(int(v[2]) for v in all)) / (formator.SLR_AREA["FF"][y][x]) }')
@@ -506,9 +513,9 @@ def reBalance(vertices : List, edges_dict : Dict, formator):
 
   mods_S = {} # Vertex -> mip_var
   for v in vertices:
-    for sub_v in v.sub_vertices.values(): 
+    for sub_v in v.sub_vertices.values():
       new_mod_S = m.add_var(var_type=INTEGER, name=f'{sub_v.name}_S')
-      mods_S[sub_v] = new_mod_S  
+      mods_S[sub_v] = new_mod_S
 
   for e in edges:
     if ('Mem' in e.dst.name or 'Mem' in e.src.name or \
@@ -531,14 +538,14 @@ def reBalance(vertices : List, edges_dict : Dict, formator):
     if (e.name in e.dst.actual_to_sub and e.name in e.src.actual_to_sub):
       src_sub = e.src.actual_to_sub[e.name]
       dst_sub = e.dst.actual_to_sub[e.name]
-      adjusted_lat = e.latency if e.latency > 1 else 0      
+      adjusted_lat = e.latency if e.latency > 1 else 0
       goal += f' + {e.width} * (mods_S[edges_dict["{e.name}"].src.actual_to_sub["{e.name}"]] - mods_S[edges_dict["{e.name}"].dst.actual_to_sub["{e.name}"]] - {adjusted_lat})'
   goal += ')'
-  
+
   if (goal == 'm.objective = minimize( 0 )'):
     print(f'[rebalance] WARNING: do not detect any reconvergent paths')
     return
-    
+
   exec(goal)
 
   # m.write('rebalance.lp')
@@ -550,7 +557,7 @@ def reBalance(vertices : List, edges_dict : Dict, formator):
     if ('Mem' in e.dst.name or 'Mem' in e.src.name or \
         'Router' in e.dst.name or 'Router' in e.src.name):
       print(f'[reBalance] FIXME need to handle async_mmap')
-      continue    
+      continue
     # if at either side the edge is not accessed in pipeline, then no worries
     if (e.name in e.dst.actual_to_sub and e.name in e.src.actual_to_sub):
       src_sub = e.src.actual_to_sub[e.name]
@@ -570,7 +577,7 @@ def reBalanceNaive(vertices : List, edges_dict : Dict, formator):
   mods_S = {} # Vertex -> mip_var
   for v in vertices:
     new_mod_S = m.add_var(var_type=INTEGER, name=f'{v.name}_S')
-    mods_S[v] = new_mod_S  
+    mods_S[v] = new_mod_S
 
   for e in edges:
     adjusted_lat = e.latency if e.latency > 1 else 0
@@ -578,14 +585,14 @@ def reBalanceNaive(vertices : List, edges_dict : Dict, formator):
 
   goal = 'm.objective = minimize( 0 '
   for e in edges:
-    adjusted_lat = e.latency if e.latency > 1 else 0      
+    adjusted_lat = e.latency if e.latency > 1 else 0
     goal += f' + {e.width} * (mods_S[edges_dict["{e.name}"].src] - mods_S[edges_dict["{e.name}"].dst] - {adjusted_lat})'
   goal += ')'
-  
+
   if (goal == 'm.objective = minimize( 0 )'):
     print(f'[rebalance] WARNING: do not detect any reconvergent paths')
     return
-    
+
   exec(goal)
 
   # m.write('rebalance.lp')
@@ -600,3 +607,4 @@ def reBalanceNaive(vertices : List, edges_dict : Dict, formator):
     e.additional_depth = mods_S[e.src].x - mods_S[e.dst].x - adjusted_lat
     if (e.additional_depth):
       print(f'[reBalanceNaive] edge {e.name} is increased by {e.additional_depth}')
+

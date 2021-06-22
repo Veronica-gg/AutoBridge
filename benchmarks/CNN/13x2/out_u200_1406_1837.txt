@@ -1,0 +1,2407 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2.1 (64-bit)
+  **** SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+  **** IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /xilinx/software/Vivado/2019.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/xilinx/software/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'veronica.grosso' on host 'michelangelo.local.necst.it' (Linux_x86_64 version 3.10.0-1160.24.1.el7.x86_64) on Mon Jun 14 18:43:25 CEST 2021
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.9 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/users/veronica.grosso/experimental/AutoBridge/benchmarks/CNN/13x2'
+Sourcing Tcl script 'generate_rtl.tcl'
+INFO: [HLS 200-10] Opening project '/home/users/veronica.grosso/experimental/AutoBridge/benchmarks/CNN/13x2/kernel3_u250'.
+INFO: [HLS 200-10] Adding design file 'src/kernel_kernel_new.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/kernel_kernel.h' to the project
+INFO: [HLS 200-10] Opening solution '/home/users/veronica.grosso/experimental/AutoBridge/benchmarks/CNN/13x2/kernel3_u250/solution'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.9ns.
+INFO: [HLS 200-10] Setting target device to 'xcu250-figd2104-2L-e'
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=0
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.9ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=0
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.9ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'src/kernel_kernel_new.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1051.344 ; gain = 527.219 ; free physical = 22271 ; free virtual = 40094
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1051.344 ; gain = 527.219 ; free physical = 22271 ; free virtual = 40094
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'C_drain_IO_L1_out_intra_trans' into 'C_drain_IO_L1_out' (src/kernel_kernel_new.cpp:1061).
+INFO: [XFORM 203-603] Inlining function 'C_drain_IO_L1_out_intra_trans' into 'C_drain_IO_L1_out_boundary' (src/kernel_kernel_new.cpp:1089).
+INFO: [XFORM 203-603] Inlining function 'C_drain_IO_L1_out_inter_trans_boundary' into 'C_drain_IO_L1_out_boundary' (src/kernel_kernel_new.cpp:1095).
+INFO: [XFORM 203-603] Inlining function 'C_drain_IO_L1_out_inter_trans' into 'C_drain_IO_L1_out' (src/kernel_kernel_new.cpp:1067).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1051.344 ; gain = 527.219 ; free physical = 22249 ; free virtual = 40072
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1052.047 ; gain = 527.922 ; free physical = 22237 ; free virtual = 40060
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2.1.1' (src/kernel_kernel_new.cpp:518) in function 'PE' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (src/kernel_kernel_new.cpp:1170) in function 'C_drain_IO_L3_out' for pipelining.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1' (src/kernel_kernel_new.cpp:1145) in function 'C_drain_IO_L2_out_boundary' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (src/kernel_kernel_new.cpp:976) in function 'C_drain_IO_L1_out_boundary' for pipelining.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-2' (src/kernel_kernel_new.cpp:1034) in function 'C_drain_IO_L1_out_boundary' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (src/kernel_kernel_new.cpp:976) in function 'C_drain_IO_L1_out' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (src/kernel_kernel_new.cpp:251) in function 'B_IO_L3_in' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (src/kernel_kernel_new.cpp:8) in function 'A_IO_L3_in' for pipelining.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1' (src/kernel_kernel_new.cpp:333) in function 'B_IO_L2_in_inter_trans_boundary' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1' (src/kernel_kernel_new.cpp:90) in function 'A_IO_L2_in_inter_trans_boundary' automatically.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1.1' (src/kernel_kernel_new.cpp:524) in function 'PE' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1.2' (src/kernel_kernel_new.cpp:535) in function 'PE' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1.3' (src/kernel_kernel_new.cpp:544) in function 'PE' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (src/kernel_kernel_new.cpp:1176) in function 'C_drain_IO_L3_out' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (src/kernel_kernel_new.cpp:1145) in function 'C_drain_IO_L2_out_boundary' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (src/kernel_kernel_new.cpp:982) in function 'C_drain_IO_L1_out_boundary' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (src/kernel_kernel_new.cpp:1034) in function 'C_drain_IO_L1_out_boundary' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (src/kernel_kernel_new.cpp:982) in function 'C_drain_IO_L1_out' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (src/kernel_kernel_new.cpp:256) in function 'B_IO_L3_in' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (src/kernel_kernel_new.cpp:13) in function 'A_IO_L3_in' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (src/kernel_kernel_new.cpp:333) in function 'B_IO_L2_in_inter_trans_boundary' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (src/kernel_kernel_new.cpp:90) in function 'A_IO_L2_in_inter_trans_boundary' completely with a factor of 1.
+INFO: [XFORM 203-102] Partitioning array 'local_A' (src/kernel_kernel_new.cpp:493) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'local_B' (src/kernel_kernel_new.cpp:494) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'local_A.0' (src/kernel_kernel_new.cpp:493) automatically.
+INFO: [XFORM 203-102] Partitioning array 'local_B.0' (src/kernel_kernel_new.cpp:494) automatically.
+INFO: [XFORM 203-101] Partitioning array 'mem_data_split.V' (src/kernel_kernel_new.cpp:1174) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_data_split.V' (src/kernel_kernel_new.cpp:967) in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'kernel3', detected/extracted 87 process function(s): 
+	 'A_IO_L3_in'
+	 'A_IO_L2_in208'
+	 'A_IO_L2_in209'
+	 'A_IO_L2_in210'
+	 'A_IO_L2_in211'
+	 'A_IO_L2_in212'
+	 'A_IO_L2_in213'
+	 'A_IO_L2_in214'
+	 'A_IO_L2_in215'
+	 'A_IO_L2_in216'
+	 'A_IO_L2_in217'
+	 'A_IO_L2_in218'
+	 'A_IO_L2_in219'
+	 'A_IO_L2_in_boundary'
+	 'B_IO_L3_in'
+	 'B_IO_L2_in'
+	 'B_IO_L2_in_boundary'
+	 'PE_wrapper_0_0'
+	 'PE_wrapper_0_1'
+	 'PE_wrapper_1_0'
+	 'PE_wrapper_1_1'
+	 'PE_wrapper_2_0'
+	 'PE_wrapper_2_1'
+	 'PE_wrapper_3_0'
+	 'PE_wrapper_3_1'
+	 'PE_wrapper_4_0'
+	 'PE_wrapper_4_1'
+	 'PE_wrapper_5_0'
+	 'PE_wrapper_5_1'
+	 'PE_wrapper_6_0'
+	 'PE_wrapper_6_1'
+	 'PE_wrapper_7_0'
+	 'PE_wrapper_7_1'
+	 'PE_wrapper_8_0'
+	 'PE_wrapper_8_1'
+	 'PE_wrapper_9_0'
+	 'PE_wrapper_9_1'
+	 'PE_wrapper_10_0'
+	 'PE_wrapper_10_1'
+	 'PE_wrapper_11_0'
+	 'PE_wrapper_11_1'
+	 'PE_wrapper_12_0'
+	 'PE_wrapper_12_1'
+	 'A_PE_dummy220'
+	 'A_PE_dummy221'
+	 'A_PE_dummy222'
+	 'A_PE_dummy223'
+	 'A_PE_dummy224'
+	 'A_PE_dummy225'
+	 'A_PE_dummy226'
+	 'A_PE_dummy227'
+	 'A_PE_dummy228'
+	 'A_PE_dummy229'
+	 'A_PE_dummy230'
+	 'A_PE_dummy231'
+	 'A_PE_dummy'
+	 'B_PE_dummy232'
+	 'B_PE_dummy'
+	 'C_drain_IO_L1_out_boundary233'
+	 'C_drain_IO_L1_out234'
+	 'C_drain_IO_L1_out235'
+	 'C_drain_IO_L1_out236'
+	 'C_drain_IO_L1_out237'
+	 'C_drain_IO_L1_out238'
+	 'C_drain_IO_L1_out239'
+	 'C_drain_IO_L1_out240'
+	 'C_drain_IO_L1_out241'
+	 'C_drain_IO_L1_out242'
+	 'C_drain_IO_L1_out243'
+	 'C_drain_IO_L1_out244'
+	 'C_drain_IO_L1_out245'
+	 'C_drain_IO_L1_out_boundary'
+	 'C_drain_IO_L1_out246'
+	 'C_drain_IO_L1_out247'
+	 'C_drain_IO_L1_out248'
+	 'C_drain_IO_L1_out249'
+	 'C_drain_IO_L1_out250'
+	 'C_drain_IO_L1_out251'
+	 'C_drain_IO_L1_out252'
+	 'C_drain_IO_L1_out253'
+	 'C_drain_IO_L1_out254'
+	 'C_drain_IO_L1_out255'
+	 'C_drain_IO_L1_out256'
+	 'C_drain_IO_L1_out257'
+	 'C_drain_IO_L2_out_boundary'
+	 'C_drain_IO_L2_out'
+	 'C_drain_IO_L3_out'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1052.047 ; gain = 527.922 ; free physical = 22201 ; free virtual = 40025
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:503:31) in function 'PE'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:516:33) in function 'PE'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:514:31) in function 'PE'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:1150:33) in function 'C_drain_IO_L2_out_boundary'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:1147:31) in function 'C_drain_IO_L2_out_boundary'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (src/kernel_kernel_new.cpp:1118:33) in function 'C_drain_IO_L2_out'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:1115:31) in function 'C_drain_IO_L2_out'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:1113:30) in function 'C_drain_IO_L2_out'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out_boundary233'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1036:31) in function 'C_drain_IO_L1_out_boundary233'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out_boundary'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1036:31) in function 'C_drain_IO_L1_out_boundary'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out257'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out257'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out257'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out256'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out256'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out256'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out255'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out255'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out255'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out254'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out254'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out254'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out253'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out253'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out253'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out252'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out252'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out252'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out251'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out251'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out251'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out250'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out250'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out250'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out249'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out249'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out249'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out248'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out248'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out248'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out247'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out247'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out247'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out246'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out246'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out246'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out245'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out245'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out245'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out244'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out244'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out244'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out243'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out243'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out243'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out242'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out242'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out242'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out241'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out241'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out241'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out240'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out240'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out240'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out239'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out239'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out239'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out238'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out238'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out238'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out237'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out237'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out237'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out236'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out236'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out236'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out235'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out235'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out235'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:974:26) in function 'C_drain_IO_L1_out234'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (src/kernel_kernel_new.cpp:1009:31) in function 'C_drain_IO_L1_out234'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (src/kernel_kernel_new.cpp:1007:30) in function 'C_drain_IO_L1_out234'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:948:33) in function 'B_PE_dummy232'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:946:31) in function 'B_PE_dummy232'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:948:33) in function 'B_PE_dummy'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:946:31) in function 'B_PE_dummy'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:280:31) in function 'B_IO_L2_in_intra_trans'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:278:29) in function 'B_IO_L2_in_intra_trans'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:335:31) in function 'B_IO_L2_in_inter_trans_boundary'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:306:31) in function 'B_IO_L2_in_inter_trans'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:304:30) in function 'B_IO_L2_in_inter_trans'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:923:33) in function 'A_PE_dummy231'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:921:31) in function 'A_PE_dummy231'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:923:33) in function 'A_PE_dummy230'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:921:31) in function 'A_PE_dummy230'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:923:33) in function 'A_PE_dummy229'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:921:31) in function 'A_PE_dummy229'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:923:33) in function 'A_PE_dummy228'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:921:31) in function 'A_PE_dummy228'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:923:33) in function 'A_PE_dummy227'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:921:31) in function 'A_PE_dummy227'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:923:33) in function 'A_PE_dummy226'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:921:31) in function 'A_PE_dummy226'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:923:33) in function 'A_PE_dummy225'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:921:31) in function 'A_PE_dummy225'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:923:33) in function 'A_PE_dummy224'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:921:31) in function 'A_PE_dummy224'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:923:33) in function 'A_PE_dummy223'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:921:31) in function 'A_PE_dummy223'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:923:33) in function 'A_PE_dummy222'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:921:31) in function 'A_PE_dummy222'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:923:33) in function 'A_PE_dummy221'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:921:31) in function 'A_PE_dummy221'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:923:33) in function 'A_PE_dummy220'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:921:31) in function 'A_PE_dummy220'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:923:33) in function 'A_PE_dummy'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:921:31) in function 'A_PE_dummy'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:37:31) in function 'A_IO_L2_in_intra_trans'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:35:29) in function 'A_IO_L2_in_intra_trans'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:92:31) in function 'A_IO_L2_in_inter_trans_boundary'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (src/kernel_kernel_new.cpp:63:31) in function 'A_IO_L2_in_inter_trans'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (src/kernel_kernel_new.cpp:61:30) in function 'A_IO_L2_in_inter_trans'.
+INFO: [XFORM 203-151] Mapping array 'local_B_ping.V' (src/kernel_kernel_new.cpp:424) with offset 0 and array 'local_B_pong.V' (src/kernel_kernel_new.cpp:427) with offset 2048 into array 'local_B' horizontally.
+INFO: [XFORM 203-151] Mapping array 'local_B_ping.V' (src/kernel_kernel_new.cpp:353) with offset 0 and array 'local_B_pong.V' (src/kernel_kernel_new.cpp:356) with offset 2048 into array 'local_B' horizontally.
+INFO: [XFORM 203-151] Mapping array 'local_A_ping.V' (src/kernel_kernel_new.cpp:181) with offset 0 and array 'local_A_pong.V' (src/kernel_kernel_new.cpp:184) with offset 512 into array 'local_A' horizontally.
+INFO: [XFORM 203-151] Mapping array 'local_A_ping.V' (src/kernel_kernel_new.cpp:110) with offset 0 and array 'local_A_pong.V' (src/kernel_kernel_new.cpp:113) with offset 512 into array 'local_A' horizontally.
+INFO: [XFORM 203-151] Mapping array 'local_A_ping.V' (src/kernel_kernel_new.cpp:110) with offset 0 and array 'local_A_pong.V' (src/kernel_kernel_new.cpp:113) with offset 512 into array 'local_A' horizontally.
+INFO: [XFORM 203-151] Mapping array 'local_A_ping.V' (src/kernel_kernel_new.cpp:110) with offset 0 and array 'local_A_pong.V' (src/kernel_kernel_new.cpp:113) with offset 512 into array 'local_A' horizontally.
+INFO: [XFORM 203-151] Mapping array 'local_A_ping.V' (src/kernel_kernel_new.cpp:110) with offset 0 and array 'local_A_pong.V' (src/kernel_kernel_new.cpp:113) with offset 512 into array 'local_A' horizontally.
+INFO: [XFORM 203-151] Mapping array 'local_A_ping.V' (src/kernel_kernel_new.cpp:110) with offset 0 and array 'local_A_pong.V' (src/kernel_kernel_new.cpp:113) with offset 512 into array 'local_A' horizontally.
+INFO: [XFORM 203-151] Mapping array 'local_A_ping.V' (src/kernel_kernel_new.cpp:110) with offset 0 and array 'local_A_pong.V' (src/kernel_kernel_new.cpp:113) with offset 512 into array 'local_A' horizontally.
+INFO: [XFORM 203-151] Mapping array 'local_A_ping.V' (src/kernel_kernel_new.cpp:110) with offset 0 and array 'local_A_pong.V' (src/kernel_kernel_new.cpp:113) with offset 512 into array 'local_A' horizontally.
+INFO: [XFORM 203-151] Mapping array 'local_A_ping.V' (src/kernel_kernel_new.cpp:110) with offset 0 and array 'local_A_pong.V' (src/kernel_kernel_new.cpp:113) with offset 512 into array 'local_A' horizontally.
+INFO: [XFORM 203-151] Mapping array 'local_A_ping.V' (src/kernel_kernel_new.cpp:110) with offset 0 and array 'local_A_pong.V' (src/kernel_kernel_new.cpp:113) with offset 512 into array 'local_A' horizontally.
+INFO: [XFORM 203-151] Mapping array 'local_A_ping.V' (src/kernel_kernel_new.cpp:110) with offset 0 and array 'local_A_pong.V' (src/kernel_kernel_new.cpp:113) with offset 512 into array 'local_A' horizontally.
+INFO: [XFORM 203-151] Mapping array 'local_A_ping.V' (src/kernel_kernel_new.cpp:110) with offset 0 and array 'local_A_pong.V' (src/kernel_kernel_new.cpp:113) with offset 512 into array 'local_A' horizontally.
+INFO: [XFORM 203-151] Mapping array 'local_A_ping.V' (src/kernel_kernel_new.cpp:110) with offset 0 and array 'local_A_pong.V' (src/kernel_kernel_new.cpp:113) with offset 512 into array 'local_A' horizontally.
+INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 1664 on port 'C.V' (src/kernel_kernel_new.cpp:1181:9). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 2048 on port 'B.V' (src/kernel_kernel_new.cpp:255:20). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 3328 on port 'A.V' (src/kernel_kernel_new.cpp:12:20). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-472] Inferring partial write operation for 'local_C' (src/kernel_kernel_new.cpp:509:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_C' (src/kernel_kernel_new.cpp:546:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_C.V' (src/kernel_kernel_new.cpp:993:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_C.V' (src/kernel_kernel_new.cpp:993:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_B.V' (src/kernel_kernel_new.cpp:341:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_B.V' (src/kernel_kernel_new.cpp:313:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_A.V' (src/kernel_kernel_new.cpp:98:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_A.V' (src/kernel_kernel_new.cpp:70:21)
+WARNING: [XFORM 203-631] Renaming function 'B_IO_L2_in_intra_trans' to 'B_IO_L2_in_intra_trans.1.1' (src/kernel_kernel_new.cpp:266)
+WARNING: [XFORM 203-631] Renaming function 'A_IO_L2_in_intra_trans' to 'A_IO_L2_in_intra_trans.1.1' (src/kernel_kernel_new.cpp:23)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2075.344 ; gain = 1551.219 ; free physical = 21368 ; free virtual = 39192
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kernel3' ...
+WARNING: [SYN 201-103] Legalizing function name 'kernel3.entry14' to 'kernel3_entry14'.
+WARNING: [SYN 201-103] Legalizing function name 'A_IO_L2_in_intra_trans.1' to 'A_IO_L2_in_intra_trans_1'.
+WARNING: [SYN 201-103] Legalizing function name 'B_IO_L2_in_intra_trans.1' to 'B_IO_L2_in_intra_trans_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kernel3_entry14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 34.46 seconds; current allocated memory: 1.074 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L3_in' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'A_IO_L3_in' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between fifo write on port 'fifo_A_local_out_V_V' (src/kernel_kernel_new.cpp:16->src/kernel_kernel_new.cpp:1188) and fifo write on port 'fifo_A_local_out_V_V' (src/kernel_kernel_new.cpp:16->src/kernel_kernel_new.cpp:1188).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 1.075 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in_inter_trans' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 1.075 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in_intra_trans_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.075 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in208' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.076 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in209' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 1.076 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in210' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.076 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in211' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.076 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in212' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.076 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in213' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in214' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in215' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 1.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in216' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in217' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in218' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.078 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.078 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in219' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.078 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.078 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in_inter_trans_boundary' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 1.078 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.078 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_IO_L2_in_boundary' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.078 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.078 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'B_IO_L3_in' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'B_IO_L3_in' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between fifo write on port 'fifo_B_local_out_V_V' (src/kernel_kernel_new.cpp:259->src/kernel_kernel_new.cpp:1188) and fifo write on port 'fifo_B_local_out_V_V' (src/kernel_kernel_new.cpp:259->src/kernel_kernel_new.cpp:1188).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 1.078 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'B_IO_L2_in_inter_trans' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 1.079 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'B_IO_L2_in_intra_trans_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.079 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'B_IO_L2_in' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 1.079 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.080 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'B_IO_L2_in_inter_trans_boundary' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 1.080 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.080 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'B_IO_L2_in_boundary' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.080 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.080 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 63.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 1.081 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 1.081 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_0_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 1.082 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_0_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 1.082 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_1_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 1.082 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_1_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 1.082 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_2_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.082 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_2_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.082 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_3_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.083 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_3_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.083 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_4_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.083 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_4_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.083 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_5_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.083 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_5_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_6_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_6_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_7_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_7_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_8_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_8_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.085 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_9_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.085 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_9_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.085 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_10_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.085 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_10_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.085 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_11_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.085 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_11_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.086 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_12_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.086 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_wrapper_12_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.086 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_PE_dummy220' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 1.086 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 1.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_PE_dummy221' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 1.086 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_PE_dummy222' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 1.086 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 1.086 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_PE_dummy223' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 1.087 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 1.087 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_PE_dummy224' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 1.087 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.087 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_PE_dummy225' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 1.087 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.087 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_PE_dummy226' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 1.087 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.087 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_PE_dummy227' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 1.087 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 1.087 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_PE_dummy228' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 1.087 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.087 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_PE_dummy229' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 1.087 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.087 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_PE_dummy230' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 1.087 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.088 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_PE_dummy231' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 1.088 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.088 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'A_PE_dummy' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 1.088 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.088 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'B_PE_dummy232' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 1.088 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.088 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'B_PE_dummy' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 1.088 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 1.088 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out_boundary233' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 1.088 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 1.089 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out234' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 1.089 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 1.089 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out235' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 1.090 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.090 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out236' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 1.090 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.091 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out237' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 1.091 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 1.091 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out238' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 1.092 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 1.092 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out239' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 1.092 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 1.093 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out240' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 1.093 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.094 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out241' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 1.094 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.094 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out242' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 1.094 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.095 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out243' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 1.095 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.096 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out244' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 1.096 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.096 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out245' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 1.097 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.097 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out_boundary' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 1.097 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.098 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out246' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 1.098 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.098 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out247' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 1.099 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.099 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out248' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 1.099 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out249' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 1.100 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out250' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 1.101 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.101 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out251' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 1.101 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.102 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out252' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 1.102 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.102 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out253' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 1.103 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 1.103 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out254' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 1.103 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.104 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out255' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 1.104 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.105 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 1.105 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 1.105 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L1_out257' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 1.106 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'local_C_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 1.106 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L2_out_boundary' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 1.106 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.106 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L2_out' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 1.106 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 1.106 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'C_drain_IO_L3_out' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'C_drain_IO_L3_out' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between fifo read on port 'fifo_C_drain_local_in_V_V' (src/kernel_kernel_new.cpp:1177->src/kernel_kernel_new.cpp:1188) and fifo read on port 'fifo_C_drain_local_in_V_V' (src/kernel_kernel_new.cpp:1177->src/kernel_kernel_new.cpp:1188).
+WARNING: [SCHED 204-68] The II Violation in module 'C_drain_IO_L3_out' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between fifo read on port 'fifo_C_drain_local_in_V_V' (src/kernel_kernel_new.cpp:1177->src/kernel_kernel_new.cpp:1188) and fifo read on port 'fifo_C_drain_local_in_V_V' (src/kernel_kernel_new.cpp:1177->src/kernel_kernel_new.cpp:1188).
+WARNING: [SCHED 204-68] The II Violation in module 'C_drain_IO_L3_out' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between fifo read on port 'fifo_C_drain_local_in_V_V' (src/kernel_kernel_new.cpp:1177->src/kernel_kernel_new.cpp:1188) and fifo read on port 'fifo_C_drain_local_in_V_V' (src/kernel_kernel_new.cpp:1177->src/kernel_kernel_new.cpp:1188).
+WARNING: [SCHED 204-68] The II Violation in module 'C_drain_IO_L3_out' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between fifo read on port 'fifo_C_drain_local_in_V_V' (src/kernel_kernel_new.cpp:1177->src/kernel_kernel_new.cpp:1188) and fifo read on port 'fifo_C_drain_local_in_V_V' (src/kernel_kernel_new.cpp:1177->src/kernel_kernel_new.cpp:1188).
+WARNING: [SCHED 204-68] The II Violation in module 'C_drain_IO_L3_out' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1)
+   between fifo read on port 'fifo_C_drain_local_in_V_V' (src/kernel_kernel_new.cpp:1177->src/kernel_kernel_new.cpp:1188) and fifo read on port 'fifo_C_drain_local_in_V_V' (src/kernel_kernel_new.cpp:1177->src/kernel_kernel_new.cpp:1188).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 8, Depth = 10.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.29 seconds; current allocated memory: 1.107 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kernel3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 1.108 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 18.16 seconds; current allocated memory: 1.122 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kernel3_entry14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kernel3_entry14'.
+INFO: [HLS 200-111]  Elapsed time: 4.71 seconds; current allocated memory: 1.125 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L3_in' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L3_in'.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.126 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in_inter_trans' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in_inter_trans'.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 1.126 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in_intra_trans_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in_intra_trans_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.128 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in208' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in208'.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 1.129 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in209' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in209'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.129 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in210' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in210'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.130 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in211' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in211'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 1.130 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in212' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in212'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.131 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in213' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in213'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.132 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in214' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in214'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 1.132 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in215' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in215'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.133 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in216' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in216'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 1.133 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in217' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in217'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 1.134 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in218' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in218'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.134 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in219' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in219'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 1.135 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in_inter_trans_boundary' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in_inter_trans_boundary'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 1.136 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_IO_L2_in_boundary' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_IO_L2_in_boundary'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.136 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'B_IO_L3_in' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'B_IO_L3_in'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.137 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'B_IO_L2_in_inter_trans' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'B_IO_L2_in_inter_trans'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 1.138 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'B_IO_L2_in_intra_trans_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'B_IO_L2_in_intra_trans_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.139 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'B_IO_L2_in' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'B_IO_L2_in'.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 1.140 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'B_IO_L2_in_inter_trans_boundary' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'B_IO_L2_in_inter_trans_boundary'.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.141 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'B_IO_L2_in_boundary' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'B_IO_L2_in_boundary'.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.142 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'PE' is 6992 from HDL expression: (1'b0 == ap_block_pp1_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'kernel3_fadd_32ns_32ns_32_7_full_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel3_fmul_32ns_32ns_32_4_max_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE'.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 1.144 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_0_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_0_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.65 seconds; current allocated memory: 1.147 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_0_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_0_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.148 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_1_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_1_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.148 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_1_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_1_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.148 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_2_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_2_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.149 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_2_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_2_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.149 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_3_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_3_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.150 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_3_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_3_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.150 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_4_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_4_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 1.151 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_4_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_4_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.151 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_5_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_5_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.152 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_5_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_5_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.152 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_6_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_6_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.153 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_6_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_6_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.153 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_7_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_7_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 1.154 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_7_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_7_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.154 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_8_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_8_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.155 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_8_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_8_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 1.155 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_9_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_9_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.155 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_9_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_9_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 1.156 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_10_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_10_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.156 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_10_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_10_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.157 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_11_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_11_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 1.157 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_11_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_11_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.158 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_12_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_12_0'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 1.158 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_wrapper_12_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_wrapper_12_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 1.159 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_PE_dummy220' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_PE_dummy220'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 1.159 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_PE_dummy221' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_PE_dummy221'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.160 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_PE_dummy222' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_PE_dummy222'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.160 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_PE_dummy223' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_PE_dummy223'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.161 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_PE_dummy224' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_PE_dummy224'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.161 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_PE_dummy225' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_PE_dummy225'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.162 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_PE_dummy226' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_PE_dummy226'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.162 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_PE_dummy227' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_PE_dummy227'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.163 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_PE_dummy228' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_PE_dummy228'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.163 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_PE_dummy229' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_PE_dummy229'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.164 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_PE_dummy230' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_PE_dummy230'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.164 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_PE_dummy231' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_PE_dummy231'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.165 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'A_PE_dummy' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'A_PE_dummy'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.165 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'B_PE_dummy232' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'B_PE_dummy232'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.166 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'B_PE_dummy' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'B_PE_dummy'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 1.166 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out_boundary233' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out_boundary233'.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out234' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out234'.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 1.169 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out235' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out235'.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 1.171 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out236' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out236'.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 1.173 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out237' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out237'.
+INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 1.175 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out238' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out238'.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 1.177 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out239' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out239'.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 1.180 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out240' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out240'.
+INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 1.182 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out241' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out241'.
+INFO: [HLS 200-111]  Elapsed time: 0.4 seconds; current allocated memory: 1.184 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out242' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out242'.
+INFO: [HLS 200-111]  Elapsed time: 0.4 seconds; current allocated memory: 1.186 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out243' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out243'.
+INFO: [HLS 200-111]  Elapsed time: 0.41 seconds; current allocated memory: 1.189 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out244' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out244'.
+INFO: [HLS 200-111]  Elapsed time: 0.41 seconds; current allocated memory: 1.191 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out245' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out245'.
+INFO: [HLS 200-111]  Elapsed time: 0.43 seconds; current allocated memory: 1.193 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out_boundary' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out_boundary'.
+INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 1.195 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out246' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out246'.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 1.197 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out247' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out247'.
+INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 1.199 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out248' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out248'.
+INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 1.201 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out249' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out249'.
+INFO: [HLS 200-111]  Elapsed time: 0.47 seconds; current allocated memory: 1.203 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out250' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out250'.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 1.206 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out251' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out251'.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 1.208 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out252' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out252'.
+INFO: [HLS 200-111]  Elapsed time: 0.47 seconds; current allocated memory: 1.210 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out253' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out253'.
+INFO: [HLS 200-111]  Elapsed time: 0.48 seconds; current allocated memory: 1.212 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out254' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out254'.
+INFO: [HLS 200-111]  Elapsed time: 0.49 seconds; current allocated memory: 1.214 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out255' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out255'.
+INFO: [HLS 200-111]  Elapsed time: 0.49 seconds; current allocated memory: 1.217 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out256'.
+INFO: [HLS 200-111]  Elapsed time: 0.5 seconds; current allocated memory: 1.219 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L1_out257' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L1_out257'.
+INFO: [HLS 200-111]  Elapsed time: 0.51 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L2_out_boundary' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L2_out_boundary'.
+INFO: [HLS 200-111]  Elapsed time: 0.49 seconds; current allocated memory: 1.223 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L2_out' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L2_out'.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 1.223 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'C_drain_IO_L3_out' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'C_drain_IO_L3_out'.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 1.225 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kernel3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel3/gmem_A' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel3/gmem_B' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel3/gmem_C' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel3/A_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel3/B_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel3/C_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kernel3' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'A_V', 'B_V' and 'C_V' to AXI-Lite port control.
+WARNING: [HLS 200-656] Deadlocks can occur since process A_IO_L3_in is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process B_IO_L3_in is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process A_PE_dummy220 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process A_PE_dummy221 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process A_PE_dummy222 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process A_PE_dummy223 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process A_PE_dummy224 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process A_PE_dummy225 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process A_PE_dummy226 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process A_PE_dummy227 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process A_PE_dummy228 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process A_PE_dummy229 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process A_PE_dummy230 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process A_PE_dummy231 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process A_PE_dummy is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process B_PE_dummy232 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process B_PE_dummy is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out_boundary233 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out234 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out235 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out236 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out237 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out238 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out239 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out240 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out241 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out242 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out243 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out244 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out245 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out_boundary is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out246 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out247 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out248 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out249 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out250 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out251 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out252 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out253 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out254 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out255 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out256 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L1_out257 is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L2_out_boundary is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L2_out is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+WARNING: [HLS 200-656] Deadlocks can occur since process C_drain_IO_L3_out is a non-flushable pipeline which is instantiated in a dataflow region without ap_ctrl_chain mode.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kernel3'.
+INFO: [HLS 200-111]  Elapsed time: 1.63 seconds; current allocated memory: 1.234 GB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 411.02 MHz
+INFO: [RTMG 210-278] Implementing memory 'kernel3_A_IO_L2_in208_local_A_ram (RAM_2P_BRAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kernel3_B_IO_L2_in_local_B_ram (RAM_2P_BRAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kernel3_PE_local_C_ram (RAM_2P_BRAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kernel3_C_drain_IO_L1_out_boundary233_local_C_V_ram (RAM_2P_BRAM)' using block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'A_V_c_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'B_V_c_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'C_V_c_U(kernel3_fifo_w64_d33_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_A_IO_L2_in_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_A_IO_L2_in_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_0_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_A_IO_L2_in_2_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_1_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_A_IO_L2_in_3_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_2_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_A_IO_L2_in_4_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_3_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_A_IO_L2_in_5_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_4_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_A_IO_L2_in_6_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_5_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_A_IO_L2_in_7_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_6_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_A_IO_L2_in_8_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_7_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_A_IO_L2_in_9_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_8_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_A_IO_L2_in_10_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_9_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_A_IO_L2_in_11_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_10_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_A_IO_L2_in_12_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_11_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_12_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_B_IO_L2_in_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_B_IO_L2_in_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_0_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_0_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_0_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_1_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_0_0_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_0_2_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_1_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_0_1_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_1_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_2_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_1_0_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_1_2_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_2_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_1_1_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_2_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_3_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_2_0_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_2_2_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_3_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_2_1_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_3_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_4_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_3_0_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_3_2_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_4_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_3_1_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_4_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_5_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_4_0_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_4_2_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_5_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_4_1_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_5_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_6_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_5_0_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_5_2_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_6_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_5_1_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_6_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_7_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_6_0_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_6_2_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_7_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_6_1_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_7_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_8_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_7_0_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_7_2_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_8_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_7_1_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_8_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_9_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_8_0_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_8_2_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_9_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_8_1_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_9_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_10_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_9_0_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_9_2_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_10_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_9_1_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_10_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_11_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_10_0_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_10_2_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_11_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_10_1_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_11_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_12_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_11_0_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_11_2_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_12_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_11_1_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_12_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_13_0_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_12_0_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_A_PE_12_2_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_B_PE_13_1_V_V_U(kernel3_fifo_w256_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_PE_12_1_V_U(kernel3_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_0_12_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_0_11_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_0_10_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_0_9_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_0_8_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_0_7_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_0_6_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_0_5_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_0_4_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_0_3_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_0_2_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_0_1_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_0_0_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_1_12_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_1_11_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_1_10_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_1_9_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_1_8_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_1_7_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_1_6_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_1_5_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_1_4_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_1_3_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_1_2_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_1_1_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L1_out_1_0_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L2_out_1_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_C_drain_C_drain_IO_L2_out_0_V_V_U(kernel3_fifo_w64_d2_A)' using Shift Registers.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:39 ; elapsed = 00:02:02 . Memory (MB): peak = 2267.344 ; gain = 1743.219 ; free physical = 21157 ; free virtual = 38996
+INFO: [VHDL 208-304] Generating VHDL RTL for kernel3 with prefix kernel3_.
+INFO: [VLOG 209-307] Generating Verilog RTL for kernel3 with prefix kernel3_.
+HLS completed successfully
+INFO: [HLS 200-112] Total elapsed time: 122.19 seconds; peak allocated memory: 1.234 GB.
+INFO: [Common 17-206] Exiting vivado_hls at Mon Jun 14 18:45:27 2021...
+Using Python-MIP package version 1.8.1
+Detecting error, Rerun AutoBridge...
+Using Python-MIP package version 1.8.1
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2.1 (64-bit)
+  **** SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+  **** IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /xilinx/software/Vivado/2019.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/xilinx/software/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'veronica.grosso' on host 'michelangelo.local.necst.it' (Linux_x86_64 version 3.10.0-1160.24.1.el7.x86_64) on Mon Jun 14 18:45:29 CEST 2021
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.9 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/users/veronica.grosso/experimental/AutoBridge/benchmarks/CNN/13x2/kernel3_u250_autobridge_impl'
+Sourcing Tcl script '../pack_xo.tcl'
+INFO: [HLS 200-10] Opening project '/home/users/veronica.grosso/experimental/AutoBridge/benchmarks/CNN/13x2/kernel3_u250_autobridge_impl/kernel3_u250'.
+INFO: [HLS 200-10] Opening solution '/home/users/veronica.grosso/experimental/AutoBridge/benchmarks/CNN/13x2/kernel3_u250_autobridge_impl/kernel3_u250/solution'.
+ERROR: Global settings file not found: /home/users/veronica.grosso/experimental/AutoBridge/benchmarks/CNN/13x2/kernel3_u250_autobridge_impl/kernel3_u250/solution/.autopilot/db/global.setting.tcl
+Global settings file not found: /home/users/veronica.grosso/experimental/AutoBridge/benchmarks/CNN/13x2/kernel3_u250_autobridge_impl/kernel3_u250/solution/.autopilot/db/global.setting.tcl
+    while executing
+"source ../pack_xo.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $arg] "
+
+INFO: [Common 17-206] Exiting vivado_hls at Mon Jun 14 18:45:29 2021...
+no constraint file found

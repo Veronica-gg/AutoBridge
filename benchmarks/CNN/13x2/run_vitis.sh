@@ -1,7 +1,7 @@
 #!/bin/bash
 src_dir=$(pwd)
 TOP=kernel3
-PLATFORM=xilinx_u250_xdma_201830_2
+PLATFORM=xilinx_u200_xdma_201830_2
 XO="${src_dir}/polysa.xo"
 STRATEGY="Default"
 output_dir="$(pwd)/vitis_run"
