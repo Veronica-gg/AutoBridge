@@ -1,0 +1,210 @@
+
+
+================================================================
+== Vivado HLS Report for 'L_drain_IO_L2_out_2_s'
+================================================================
+* Date:           Sat Jun 19 18:25:04 2021
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        kernel0
+* Solution:       solution
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 3.33 ns | 2.433 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       37|      109| 0.123 us | 0.363 us |   37|  109|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- Loop 1     |       36|      108|  4 ~ 12  |          -|          -|      9|    no    |
+        | + Loop 1.1  |        9|        9|         2|          1|          1|      9|    yes   |
+        | + Loop 1.2  |        1|        9|         2|          1|          1| 1 ~ 9 |    yes   |
+        +-------------+---------+---------+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+  * Pipeline-1: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 2
+  Pipeline-0 : II = 1, D = 2, States = { 3 4 }
+  Pipeline-1 : II = 1, D = 2, States = { 6 7 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 6 
+3 --> 5 4 
+4 --> 3 
+5 --> 2 
+6 --> 5 7 
+7 --> 6 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.60>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %fifo_L_drain_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %fifo_L_drain_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 9 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %fifo_L_drain_local_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 10 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.60ns)   --->   "br label %1" [src/kernel_kernel.cpp:498]   --->   Operation 11 'br' <Predicate = true> <Delay = 0.60>
+
+State 2 <SV = 1> <Delay = 1.11>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%p_080_0 = phi i4 [ 2, %0 ], [ %c0_V, %.loopexit ]"   --->   Operation 12 'phi' 'p_080_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.65ns)   --->   "%icmp_ln498 = icmp eq i4 %p_080_0, -5" [src/kernel_kernel.cpp:498]   --->   Operation 13 'icmp' 'icmp_ln498' <Predicate = true> <Delay = 0.65> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 9, i64 9, i64 9)"   --->   Operation 14 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "br i1 %icmp_ln498, label %3, label %2" [src/kernel_kernel.cpp:498]   --->   Operation 15 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln498 = zext i4 %p_080_0 to i5" [src/kernel_kernel.cpp:498]   --->   Operation 16 'zext' 'zext_ln498' <Predicate = (!icmp_ln498)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.65ns)   --->   "%icmp_ln879 = icmp eq i4 %p_080_0, 2" [src/kernel_kernel.cpp:500]   --->   Operation 17 'icmp' 'icmp_ln879' <Predicate = (!icmp_ln498)> <Delay = 0.65> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "br i1 %icmp_ln879, label %.preheader136.preheader, label %.preheader.preheader" [src/kernel_kernel.cpp:500]   --->   Operation 18 'br' <Predicate = (!icmp_ln498)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.60ns)   --->   "br label %.preheader" [src/kernel_kernel.cpp:510]   --->   Operation 19 'br' <Predicate = (!icmp_ln498 & !icmp_ln879)> <Delay = 0.60>
+ST_2 : Operation 20 [1/1] (0.60ns)   --->   "br label %.preheader136" [src/kernel_kernel.cpp:501]   --->   Operation 20 'br' <Predicate = (!icmp_ln498 & icmp_ln879)> <Delay = 0.60>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "ret void" [src/kernel_kernel.cpp:520]   --->   Operation 21 'ret' <Predicate = (icmp_ln498)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.63>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%p_035_0_in = phi i5 [ %c1_V, %hls_label_210 ], [ %zext_ln498, %.preheader.preheader ]"   --->   Operation 22 'phi' 'p_035_0_in' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.63ns)   --->   "%icmp_ln510 = icmp eq i5 %p_035_0_in, 11" [src/kernel_kernel.cpp:510]   --->   Operation 23 'icmp' 'icmp_ln510' <Predicate = true> <Delay = 0.63> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%empty_558 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 9, i64 0)"   --->   Operation 24 'speclooptripcount' 'empty_558' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "br i1 %icmp_ln510, label %.loopexit.loopexit, label %hls_label_210" [src/kernel_kernel.cpp:510]   --->   Operation 25 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.34ns)   --->   "%c1_V = add i5 %p_035_0_in, 1" [src/kernel_kernel.cpp:510]   --->   Operation 26 'add' 'c1_V' <Predicate = (!icmp_ln510)> <Delay = 0.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 2.43>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_141 = call i32 (...)* @_ssdm_op_SpecRegionBegin([14 x i8]* @p_str64)" [src/kernel_kernel.cpp:510]   --->   Operation 27 'specregionbegin' 'tmp_141' <Predicate = (!icmp_ln510)> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [src/kernel_kernel.cpp:511]   --->   Operation 28 'specpipeline' <Predicate = (!icmp_ln510)> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (1.21ns)   --->   "%tmp_1079 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %fifo_L_drain_in_V)" [src/kernel_kernel.cpp:515]   --->   Operation 29 'read' 'tmp_1079' <Predicate = (!icmp_ln510)> <Delay = 1.21> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_4 : Operation 30 [1/1] (1.21ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %fifo_L_drain_out_V, float %tmp_1079)" [src/kernel_kernel.cpp:516]   --->   Operation 30 'write' <Predicate = (!icmp_ln510)> <Delay = 1.21> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%empty_559 = call i32 (...)* @_ssdm_op_SpecRegionEnd([14 x i8]* @p_str64, i32 %tmp_141)" [src/kernel_kernel.cpp:517]   --->   Operation 31 'specregionend' 'empty_559' <Predicate = (!icmp_ln510)> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "br label %.preheader" [src/kernel_kernel.cpp:510]   --->   Operation 32 'br' <Predicate = (!icmp_ln510)> <Delay = 0.00>
+
+State 5 <SV = 3> <Delay = 0.33>
+ST_5 : Operation 33 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 33 'br' <Predicate = (!icmp_ln879)> <Delay = 0.00>
+ST_5 : Operation 34 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 34 'br' <Predicate = (icmp_ln879)> <Delay = 0.00>
+ST_5 : Operation 35 [1/1] (0.33ns)   --->   "%c0_V = add i4 %p_080_0, 1" [src/kernel_kernel.cpp:498]   --->   Operation 35 'add' 'c0_V' <Predicate = true> <Delay = 0.33> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 36 [1/1] (0.00ns)   --->   "br label %1" [src/kernel_kernel.cpp:498]   --->   Operation 36 'br' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 2> <Delay = 0.65>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%p_072_0 = phi i4 [ %c1_V_8, %hls_label_209 ], [ 3, %.preheader136.preheader ]"   --->   Operation 37 'phi' 'p_072_0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 38 [1/1] (0.65ns)   --->   "%icmp_ln501 = icmp eq i4 %p_072_0, -4" [src/kernel_kernel.cpp:501]   --->   Operation 38 'icmp' 'icmp_ln501' <Predicate = true> <Delay = 0.65> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%empty_556 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 9, i64 9, i64 9)"   --->   Operation 39 'speclooptripcount' 'empty_556' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "br i1 %icmp_ln501, label %.loopexit.loopexit4, label %hls_label_209" [src/kernel_kernel.cpp:501]   --->   Operation 40 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 41 [1/1] (0.33ns)   --->   "%c1_V_8 = add i4 %p_072_0, 1" [src/kernel_kernel.cpp:501]   --->   Operation 41 'add' 'c1_V_8' <Predicate = (!icmp_ln501)> <Delay = 0.33> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 3> <Delay = 2.43>
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([14 x i8]* @p_str63)" [src/kernel_kernel.cpp:501]   --->   Operation 42 'specregionbegin' 'tmp_s' <Predicate = (!icmp_ln501)> <Delay = 0.00>
+ST_7 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [src/kernel_kernel.cpp:502]   --->   Operation 43 'specpipeline' <Predicate = (!icmp_ln501)> <Delay = 0.00>
+ST_7 : Operation 44 [1/1] (1.21ns)   --->   "%tmp = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %fifo_L_drain_local_in_V)" [src/kernel_kernel.cpp:506]   --->   Operation 44 'read' 'tmp' <Predicate = (!icmp_ln501)> <Delay = 1.21> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_7 : Operation 45 [1/1] (1.21ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %fifo_L_drain_out_V, float %tmp)" [src/kernel_kernel.cpp:507]   --->   Operation 45 'write' <Predicate = (!icmp_ln501)> <Delay = 1.21> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%empty_557 = call i32 (...)* @_ssdm_op_SpecRegionEnd([14 x i8]* @p_str63, i32 %tmp_s)" [src/kernel_kernel.cpp:508]   --->   Operation 46 'specregionend' 'empty_557' <Predicate = (!icmp_ln501)> <Delay = 0.00>
+ST_7 : Operation 47 [1/1] (0.00ns)   --->   "br label %.preheader136" [src/kernel_kernel.cpp:501]   --->   Operation 47 'br' <Predicate = (!icmp_ln501)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 0.603ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('c0.V') with incoming values : ('c0.V', src/kernel_kernel.cpp:498) [9]  (0.603 ns)
+
+ <State 2>: 1.11ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln498', src/kernel_kernel.cpp:498) [10]  (0.656 ns)
+	blocking operation 0.456 ns on control path)
+
+ <State 3>: 0.637ns
+The critical path consists of the following:
+	'phi' operation ('c1.V') with incoming values : ('zext_ln498', src/kernel_kernel.cpp:498) ('c1.V', src/kernel_kernel.cpp:510) [20]  (0 ns)
+	'icmp' operation ('icmp_ln510', src/kernel_kernel.cpp:510) [21]  (0.637 ns)
+
+ <State 4>: 2.43ns
+The critical path consists of the following:
+	fifo read on port 'fifo_L_drain_in_V' (src/kernel_kernel.cpp:515) [28]  (1.22 ns)
+	fifo write on port 'fifo_L_drain_out_V' (src/kernel_kernel.cpp:516) [29]  (1.22 ns)
+
+ <State 5>: 0.336ns
+The critical path consists of the following:
+	'add' operation ('c0.V', src/kernel_kernel.cpp:498) [52]  (0.336 ns)
+
+ <State 6>: 0.656ns
+The critical path consists of the following:
+	'phi' operation ('c1.V') with incoming values : ('c1.V', src/kernel_kernel.cpp:501) [37]  (0 ns)
+	'icmp' operation ('icmp_ln501', src/kernel_kernel.cpp:501) [38]  (0.656 ns)
+
+ <State 7>: 2.43ns
+The critical path consists of the following:
+	fifo read on port 'fifo_L_drain_local_in_V' (src/kernel_kernel.cpp:506) [44]  (1.22 ns)
+	fifo write on port 'fifo_L_drain_out_V' (src/kernel_kernel.cpp:507) [45]  (1.22 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

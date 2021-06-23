@@ -1,0 +1,249 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'kernel3'" level="0">
+<item name = "Date">Fri May 28 08:41:11 2021
+</item>
+<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Project">kernel3_u250</item>
+<item name = "Solution">solution</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu250-figd2104-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 2.433 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">40083, 49174, 0.134 ms, 0.164 ms, 39945, 49160, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_PE_wrapper_0_0_fu_2644">PE_wrapper_0_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_0_1_fu_2653">PE_wrapper_0_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_1_0_fu_2662">PE_wrapper_1_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_0_2_fu_2671">PE_wrapper_0_2, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_1_1_fu_2680">PE_wrapper_1_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_2_0_fu_2689">PE_wrapper_2_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_0_3_fu_2698">PE_wrapper_0_3, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_1_2_fu_2707">PE_wrapper_1_2, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_2_1_fu_2716">PE_wrapper_2_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_3_0_fu_2725">PE_wrapper_3_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_0_4_fu_2734">PE_wrapper_0_4, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_1_3_fu_2743">PE_wrapper_1_3, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_2_2_fu_2752">PE_wrapper_2_2, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_3_1_fu_2761">PE_wrapper_3_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_4_0_fu_2770">PE_wrapper_4_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_0_5_fu_2779">PE_wrapper_0_5, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_1_4_fu_2788">PE_wrapper_1_4, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_2_3_fu_2797">PE_wrapper_2_3, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_3_2_fu_2806">PE_wrapper_3_2, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_4_1_fu_2815">PE_wrapper_4_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_5_0_fu_2824">PE_wrapper_5_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_1_5_fu_2833">PE_wrapper_1_5, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_2_4_fu_2842">PE_wrapper_2_4, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_3_3_fu_2851">PE_wrapper_3_3, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_4_2_fu_2860">PE_wrapper_4_2, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_5_1_fu_2869">PE_wrapper_5_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_6_0_fu_2878">PE_wrapper_6_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_2_5_fu_2887">PE_wrapper_2_5, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_3_4_fu_2896">PE_wrapper_3_4, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_4_3_fu_2905">PE_wrapper_4_3, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_5_2_fu_2914">PE_wrapper_5_2, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_6_1_fu_2923">PE_wrapper_6_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_7_0_fu_2932">PE_wrapper_7_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_3_5_fu_2941">PE_wrapper_3_5, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_4_4_fu_2950">PE_wrapper_4_4, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_5_3_fu_2959">PE_wrapper_5_3, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_6_2_fu_2968">PE_wrapper_6_2, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_7_1_fu_2977">PE_wrapper_7_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_8_0_fu_2986">PE_wrapper_8_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_4_5_fu_2995">PE_wrapper_4_5, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_5_4_fu_3004">PE_wrapper_5_4, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_6_3_fu_3013">PE_wrapper_6_3, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_7_2_fu_3022">PE_wrapper_7_2, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_8_1_fu_3031">PE_wrapper_8_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_9_0_fu_3040">PE_wrapper_9_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_5_5_fu_3049">PE_wrapper_5_5, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_6_4_fu_3058">PE_wrapper_6_4, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_7_3_fu_3067">PE_wrapper_7_3, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_8_2_fu_3076">PE_wrapper_8_2, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_9_1_fu_3085">PE_wrapper_9_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_10_0_fu_3094">PE_wrapper_10_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_6_5_fu_3103">PE_wrapper_6_5, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_7_4_fu_3112">PE_wrapper_7_4, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_8_3_fu_3121">PE_wrapper_8_3, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_9_2_fu_3130">PE_wrapper_9_2, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_10_1_fu_3139">PE_wrapper_10_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_11_0_fu_3148">PE_wrapper_11_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_7_5_fu_3157">PE_wrapper_7_5, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_8_4_fu_3166">PE_wrapper_8_4, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_9_3_fu_3175">PE_wrapper_9_3, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_10_2_fu_3184">PE_wrapper_10_2, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_11_1_fu_3193">PE_wrapper_11_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_12_0_fu_3202">PE_wrapper_12_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_8_5_fu_3211">PE_wrapper_8_5, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_9_4_fu_3220">PE_wrapper_9_4, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_10_3_fu_3229">PE_wrapper_10_3, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_11_2_fu_3238">PE_wrapper_11_2, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_12_1_fu_3247">PE_wrapper_12_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_9_5_fu_3256">PE_wrapper_9_5, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_10_4_fu_3265">PE_wrapper_10_4, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_11_3_fu_3274">PE_wrapper_11_3, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_12_2_fu_3283">PE_wrapper_12_2, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_10_5_fu_3292">PE_wrapper_10_5, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_11_4_fu_3301">PE_wrapper_11_4, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_12_3_fu_3310">PE_wrapper_12_3, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_11_5_fu_3319">PE_wrapper_11_5, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_12_4_fu_3328">PE_wrapper_12_4, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_12_5_fu_3337">PE_wrapper_12_5, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_B_IO_L3_in_fu_3346">B_IO_L3_in, 12298, 12298, 40.989 us, 40.989 us, 12298, 12298, none</column>
+<column name="grp_A_IO_L3_in_fu_3354">A_IO_L3_in, 6666, 6666, 22.218 us, 22.218 us, 6666, 6666, none</column>
+<column name="grp_C_drain_IO_L3_out_fu_3362">C_drain_IO_L3_out, 39944, 39944, 0.133 ms, 0.133 ms, 39944, 39944, none</column>
+<column name="grp_C_drain_IO_L1_out457_fu_3370">C_drain_IO_L1_out457, 5127, 5127, 17.088 us, 17.088 us, 5127, 5127, none</column>
+<column name="grp_C_drain_IO_L1_out458_fu_3377">C_drain_IO_L1_out458, 5639, 5639, 18.795 us, 18.795 us, 5639, 5639, none</column>
+<column name="grp_C_drain_IO_L1_out470_fu_3384">C_drain_IO_L1_out470, 5127, 5127, 17.088 us, 17.088 us, 5127, 5127, none</column>
+<column name="grp_C_drain_IO_L1_out459_fu_3391">C_drain_IO_L1_out459, 6151, 6151, 20.501 us, 20.501 us, 6151, 6151, none</column>
+<column name="grp_C_drain_IO_L1_out471_fu_3398">C_drain_IO_L1_out471, 5639, 5639, 18.795 us, 18.795 us, 5639, 5639, none</column>
+<column name="grp_C_drain_IO_L1_out483_fu_3405">C_drain_IO_L1_out483, 5127, 5127, 17.088 us, 17.088 us, 5127, 5127, none</column>
+<column name="grp_C_drain_IO_L1_out460_fu_3412">C_drain_IO_L1_out460, 6663, 6663, 22.208 us, 22.208 us, 6663, 6663, none</column>
+<column name="grp_C_drain_IO_L1_out472_fu_3419">C_drain_IO_L1_out472, 6151, 6151, 20.501 us, 20.501 us, 6151, 6151, none</column>
+<column name="grp_C_drain_IO_L1_out484_fu_3426">C_drain_IO_L1_out484, 5639, 5639, 18.795 us, 18.795 us, 5639, 5639, none</column>
+<column name="grp_C_drain_IO_L1_out496_fu_3433">C_drain_IO_L1_out496, 5127, 5127, 17.088 us, 17.088 us, 5127, 5127, none</column>
+<column name="grp_C_drain_IO_L1_out461_fu_3440">C_drain_IO_L1_out461, 7175, 7175, 23.914 us, 23.914 us, 7175, 7175, none</column>
+<column name="grp_C_drain_IO_L1_out473_fu_3447">C_drain_IO_L1_out473, 6663, 6663, 22.208 us, 22.208 us, 6663, 6663, none</column>
+<column name="grp_C_drain_IO_L1_out485_fu_3454">C_drain_IO_L1_out485, 6151, 6151, 20.501 us, 20.501 us, 6151, 6151, none</column>
+<column name="grp_C_drain_IO_L1_out497_fu_3461">C_drain_IO_L1_out497, 5639, 5639, 18.795 us, 18.795 us, 5639, 5639, none</column>
+<column name="grp_C_drain_IO_L1_out509_fu_3468">C_drain_IO_L1_out509, 5127, 5127, 17.088 us, 17.088 us, 5127, 5127, none</column>
+<column name="grp_C_drain_IO_L1_out462_fu_3475">C_drain_IO_L1_out462, 7687, 7687, 25.621 us, 25.621 us, 7687, 7687, none</column>
+<column name="grp_C_drain_IO_L1_out474_fu_3482">C_drain_IO_L1_out474, 7175, 7175, 23.914 us, 23.914 us, 7175, 7175, none</column>
+<column name="grp_C_drain_IO_L1_out486_fu_3489">C_drain_IO_L1_out486, 6663, 6663, 22.208 us, 22.208 us, 6663, 6663, none</column>
+<column name="grp_C_drain_IO_L1_out498_fu_3496">C_drain_IO_L1_out498, 6151, 6151, 20.501 us, 20.501 us, 6151, 6151, none</column>
+<column name="grp_C_drain_IO_L1_out510_fu_3503">C_drain_IO_L1_out510, 5639, 5639, 18.795 us, 18.795 us, 5639, 5639, none</column>
+<column name="grp_C_drain_IO_L1_out521_fu_3510">C_drain_IO_L1_out521, 5127, 5127, 17.088 us, 17.088 us, 5127, 5127, none</column>
+<column name="grp_C_drain_IO_L1_out475_fu_3517">C_drain_IO_L1_out475, 7687, 7687, 25.621 us, 25.621 us, 7687, 7687, none</column>
+<column name="grp_C_drain_IO_L1_out487_fu_3524">C_drain_IO_L1_out487, 7175, 7175, 23.914 us, 23.914 us, 7175, 7175, none</column>
+<column name="grp_C_drain_IO_L1_out499_fu_3531">C_drain_IO_L1_out499, 6663, 6663, 22.208 us, 22.208 us, 6663, 6663, none</column>
+<column name="grp_C_drain_IO_L1_out511_fu_3538">C_drain_IO_L1_out511, 6151, 6151, 20.501 us, 20.501 us, 6151, 6151, none</column>
+<column name="grp_C_drain_IO_L1_out522_fu_3545">C_drain_IO_L1_out522, 5639, 5639, 18.795 us, 18.795 us, 5639, 5639, none</column>
+<column name="grp_C_drain_IO_L1_out488_fu_3552">C_drain_IO_L1_out488, 7687, 7687, 25.621 us, 25.621 us, 7687, 7687, none</column>
+<column name="grp_C_drain_IO_L1_out500_fu_3559">C_drain_IO_L1_out500, 7175, 7175, 23.914 us, 23.914 us, 7175, 7175, none</column>
+<column name="grp_C_drain_IO_L1_out512_fu_3566">C_drain_IO_L1_out512, 6663, 6663, 22.208 us, 22.208 us, 6663, 6663, none</column>
+<column name="grp_C_drain_IO_L1_out523_fu_3573">C_drain_IO_L1_out523, 6151, 6151, 20.501 us, 20.501 us, 6151, 6151, none</column>
+<column name="grp_C_drain_IO_L1_out501_fu_3580">C_drain_IO_L1_out501, 7687, 7687, 25.621 us, 25.621 us, 7687, 7687, none</column>
+<column name="grp_C_drain_IO_L1_out513_fu_3587">C_drain_IO_L1_out513, 7175, 7175, 23.914 us, 23.914 us, 7175, 7175, none</column>
+<column name="grp_C_drain_IO_L1_out524_fu_3594">C_drain_IO_L1_out524, 6663, 6663, 22.208 us, 22.208 us, 6663, 6663, none</column>
+<column name="grp_C_drain_IO_L1_out514_fu_3601">C_drain_IO_L1_out514, 7687, 7687, 25.621 us, 25.621 us, 7687, 7687, none</column>
+<column name="grp_C_drain_IO_L1_out525_fu_3608">C_drain_IO_L1_out525, 7175, 7175, 23.914 us, 23.914 us, 7175, 7175, none</column>
+<column name="grp_C_drain_IO_L1_out526_fu_3615">C_drain_IO_L1_out526, 7687, 7687, 25.621 us, 25.621 us, 7687, 7687, none</column>
+<column name="grp_C_drain_IO_L1_out453_fu_3622">C_drain_IO_L1_out453, 3079, 3079, 10.262 us, 10.262 us, 3079, 3079, none</column>
+<column name="grp_C_drain_IO_L1_out454_fu_3629">C_drain_IO_L1_out454, 3591, 3591, 11.969 us, 11.969 us, 3591, 3591, none</column>
+<column name="grp_C_drain_IO_L1_out466_fu_3636">C_drain_IO_L1_out466, 3079, 3079, 10.262 us, 10.262 us, 3079, 3079, none</column>
+<column name="grp_C_drain_IO_L1_out455_fu_3643">C_drain_IO_L1_out455, 4103, 4103, 13.675 us, 13.675 us, 4103, 4103, none</column>
+<column name="grp_C_drain_IO_L1_out467_fu_3650">C_drain_IO_L1_out467, 3591, 3591, 11.969 us, 11.969 us, 3591, 3591, none</column>
+<column name="grp_C_drain_IO_L1_out479_fu_3657">C_drain_IO_L1_out479, 3079, 3079, 10.262 us, 10.262 us, 3079, 3079, none</column>
+<column name="grp_C_drain_IO_L1_out456_fu_3664">C_drain_IO_L1_out456, 4615, 4615, 15.382 us, 15.382 us, 4615, 4615, none</column>
+<column name="grp_C_drain_IO_L1_out468_fu_3671">C_drain_IO_L1_out468, 4103, 4103, 13.675 us, 13.675 us, 4103, 4103, none</column>
+<column name="grp_C_drain_IO_L1_out480_fu_3678">C_drain_IO_L1_out480, 3591, 3591, 11.969 us, 11.969 us, 3591, 3591, none</column>
+<column name="grp_C_drain_IO_L1_out492_fu_3685">C_drain_IO_L1_out492, 3079, 3079, 10.262 us, 10.262 us, 3079, 3079, none</column>
+<column name="grp_C_drain_IO_L1_out469_fu_3692">C_drain_IO_L1_out469, 4615, 4615, 15.382 us, 15.382 us, 4615, 4615, none</column>
+<column name="grp_C_drain_IO_L1_out481_fu_3699">C_drain_IO_L1_out481, 4103, 4103, 13.675 us, 13.675 us, 4103, 4103, none</column>
+<column name="grp_C_drain_IO_L1_out493_fu_3706">C_drain_IO_L1_out493, 3591, 3591, 11.969 us, 11.969 us, 3591, 3591, none</column>
+<column name="grp_C_drain_IO_L1_out505_fu_3713">C_drain_IO_L1_out505, 3079, 3079, 10.262 us, 10.262 us, 3079, 3079, none</column>
+<column name="grp_C_drain_IO_L1_out482_fu_3720">C_drain_IO_L1_out482, 4615, 4615, 15.382 us, 15.382 us, 4615, 4615, none</column>
+<column name="grp_C_drain_IO_L1_out494_fu_3727">C_drain_IO_L1_out494, 4103, 4103, 13.675 us, 13.675 us, 4103, 4103, none</column>
+<column name="grp_C_drain_IO_L1_out506_fu_3734">C_drain_IO_L1_out506, 3591, 3591, 11.969 us, 11.969 us, 3591, 3591, none</column>
+<column name="grp_C_drain_IO_L1_out517_fu_3741">C_drain_IO_L1_out517, 3079, 3079, 10.262 us, 10.262 us, 3079, 3079, none</column>
+<column name="grp_C_drain_IO_L1_out495_fu_3748">C_drain_IO_L1_out495, 4615, 4615, 15.382 us, 15.382 us, 4615, 4615, none</column>
+<column name="grp_C_drain_IO_L1_out507_fu_3755">C_drain_IO_L1_out507, 4103, 4103, 13.675 us, 13.675 us, 4103, 4103, none</column>
+<column name="grp_C_drain_IO_L1_out518_fu_3762">C_drain_IO_L1_out518, 3591, 3591, 11.969 us, 11.969 us, 3591, 3591, none</column>
+<column name="grp_C_drain_IO_L1_out508_fu_3769">C_drain_IO_L1_out508, 4615, 4615, 15.382 us, 15.382 us, 4615, 4615, none</column>
+<column name="grp_C_drain_IO_L1_out519_fu_3776">C_drain_IO_L1_out519, 4103, 4103, 13.675 us, 13.675 us, 4103, 4103, none</column>
+<column name="grp_C_drain_IO_L1_out520_fu_3783">C_drain_IO_L1_out520, 4615, 4615, 15.382 us, 15.382 us, 4615, 4615, none</column>
+<column name="grp_C_drain_IO_L1_out451_fu_3790">C_drain_IO_L1_out451, 2055, 2055, 6.849 us, 6.849 us, 2055, 2055, none</column>
+<column name="grp_C_drain_IO_L1_out452_fu_3797">C_drain_IO_L1_out452, 2567, 2567, 8.556 us, 8.556 us, 2567, 2567, none</column>
+<column name="grp_C_drain_IO_L1_out464_fu_3804">C_drain_IO_L1_out464, 2055, 2055, 6.849 us, 6.849 us, 2055, 2055, none</column>
+<column name="grp_C_drain_IO_L1_out465_fu_3811">C_drain_IO_L1_out465, 2567, 2567, 8.556 us, 8.556 us, 2567, 2567, none</column>
+<column name="grp_C_drain_IO_L1_out477_fu_3818">C_drain_IO_L1_out477, 2055, 2055, 6.849 us, 6.849 us, 2055, 2055, none</column>
+<column name="grp_C_drain_IO_L1_out478_fu_3825">C_drain_IO_L1_out478, 2567, 2567, 8.556 us, 8.556 us, 2567, 2567, none</column>
+<column name="grp_C_drain_IO_L1_out490_fu_3832">C_drain_IO_L1_out490, 2055, 2055, 6.849 us, 6.849 us, 2055, 2055, none</column>
+<column name="grp_C_drain_IO_L1_out491_fu_3839">C_drain_IO_L1_out491, 2567, 2567, 8.556 us, 8.556 us, 2567, 2567, none</column>
+<column name="grp_C_drain_IO_L1_out503_fu_3846">C_drain_IO_L1_out503, 2055, 2055, 6.849 us, 6.849 us, 2055, 2055, none</column>
+<column name="grp_C_drain_IO_L1_out504_fu_3853">C_drain_IO_L1_out504, 2567, 2567, 8.556 us, 8.556 us, 2567, 2567, none</column>
+<column name="grp_C_drain_IO_L1_out515_fu_3860">C_drain_IO_L1_out515, 2055, 2055, 6.849 us, 6.849 us, 2055, 2055, none</column>
+<column name="grp_C_drain_IO_L1_out516_fu_3867">C_drain_IO_L1_out516, 2567, 2567, 8.556 us, 8.556 us, 2567, 2567, none</column>
+<column name="grp_B_IO_L2_in428_fu_3874">B_IO_L2_in428, 32776, 49159, 0.109 ms, 0.164 ms, 32776, 49159, none</column>
+<column name="grp_B_IO_L2_in429_fu_3881">B_IO_L2_in429, 32776, 49159, 0.109 ms, 0.164 ms, 32776, 49159, none</column>
+<column name="grp_B_IO_L2_in430_fu_3888">B_IO_L2_in430, 32776, 49159, 0.109 ms, 0.164 ms, 32776, 49159, none</column>
+<column name="grp_B_IO_L2_in431_fu_3895">B_IO_L2_in431, 32776, 49159, 0.109 ms, 0.164 ms, 32776, 49159, none</column>
+<column name="grp_B_IO_L2_in432_fu_3902">B_IO_L2_in432, 32776, 49159, 0.109 ms, 0.164 ms, 32776, 49159, none</column>
+<column name="grp_A_IO_L2_in416_fu_3909">A_IO_L2_in416, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in417_fu_3916">A_IO_L2_in417, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in418_fu_3923">A_IO_L2_in418, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in419_fu_3930">A_IO_L2_in419, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in420_fu_3937">A_IO_L2_in420, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in421_fu_3944">A_IO_L2_in421, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in422_fu_3951">A_IO_L2_in422, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in423_fu_3958">A_IO_L2_in423, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in424_fu_3965">A_IO_L2_in424, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in425_fu_3972">A_IO_L2_in425, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in426_fu_3979">A_IO_L2_in426, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in427_fu_3986">A_IO_L2_in427, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_B_IO_L2_in_boundary_fu_3993">B_IO_L2_in_boundary, 34824, 34824, 0.116 ms, 0.116 ms, 34824, 34824, none</column>
+<column name="grp_C_drain_IO_L1_out_boundary450_fu_3999">C_drain_IO_L1_out_boundary450, 1542, 1542, 5.139 us, 5.139 us, 1542, 1542, none</column>
+<column name="grp_C_drain_IO_L1_out_boundary463_fu_4005">C_drain_IO_L1_out_boundary463, 1542, 1542, 5.139 us, 5.139 us, 1542, 1542, none</column>
+<column name="grp_C_drain_IO_L1_out_boundary476_fu_4011">C_drain_IO_L1_out_boundary476, 1542, 1542, 5.139 us, 5.139 us, 1542, 1542, none</column>
+<column name="grp_C_drain_IO_L1_out_boundary489_fu_4017">C_drain_IO_L1_out_boundary489, 1542, 1542, 5.139 us, 5.139 us, 1542, 1542, none</column>
+<column name="grp_C_drain_IO_L1_out_boundary502_fu_4023">C_drain_IO_L1_out_boundary502, 1542, 1542, 5.139 us, 5.139 us, 1542, 1542, none</column>
+<column name="grp_C_drain_IO_L1_out_boundary_fu_4029">C_drain_IO_L1_out_boundary, 1542, 1542, 5.139 us, 5.139 us, 1542, 1542, none</column>
+<column name="grp_A_IO_L2_in_boundary_fu_4035">A_IO_L2_in_boundary, 33288, 33288, 0.111 ms, 0.111 ms, 33288, 33288, none</column>
+<column name="grp_C_drain_IO_L2_out530_fu_4041">C_drain_IO_L2_out530, 33283, 33283, 0.111 ms, 0.111 ms, 33283, 33283, none</column>
+<column name="grp_C_drain_IO_L2_out531_fu_4048">C_drain_IO_L2_out531, 39939, 39939, 0.133 ms, 0.133 ms, 39939, 39939, none</column>
+<column name="grp_C_drain_IO_L2_out528_fu_4055">C_drain_IO_L2_out528, 19971, 19971, 66.563 us, 66.563 us, 19971, 19971, none</column>
+<column name="grp_C_drain_IO_L2_out529_fu_4062">C_drain_IO_L2_out529, 26627, 26627, 88.748 us, 88.748 us, 26627, 26627, none</column>
+<column name="grp_C_drain_IO_L2_out527_fu_4069">C_drain_IO_L2_out527, 13315, 13315, 44.379 us, 44.379 us, 13315, 13315, none</column>
+<column name="grp_A_PE_dummy433_fu_4076">A_PE_dummy433, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy434_fu_4081">A_PE_dummy434, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy435_fu_4086">A_PE_dummy435, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy436_fu_4091">A_PE_dummy436, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy437_fu_4096">A_PE_dummy437, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy438_fu_4101">A_PE_dummy438, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy439_fu_4106">A_PE_dummy439, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy440_fu_4111">A_PE_dummy440, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_B_PE_dummy445_fu_4116">B_PE_dummy445, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy441_fu_4121">A_PE_dummy441, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_B_PE_dummy446_fu_4126">B_PE_dummy446, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy442_fu_4131">A_PE_dummy442, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_B_PE_dummy447_fu_4136">B_PE_dummy447, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy443_fu_4141">A_PE_dummy443, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_B_PE_dummy448_fu_4146">B_PE_dummy448, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy444_fu_4151">A_PE_dummy444, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_B_PE_dummy449_fu_4156">B_PE_dummy449, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy_fu_4161">A_PE_dummy, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_B_PE_dummy_fu_4166">B_PE_dummy, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_C_drain_IO_L2_out_boundary_fu_4171">C_drain_IO_L2_out_boundary, 6658, 6658, 22.191 us, 22.191 us, 6658, 6658, none</column>
+<column name="call_ln1810_kernel3_entry14_fu_4177">kernel3_entry14, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

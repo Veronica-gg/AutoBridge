@@ -1,0 +1,242 @@
+
+
+================================================================
+== Vivado HLS Report for 'B_IO_L3_in'
+================================================================
+* Date:           Fri May 28 08:38:47 2021
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        kernel3_u250
+* Solution:       solution
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 3.33 ns | 2.433 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-------+-------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+    |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
+    +---------+---------+-----------+-----------+-------+-------+---------+
+    |    12298|    12298| 40.989 us | 40.989 us |  12298|  12298|   none  |
+    +---------+---------+-----------+-----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    12289|    12289|         4|          2|          1|  6144|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 13
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 4, States = { 9 10 11 12 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 13 10 
+10 --> 11 
+11 --> 12 
+12 --> 9 
+13 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.21>
+ST_1 : Operation 14 [1/1] (1.21ns)   --->   "%B_V_offset_read = call i64 @_ssdm_op_Read.ap_fifo.i64P(i64* %B_V_offset)" [src/kernel_kernel_new.cpp:246]   --->   Operation 14 'read' 'B_V_offset_read' <Predicate = true> <Delay = 1.21> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 0> <FIFO>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%B_V_offset1_i = call i58 @_ssdm_op_PartSelect.i58.i64.i32.i32(i64 %B_V_offset_read, i32 6, i32 63)" [src/kernel_kernel_new.cpp:246->src/kernel_kernel_new.cpp:1810]   --->   Operation 15 'partselect' 'B_V_offset1_i' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.43>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln246 = zext i58 %B_V_offset1_i to i64" [src/kernel_kernel_new.cpp:246->src/kernel_kernel_new.cpp:1810]   --->   Operation 16 'zext' 'zext_ln246' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%B_V_addr = getelementptr i512* %B_V, i64 %zext_ln246" [src/kernel_kernel_new.cpp:246->src/kernel_kernel_new.cpp:1810]   --->   Operation 17 'getelementptr' 'B_V_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [7/7] (2.43ns)   --->   "%B_V_addr_i_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i512P(i512* %B_V_addr, i32 6144)" [src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810]   --->   Operation 18 'readreq' 'B_V_addr_i_rd_req' <Predicate = true> <Delay = 2.43> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 2.43>
+ST_3 : Operation 19 [6/7] (2.43ns)   --->   "%B_V_addr_i_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i512P(i512* %B_V_addr, i32 6144)" [src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810]   --->   Operation 19 'readreq' 'B_V_addr_i_rd_req' <Predicate = true> <Delay = 2.43> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 2.43>
+ST_4 : Operation 20 [5/7] (2.43ns)   --->   "%B_V_addr_i_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i512P(i512* %B_V_addr, i32 6144)" [src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810]   --->   Operation 20 'readreq' 'B_V_addr_i_rd_req' <Predicate = true> <Delay = 2.43> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 2.43>
+ST_5 : Operation 21 [4/7] (2.43ns)   --->   "%B_V_addr_i_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i512P(i512* %B_V_addr, i32 6144)" [src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810]   --->   Operation 21 'readreq' 'B_V_addr_i_rd_req' <Predicate = true> <Delay = 2.43> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 2.43>
+ST_6 : Operation 22 [3/7] (2.43ns)   --->   "%B_V_addr_i_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i512P(i512* %B_V_addr, i32 6144)" [src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810]   --->   Operation 22 'readreq' 'B_V_addr_i_rd_req' <Predicate = true> <Delay = 2.43> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 2.43>
+ST_7 : Operation 23 [2/7] (2.43ns)   --->   "%B_V_addr_i_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i512P(i512* %B_V_addr, i32 6144)" [src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810]   --->   Operation 23 'readreq' 'B_V_addr_i_rd_req' <Predicate = true> <Delay = 2.43> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 2.43>
+ST_8 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i512* %B_V, [6 x i8]* @p_str28, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 6144, [7 x i8]* @p_str31, [6 x i8]* @p_str30, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 24 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i256* %fifo_B_local_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 25 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %B_V_offset, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 26 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i256* %fifo_B_local_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 27 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i512* %B_V, [6 x i8]* @p_str28, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 6144, [7 x i8]* @p_str31, [6 x i8]* @p_str30, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 28 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 29 [1/7] (2.43ns)   --->   "%B_V_addr_i_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i512P(i512* %B_V_addr, i32 6144)" [src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810]   --->   Operation 29 'readreq' 'B_V_addr_i_rd_req' <Predicate = true> <Delay = 2.43> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 30 [1/1] (0.60ns)   --->   "br label %0" [src/kernel_kernel_new.cpp:251->src/kernel_kernel_new.cpp:1810]   --->   Operation 30 'br' <Predicate = true> <Delay = 0.60>
+
+State 9 <SV = 8> <Delay = 0.64>
+ST_9 : Operation 31 [1/1] (0.00ns)   --->   "%t_V = phi i13 [ 0, %entry ], [ %i_V, %hls_label_4 ]"   --->   Operation 31 'phi' 't_V' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 32 [1/1] (0.64ns)   --->   "%icmp_ln887 = icmp eq i13 %t_V, -2048" [src/kernel_kernel_new.cpp:251->src/kernel_kernel_new.cpp:1810]   --->   Operation 32 'icmp' 'icmp_ln887' <Predicate = true> <Delay = 0.64> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 33 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6144, i64 6144, i64 6144)"   --->   Operation 33 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 34 [1/1] (0.54ns)   --->   "%i_V = add i13 %t_V, 1" [src/kernel_kernel_new.cpp:251->src/kernel_kernel_new.cpp:1810]   --->   Operation 34 'add' 'i_V' <Predicate = true> <Delay = 0.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 35 [1/1] (0.00ns)   --->   "br i1 %icmp_ln887, label %.exit, label %hls_label_4" [src/kernel_kernel_new.cpp:251->src/kernel_kernel_new.cpp:1810]   --->   Operation 35 'br' <Predicate = true> <Delay = 0.00>
+
+State 10 <SV = 9> <Delay = 2.43>
+ST_10 : Operation 36 [1/1] (2.43ns)   --->   "%mem_data_V = call i512 @_ssdm_op_Read.m_axi.i512P(i512* %B_V_addr)" [src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810]   --->   Operation 36 'read' 'mem_data_V' <Predicate = (!icmp_ln887)> <Delay = 2.43> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_V = trunc i512 %mem_data_V to i256" [src/kernel_kernel_new.cpp:257->src/kernel_kernel_new.cpp:1810]   --->   Operation 37 'trunc' 'tmp_V' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_10 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_V_91 = call i256 @_ssdm_op_PartSelect.i256.i512.i32.i32(i512 %mem_data_V, i32 256, i32 511)" [src/kernel_kernel_new.cpp:257->src/kernel_kernel_new.cpp:1810]   --->   Operation 38 'partselect' 'tmp_V_91' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 1.21>
+ST_11 : Operation 39 [1/1] (1.21ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i256P(i256* %fifo_B_local_out_V_V, i256 %tmp_V)" [src/kernel_kernel_new.cpp:259->src/kernel_kernel_new.cpp:1810]   --->   Operation 39 'write' <Predicate = (!icmp_ln887)> <Delay = 1.21> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 0> <FIFO>
+
+State 12 <SV = 11> <Delay = 1.21>
+ST_12 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str8)" [src/kernel_kernel_new.cpp:251->src/kernel_kernel_new.cpp:1810]   --->   Operation 40 'specregionbegin' 'tmp_i' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_12 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [src/kernel_kernel_new.cpp:252->src/kernel_kernel_new.cpp:1810]   --->   Operation 41 'specpipeline' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_12 : Operation 42 [1/1] (1.21ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i256P(i256* %fifo_B_local_out_V_V, i256 %tmp_V_91)" [src/kernel_kernel_new.cpp:259->src/kernel_kernel_new.cpp:1810]   --->   Operation 42 'write' <Predicate = (!icmp_ln887)> <Delay = 1.21> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 0> <FIFO>
+ST_12 : Operation 43 [1/1] (0.00ns)   --->   "%empty_672 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str8, i32 %tmp_i)" [src/kernel_kernel_new.cpp:261->src/kernel_kernel_new.cpp:1810]   --->   Operation 43 'specregionend' 'empty_672' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_12 : Operation 44 [1/1] (0.00ns)   --->   "br label %0" [src/kernel_kernel_new.cpp:251->src/kernel_kernel_new.cpp:1810]   --->   Operation 44 'br' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+
+State 13 <SV = 9> <Delay = 0.00>
+ST_13 : Operation 45 [1/1] (0.00ns)   --->   "ret void" [src/kernel_kernel_new.cpp:1810]   --->   Operation 45 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 1.22ns
+The critical path consists of the following:
+	fifo read on port 'B_V_offset' (src/kernel_kernel_new.cpp:246) [7]  (1.22 ns)
+
+ <State 2>: 2.43ns
+The critical path consists of the following:
+	'getelementptr' operation ('B_V_addr', src/kernel_kernel_new.cpp:246->src/kernel_kernel_new.cpp:1810) [10]  (0 ns)
+	bus request on port 'B_V' (src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810) [13]  (2.43 ns)
+
+ <State 3>: 2.43ns
+The critical path consists of the following:
+	bus request on port 'B_V' (src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810) [13]  (2.43 ns)
+
+ <State 4>: 2.43ns
+The critical path consists of the following:
+	bus request on port 'B_V' (src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810) [13]  (2.43 ns)
+
+ <State 5>: 2.43ns
+The critical path consists of the following:
+	bus request on port 'B_V' (src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810) [13]  (2.43 ns)
+
+ <State 6>: 2.43ns
+The critical path consists of the following:
+	bus request on port 'B_V' (src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810) [13]  (2.43 ns)
+
+ <State 7>: 2.43ns
+The critical path consists of the following:
+	bus request on port 'B_V' (src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810) [13]  (2.43 ns)
+
+ <State 8>: 2.43ns
+The critical path consists of the following:
+	bus request on port 'B_V' (src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810) [13]  (2.43 ns)
+
+ <State 9>: 0.64ns
+The critical path consists of the following:
+	'phi' operation ('i.V') with incoming values : ('i.V', src/kernel_kernel_new.cpp:251->src/kernel_kernel_new.cpp:1810) [16]  (0 ns)
+	'icmp' operation ('icmp_ln887', src/kernel_kernel_new.cpp:251->src/kernel_kernel_new.cpp:1810) [17]  (0.64 ns)
+
+ <State 10>: 2.43ns
+The critical path consists of the following:
+	bus read on port 'B_V' (src/kernel_kernel_new.cpp:255->src/kernel_kernel_new.cpp:1810) [24]  (2.43 ns)
+
+ <State 11>: 1.22ns
+The critical path consists of the following:
+	fifo write on port 'fifo_B_local_out_V_V' (src/kernel_kernel_new.cpp:259->src/kernel_kernel_new.cpp:1810) [26]  (1.22 ns)
+
+ <State 12>: 1.22ns
+The critical path consists of the following:
+	fifo write on port 'fifo_B_local_out_V_V' (src/kernel_kernel_new.cpp:259->src/kernel_kernel_new.cpp:1810) [28]  (1.22 ns)
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

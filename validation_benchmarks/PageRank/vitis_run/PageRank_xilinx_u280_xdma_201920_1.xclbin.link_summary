@@ -1,0 +1,2120 @@
+<ENTRY>
+{
+ "session": {
+  "name": "v++_link_PageRank_xilinx_u280_xdma_201920_1",
+  "pid": "0",
+  "uuid": "879357d3-b4ce-4eef-aedc-f1ce7294bdd3",
+  "description": "",
+  "timestamp": "0",
+  "outputFiles": [
+   {
+    "type": "JSON",
+    "mode": "CLIENT_ONLY",
+    "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/.tlog/v++_link_PageRank_xilinx_u280_xdma_201920_1.xtl",
+    "continuous": true
+   },
+   {
+    "type": "JSON",
+    "mode": "LOCAL_IF_NO_CONNECT",
+    "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.xclbin.link_summary",
+    "continuous": true
+   },
+   {
+    "type": "BINARY_PROTOBUF",
+    "mode": "LOCAL_IF_NO_CONNECT",
+    "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.xclbin.link_summary.pb",
+    "continuous": true
+   }
+  ]
+ },
+ "thisFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Apr 12 19:00:31 2021",
+ "timestampMillis": "1618246831157",
+ "buildStep": {
+  "cmdId": "f70fd153-c60e-484c-8adf-9847c65b5312",
+  "name": "v++",
+  "logFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/link.steps.log",
+  "commandLine": "/xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"vivado_prop:run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --xp vivado_prop:run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --xp vivado_prop:run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --xp vivado_param:project.writeIntermediateCheckpoints=1 --xp \"misc:report=type report_utilization name synth_report_utilization_summary steps {synth_design} runs {__KERNEL__} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_init_design_summary steps {init_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_init_design_summary steps {init_design} runs {impl_1} options {-max_paths 10}\" --xp \"param:compiler.reportFailfast=pre_opt_design {__KERNEL_NAMES__} post_opt_design {__OCL_TOP__} post_route_design {__SLR__}\" --xp \"misc:report=type report_io name impl_report_io_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_control_sets name impl_report_control_sets_place_design_summary steps {place_design} runs {impl_1} options {-verbose}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_place_design_summary steps {place_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_drc name impl_report_drc_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_methodology name impl_report_methodology_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_power name impl_report_power_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_route_status name impl_report_route_status_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_clock_utilization name impl_report_clock_utilization_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_bus_skew name impl_report_bus_skew_route_design_summary steps {route_design} runs {impl_1} options {-warn_on_violation}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --link --output /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.xclbin --kernel PageRank --platform xilinx_u280_xdma_201920_1 --target hw --report_level 2 --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp --optimize 3 --connectivity.nk PageRank:1:PageRank --max_memory_ports PageRank --save-temps /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/PageRank_FP1.xo --connectivity.sp PageRank.edges_0:HBM[0] --connectivity.sp PageRank.edges_1:HBM[3] --connectivity.sp PageRank.edges_2:HBM[6] --connectivity.sp PageRank.edges_3:HBM[9] --connectivity.sp PageRank.edges_4:HBM[12] --connectivity.sp PageRank.edges_5:HBM[15] --connectivity.sp PageRank.edges_6:HBM[18] --connectivity.sp PageRank.edges_7:HBM[21] --connectivity.sp PageRank.updates_0:HBM[2] --connectivity.sp PageRank.updates_1:HBM[5] --connectivity.sp PageRank.updates_2:HBM[8] --connectivity.sp PageRank.updates_3:HBM[11] --connectivity.sp PageRank.updates_4:HBM[14] --connectivity.sp PageRank.updates_5:HBM[17] --connectivity.sp PageRank.updates_6:HBM[20] --connectivity.sp PageRank.updates_7:HBM[23] --connectivity.sp PageRank.metadata:PLRAM[0] --connectivity.sp PageRank.degrees:HBM[24] --connectivity.sp PageRank.rankings:HBM[26] --connectivity.sp PageRank.tmps:HBM[27] --kernel_frequency 250 --vivado.prop run.impl_1.STEPS.PLACE_DESIGN.ARGS.DIRECTIVE=EarlyBlockPlacement --vivado.prop run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/constraint_ref.tcl ",
+  "args": [
+   "--link",
+   "--output",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.xclbin",
+   "--kernel",
+   "PageRank",
+   "--platform",
+   "xilinx_u280_xdma_201920_1",
+   "--target",
+   "hw",
+   "--report_level",
+   "2",
+   "--temp_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp",
+   "--optimize",
+   "3",
+   "--connectivity.nk",
+   "PageRank:1:PageRank",
+   "--max_memory_ports",
+   "PageRank",
+   "--save-temps",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/PageRank_FP1.xo",
+   "--connectivity.sp",
+   "PageRank.edges_0:HBM[0]",
+   "--connectivity.sp",
+   "PageRank.edges_1:HBM[3]",
+   "--connectivity.sp",
+   "PageRank.edges_2:HBM[6]",
+   "--connectivity.sp",
+   "PageRank.edges_3:HBM[9]",
+   "--connectivity.sp",
+   "PageRank.edges_4:HBM[12]",
+   "--connectivity.sp",
+   "PageRank.edges_5:HBM[15]",
+   "--connectivity.sp",
+   "PageRank.edges_6:HBM[18]",
+   "--connectivity.sp",
+   "PageRank.edges_7:HBM[21]",
+   "--connectivity.sp",
+   "PageRank.updates_0:HBM[2]",
+   "--connectivity.sp",
+   "PageRank.updates_1:HBM[5]",
+   "--connectivity.sp",
+   "PageRank.updates_2:HBM[8]",
+   "--connectivity.sp",
+   "PageRank.updates_3:HBM[11]",
+   "--connectivity.sp",
+   "PageRank.updates_4:HBM[14]",
+   "--connectivity.sp",
+   "PageRank.updates_5:HBM[17]",
+   "--connectivity.sp",
+   "PageRank.updates_6:HBM[20]",
+   "--connectivity.sp",
+   "PageRank.updates_7:HBM[23]",
+   "--connectivity.sp",
+   "PageRank.metadata:PLRAM[0]",
+   "--connectivity.sp",
+   "PageRank.degrees:HBM[24]",
+   "--connectivity.sp",
+   "PageRank.rankings:HBM[26]",
+   "--connectivity.sp",
+   "PageRank.tmps:HBM[27]",
+   "--kernel_frequency",
+   "250",
+   "--vivado.prop",
+   "run.impl_1.STEPS.PLACE_DESIGN.ARGS.DIRECTIVE=EarlyBlockPlacement",
+   "--vivado.prop",
+   "run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/constraint_ref.tcl"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Apr 12 19:00:31 2021",
+ "timestampMillis": "1618246831157",
+ "status": {
+  "cmdId": "f70fd153-c60e-484c-8adf-9847c65b5312",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Apr 12 19:00:39 2021",
+ "timestampMillis": "1618246839425",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_xdma_201920_1.xpfm",
+  "hardwareDsa": "xilinx_u280_xdma_201920_1.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_xdma_201920_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "PageRank_xilinx_u280_xdma_201920_1",
+    "file": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.xclbin",
+    "reports": []
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "PageRank",
+     "file": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/PageRank_FP1.xo",
+     "reports": []
+    },
+    "sources": [],
+    "cuNames": [
+     "PageRank"
+    ]
+   }
+  ]
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Apr 12 19:00:39 2021",
+ "timestampMillis": "1618246839574",
+ "buildStep": {
+  "cmdId": "a7a47aa2-85d8-4785-a55a-beb41e5d736f",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/PageRank_FP1.xo -keep --config /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_xdma_201920_1/xilinx_u280_xdma_201920_1.xpfm --target hw --output_dir /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/PageRank_FP1.xo",
+   "-keep",
+   "--config",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u280_xdma_201920_1/xilinx_u280_xdma_201920_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int",
+   "--temp_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/sys_link"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Apr 12 19:00:39 2021",
+ "timestampMillis": "1618246839575",
+ "status": {
+  "cmdId": "a7a47aa2-85d8-4785-a55a-beb41e5d736f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Apr 12 19:00:53 2021",
+ "timestampMillis": "1618246853876",
+ "status": {
+  "cmdId": "a7a47aa2-85d8-4785-a55a-beb41e5d736f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Apr 12 19:00:53 2021",
+ "timestampMillis": "1618246853877",
+ "buildStep": {
+  "cmdId": "a54d7c61-53e0-49d8-8a1d-dce27607c248",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/sdsl.dat -rtd /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/cf2sw.rtd -xclbin /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/xclbin_orig.xml -o /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/sdsl.dat",
+   "-rtd",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/cf2sw.rtd",
+   "-xclbin",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Apr 12 19:00:53 2021",
+ "timestampMillis": "1618246853878",
+ "status": {
+  "cmdId": "a54d7c61-53e0-49d8-8a1d-dce27607c248",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Apr 12 19:00:56 2021",
+ "timestampMillis": "1618246856339",
+ "status": {
+  "cmdId": "a54d7c61-53e0-49d8-8a1d-dce27607c248",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Apr 12 19:00:56 2021",
+ "timestampMillis": "1618246856340",
+ "buildStep": {
+  "cmdId": "2954f26f-72e9-4093-93b6-159ece9627b6",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram --rtdJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/cf2sw.rtd --diagramJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModel.json --platformFilePath /opt/xilinx/platforms/xilinx_u280_xdma_201920_1/xilinx_u280_xdma_201920_1.xpfm --generatedByName v++ --generatedByVersion 2019.2.1 --generatedByChangeList 2729669 --generatedByTimeStamp Thu Dec  5 04:48:12 MST 2019 --generatedByOptions /xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ --link --output /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.xclbin --kernel PageRank --platform xilinx_u280_xdma_201920_1 --target hw --report_level 2 --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp --optimize 3 --connectivity.nk PageRank:1:PageRank --max_memory_ports PageRank --save-temps /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/PageRank_FP1.xo --connectivity.sp PageRank.edges_0:HBM[0] --connectivity.sp PageRank.edges_1:HBM[3] --connectivity.sp PageRank.edges_2:HBM[6] --connectivity.sp PageRank.edges_3:HBM[9] --connectivity.sp PageRank.edges_4:HBM[12] --connectivity.sp PageRank.edges_5:HBM[15] --connectivity.sp PageRank.edges_6:HBM[18] --connectivity.sp PageRank.edges_7:HBM[21] --connectivity.sp PageRank.updates_0:HBM[2] --connectivity.sp PageRank.updates_1:HBM[5] --connectivity.sp PageRank.updates_2:HBM[8] --connectivity.sp PageRank.updates_3:HBM[11] --connectivity.sp PageRank.updates_4:HBM[14] --connectivity.sp PageRank.updates_5:HBM[17] --connectivity.sp PageRank.updates_6:HBM[20] --connectivity.sp PageRank.updates_7:HBM[23] --connectivity.sp PageRank.metadata:PLRAM[0] --connectivity.sp PageRank.degrees:HBM[24] --connectivity.sp PageRank.rankings:HBM[26] --connectivity.sp PageRank.tmps:HBM[27] --kernel_frequency 250 --vivado.prop run.impl_1.STEPS.PLACE_DESIGN.ARGS.DIRECTIVE=EarlyBlockPlacement --vivado.prop run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/constraint_ref.tcl  --generatedByXclbinName PageRank_xilinx_u280_xdma_201920_1 --kernelInfoDataFileName /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/kernel_info.dat",
+  "args": [
+   "--rtdJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/cf2sw.rtd",
+   "--diagramJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModel.json",
+   "--platformFilePath",
+   "/opt/xilinx/platforms/xilinx_u280_xdma_201920_1/xilinx_u280_xdma_201920_1.xpfm",
+   "--generatedByName",
+   "v++",
+   "--generatedByVersion",
+   "2019.2.1",
+   "--generatedByChangeList",
+   "2729669",
+   "--generatedByTimeStamp",
+   "Thu Dec  5 04:48:12 MST 2019",
+   "--generatedByOptions",
+   "/xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ --link --output /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.xclbin --kernel PageRank --platform xilinx_u280_xdma_201920_1 --target hw --report_level 2 --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp --optimize 3 --connectivity.nk PageRank:1:PageRank --max_memory_ports PageRank --save-temps /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/PageRank_FP1.xo --connectivity.sp PageRank.edges_0:HBM[0] --connectivity.sp PageRank.edges_1:HBM[3] --connectivity.sp PageRank.edges_2:HBM[6] --connectivity.sp PageRank.edges_3:HBM[9] --connectivity.sp PageRank.edges_4:HBM[12] --connectivity.sp PageRank.edges_5:HBM[15] --connectivity.sp PageRank.edges_6:HBM[18] --connectivity.sp PageRank.edges_7:HBM[21] --connectivity.sp PageRank.updates_0:HBM[2] --connectivity.sp PageRank.updates_1:HBM[5] --connectivity.sp PageRank.updates_2:HBM[8] --connectivity.sp PageRank.updates_3:HBM[11] --connectivity.sp PageRank.updates_4:HBM[14] --connectivity.sp PageRank.updates_5:HBM[17] --connectivity.sp PageRank.updates_6:HBM[20] --connectivity.sp PageRank.updates_7:HBM[23] --connectivity.sp PageRank.metadata:PLRAM[0] --connectivity.sp PageRank.degrees:HBM[24] --connectivity.sp PageRank.rankings:HBM[26] --connectivity.sp PageRank.tmps:HBM[27] --kernel_frequency 250 --vivado.prop run.impl_1.STEPS.PLACE_DESIGN.ARGS.DIRECTIVE=EarlyBlockPlacement --vivado.prop run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/constraint_ref.tcl ",
+   "--generatedByXclbinName",
+   "PageRank_xilinx_u280_xdma_201920_1",
+   "--kernelInfoDataFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/kernel_info.dat"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Apr 12 19:00:56 2021",
+ "timestampMillis": "1618246856341",
+ "status": {
+  "cmdId": "2954f26f-72e9-4093-93b6-159ece9627b6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Apr 12 19:00:58 2021",
+ "timestampMillis": "1618246858010",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Apr 12 19:00:58 2021",
+ "timestampMillis": "1618246858016",
+ "status": {
+  "cmdId": "2954f26f-72e9-4093-93b6-159ece9627b6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Apr 12 19:00:58 2021",
+ "timestampMillis": "1618246858017",
+ "buildStep": {
+  "cmdId": "21c67ddb-1044-4046-a829-1350f1b15e16",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u280_xdma_201920_1 --kernel_frequency 250 -s --output_dir /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int --log_dir /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/logs/link --report_dir /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link --config /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/vplConfig.ini -k /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link --no-info --tlog_dir /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/.tlog/v++_link_PageRank_xilinx_u280_xdma_201920_1 --iprepo /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/xo/ip_repo/haoda_xrtl_PageRank_1_0 --messageDb /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/run_link/vpl.pb /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u280_xdma_201920_1",
+   "--kernel_frequency",
+   "250",
+   "-s",
+   "--output_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int",
+   "--log_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/logs/link",
+   "--report_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link",
+   "--config",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/vplConfig.ini",
+   "-k",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link",
+   "--no-info",
+   "--tlog_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/.tlog/v++_link_PageRank_xilinx_u280_xdma_201920_1",
+   "--iprepo",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/xo/ip_repo/haoda_xrtl_PageRank_1_0",
+   "--messageDb",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/run_link/vpl.pb",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Apr 12 19:00:58 2021",
+ "timestampMillis": "1618246858018",
+ "status": {
+  "cmdId": "21c67ddb-1044-4046-a829-1350f1b15e16",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Apr 12 19:00:59 2021",
+ "timestampMillis": "1618246859516",
+ "buildStep": {
+  "cmdId": "1b8b5f8a-7dcc-4a34-bed8-e39e9bb2861b",
+  "name": "vpl",
+  "logFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/link.steps.log",
+  "commandLine": "/xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u280_xdma_201920_1 --kernel_frequency 250 -s --output_dir /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int --log_dir /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/logs/link --report_dir /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link --config /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/vplConfig.ini -k /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link --no-info --tlog_dir /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/.tlog/v++_link_PageRank_xilinx_u280_xdma_201920_1 --iprepo /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/xo/ip_repo/haoda_xrtl_PageRank_1_0 --messageDb /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/run_link/vpl.pb /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Apr 12 19:00:59 2021",
+ "timestampMillis": "1618246859516",
+ "status": {
+  "cmdId": "1b8b5f8a-7dcc-4a34-bed8-e39e9bb2861b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Apr 12 19:01:10 2021",
+ "timestampMillis": "1618246870534",
+ "buildStep": {
+  "cmdId": "a85ba931-71b6-476c-bfbd-c9ba2ea9c9c8",
+  "name": "vivado",
+  "logFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Apr 12 19:01:10 2021",
+ "timestampMillis": "1618246870534",
+ "status": {
+  "cmdId": "a85ba931-71b6-476c-bfbd-c9ba2ea9c9c8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Apr 13 07:46:22 2021",
+ "timestampMillis": "1618292782946",
+ "status": {
+  "cmdId": "a85ba931-71b6-476c-bfbd-c9ba2ea9c9c8",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:25 2021",
+ "timestampMillis": "1618292785852",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_util_and2_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:25 2021",
+ "timestampMillis": "1618292785883",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:25 2021",
+ "timestampMillis": "1618292785884",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:25 2021",
+ "timestampMillis": "1618292785893",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_dataclk_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:25 2021",
+ "timestampMillis": "1618292785906",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_axi_vip_data_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:25 2021",
+ "timestampMillis": "1618292785926",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_data_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:25 2021",
+ "timestampMillis": "1618292785935",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_control_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:25 2021",
+ "timestampMillis": "1618292785935",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_logic_reset_op_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:25 2021",
+ "timestampMillis": "1618292785951",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_axi_vip_ctrl_userpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:25 2021",
+ "timestampMillis": "1618292785972",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:25 2021",
+ "timestampMillis": "1618292785989",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_memory_subsystem_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:25 2021",
+ "timestampMillis": "1618292785995",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_init_combine_mss_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786014",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786027",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786043",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_axi_gpio_null_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786060",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_hmss_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786076",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_debug_bridge_xsdbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786091",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_axilite_user_input_reg_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786104",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_xbar_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786116",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_ebbe_xsdbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786136",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_ebbe_lut_buffer_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786155",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_PageRank_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786169",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_xbar_4_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786184",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_axi_cdc_xdma_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786196",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_control_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786214",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_data_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786230",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_dataclk_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786250",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786270",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel2_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786285",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_sdx_mss_regslice_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786299",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_logic_reset_op_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786308",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_control_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786321",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_data_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786331",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_dataclk_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786345",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786359",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel2_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786371",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_freq_counter_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786380",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_xdma_smartconnect_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786380",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_m00_regslice_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786397",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_xbar_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786409",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_plram_mem00_memory_init_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786421",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_m01_regslice_10_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786421",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_s00_regslice_15_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786435",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_auto_cc_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786451",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_m01_regslice_12_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786468",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_hbm_reset_sync_SLR2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786485",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_vip_S04_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786500",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect5_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786510",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_slice8_12_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786526",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect9_13_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786538",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect12_2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786541",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_auto_cc_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786556",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect13_5_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786574",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect7_8_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786587",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_hbm_inst_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786604",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_vip_S00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786618",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_axi_apb_bridge_inst_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786632",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_util_vector_logic_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786642",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect4_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786656",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect14_9_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786674",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect8_12_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786675",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect15_10_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786684",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect6_4_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786685",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect16_14_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786686",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect0_15_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786704",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_slice0_15_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786713",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect10_16_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786714",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect17_17_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786722",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect11_20_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786723",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect18_21_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786726",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect19_22_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786740",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect1_24_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786753",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect2_25_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786765",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect3_26_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786782",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_init_reduce_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786801",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_psr_aclk_SLR0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786817",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_psr_aclk_SLR1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786830",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_interconnect_PLRAM_MEM00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786843",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_vip_S00_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786859",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_vip_S01_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786880",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_plram_mem00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786881",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_plram_mem00_bram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786897",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_interconnect_ddrmem_ctrl_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786912",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_psr_ctrl_interconnect_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786926",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_vip_PLRAM_MEM00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:26 2021",
+ "timestampMillis": "1618292786934",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/init_report_utilization_0.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787037",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_timing_summary_init.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787060",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_io_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_IO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787068",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_utilization_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787068",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_utilization_placed.rpt",
+  "name": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787171",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_control_sets_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_CONTROL_SETS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787262",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_timing_summary_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787291",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_drc_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_DRC"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787292",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_methodology_drc_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_METHODOLOGY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787292",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_power_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_POWER"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787292",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_route_status.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_ROUTE_STATUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787299",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787299",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_clock_utilization_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_CLOCK_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787299",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_clock_utilization_routed.rpt",
+  "name": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_clock",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787303",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_bus_skew_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_BUS_SKEW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787310",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_timing_summary_postroute_physopted.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Apr 13 07:46:27 2021",
+ "timestampMillis": "1618292787535",
+ "status": {
+  "cmdId": "1b8b5f8a-7dcc-4a34-bed8-e39e9bb2861b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Apr 13 07:46:28 2021",
+ "timestampMillis": "1618292788567",
+ "status": {
+  "cmdId": "21c67ddb-1044-4046-a829-1350f1b15e16",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Apr 13 07:46:28 2021",
+ "timestampMillis": "1618292788687",
+ "buildStep": {
+  "cmdId": "879ccc05-1424-4dea-b001-bf2a9105d2af",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Apr 13 07:46:28 2021",
+ "timestampMillis": "1618292788688",
+ "status": {
+  "cmdId": "879ccc05-1424-4dea-b001-bf2a9105d2af",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:28 2021",
+ "timestampMillis": "1618292788812",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Apr 13 07:46:28 2021",
+ "timestampMillis": "1618292788961",
+ "buildStep": {
+  "cmdId": "542f38c5-455c-4947-aecb-cb2c7a7af990",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/address_map.xml -sdsl /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/sdsl.dat -xclbin /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/xclbin_orig.xml -rtd /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.rtd -o /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.xml",
+  "args": [
+   "-a",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/address_map.xml",
+   "-sdsl",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.rtd",
+   "-o",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.xml"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Apr 13 07:46:28 2021",
+ "timestampMillis": "1618292788961",
+ "status": {
+  "cmdId": "542f38c5-455c-4947-aecb-cb2c7a7af990",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Apr 13 07:46:32 2021",
+ "timestampMillis": "1618292792022",
+ "status": {
+  "cmdId": "542f38c5-455c-4947-aecb-cb2c7a7af990",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Apr 13 07:46:32 2021",
+ "timestampMillis": "1618292792054",
+ "buildStep": {
+  "cmdId": "7d40573f-d0f7-4614-9f32-bba0144a2372",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram --rtdJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.rtd --diagramJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModel.json --diagramWithAddressesAndSlrsJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModelSlrBaseAddress.json",
+  "args": [
+   "--rtdJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.rtd",
+   "--diagramJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModel.json",
+   "--diagramWithAddressesAndSlrsJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Apr 13 07:46:32 2021",
+ "timestampMillis": "1618292792054",
+ "status": {
+  "cmdId": "7d40573f-d0f7-4614-9f32-bba0144a2372",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:33 2021",
+ "timestampMillis": "1618292793850",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Apr 13 07:46:33 2021",
+ "timestampMillis": "1618292793963",
+ "status": {
+  "cmdId": "7d40573f-d0f7-4614-9f32-bba0144a2372",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Apr 13 07:46:33 2021",
+ "timestampMillis": "1618292793964",
+ "status": {
+  "cmdId": "879ccc05-1424-4dea-b001-bf2a9105d2af",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Apr 13 07:46:33 2021",
+ "timestampMillis": "1618292793972",
+ "buildStep": {
+  "cmdId": "61f1a55f-bf6e-49f7-acd7-19836cb94d14",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section BITSTREAM:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/partial.bit --force --key-value SYS:mode:hw_pr --add-section :JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.rtd --append-section :JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1_xml.rtd --add-section BUILD_METADATA:JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.xml --add-section SYSTEM_METADATA:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModelSlrBaseAddress.json --output /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/partial.bit",
+   "--force",
+   "--key-value",
+   "SYS:mode:hw_pr",
+   "--add-section",
+   ":JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.rtd",
+   "--append-section",
+   ":JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--output",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.xclbin"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Apr 13 07:46:33 2021",
+ "timestampMillis": "1618292793977",
+ "status": {
+  "cmdId": "61f1a55f-bf6e-49f7-acd7-19836cb94d14",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Apr 13 07:46:34 2021",
+ "timestampMillis": "1618292794196",
+ "status": {
+  "cmdId": "61f1a55f-bf6e-49f7-acd7-19836cb94d14",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Apr 13 07:46:34 2021",
+ "timestampMillis": "1618292794197",
+ "buildStep": {
+  "cmdId": "54e9e67d-0317-4b1e-a9c7-074135329666",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --info /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.xclbin.info --input /home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.xclbin",
+  "args": [
+   "--quiet",
+   "--info",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.xclbin.info",
+   "--input",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/link/int/PageRank_xilinx_u280_xdma_201920_1.xclbin"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Apr 13 07:46:34 2021",
+ "timestampMillis": "1618292794197",
+ "status": {
+  "cmdId": "54e9e67d-0317-4b1e-a9c7-074135329666",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Apr 13 07:46:34 2021",
+ "timestampMillis": "1618292794661",
+ "status": {
+  "cmdId": "54e9e67d-0317-4b1e-a9c7-074135329666",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:34 2021",
+ "timestampMillis": "1618292794795",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/system_estimate_PageRank_xilinx_u280_xdma_201920_1.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:35 2021",
+ "timestampMillis": "1618292795459",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/reports/link/v++_link_PageRank_xilinx_u280_xdma_201920_1_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:35 2021",
+ "timestampMillis": "1618292795459",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/v++_link_PageRank_xilinx_u280_xdma_201920_1_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Apr 13 07:46:37 2021",
+ "timestampMillis": "1618292797922",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/PageRank/vitis_run/PageRank_xilinx_u280_xdma_201920_1.temp/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Apr 13 07:46:37 2021",
+ "timestampMillis": "1618292797932",
+ "status": {
+  "cmdId": "f70fd153-c60e-484c-8adf-9847c65b5312",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

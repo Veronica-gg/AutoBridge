@@ -1,0 +1,518 @@
+<ENTRY>
+{
+ "session": {
+  "name": "v++_link_kernel3_xilinx_u250_xdma_201830_2",
+  "pid": "0",
+  "uuid": "0eae849f-8987-49f5-8034-d924070a8a33",
+  "description": "",
+  "timestamp": "0",
+  "outputFiles": [
+   {
+    "type": "JSON",
+    "mode": "CLIENT_ONLY",
+    "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/.tlog/v++_link_kernel3_xilinx_u250_xdma_201830_2.xtl",
+    "continuous": true
+   },
+   {
+    "type": "JSON",
+    "mode": "LOCAL_IF_NO_CONNECT",
+    "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.xclbin.link_summary",
+    "continuous": true
+   },
+   {
+    "type": "BINARY_PROTOBUF",
+    "mode": "LOCAL_IF_NO_CONNECT",
+    "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.xclbin.link_summary.pb",
+    "continuous": true
+   }
+  ]
+ },
+ "thisFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Jun 10 11:58:54 2021",
+ "timestampMillis": "1623319134069",
+ "buildStep": {
+  "cmdId": "31b7b97f-6b1b-4b56-9f29-494d23da7350",
+  "name": "v++",
+  "logFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/link.steps.log",
+  "commandLine": "/xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"vivado_prop:run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --xp vivado_prop:run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --xp vivado_prop:run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --xp vivado_param:project.writeIntermediateCheckpoints=1 --xp \"misc:report=type report_utilization name synth_report_utilization_summary steps {synth_design} runs {__KERNEL__} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_init_design_summary steps {init_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_init_design_summary steps {init_design} runs {impl_1} options {-max_paths 10}\" --xp \"param:compiler.reportFailfast=pre_opt_design {__KERNEL_NAMES__} post_opt_design {__OCL_TOP__} post_route_design {__SLR__}\" --xp \"misc:report=type report_io name impl_report_io_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_control_sets name impl_report_control_sets_place_design_summary steps {place_design} runs {impl_1} options {-verbose}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_place_design_summary steps {place_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_drc name impl_report_drc_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_methodology name impl_report_methodology_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_power name impl_report_power_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_route_status name impl_report_route_status_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_clock_utilization name impl_report_clock_utilization_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_bus_skew name impl_report_bus_skew_route_design_summary steps {route_design} runs {impl_1} options {-warn_on_violation}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --link --output /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.xclbin --kernel kernel3 --platform xilinx_u250_xdma_201830_2 --target hw --report_level 2 --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp --optimize 3 --connectivity.nk kernel3:1:kernel3_1 --max_memory_ports kernel3 --save-temps /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/polysa.xo --connectivity.sp kernel3_1.A:DDR[0] --connectivity.sp kernel3_1.B:DDR[1] --connectivity.sp kernel3_1.C:DDR[3] --kernel_frequency 330 --vivado.prop run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/constraint.tcl ",
+  "args": [
+   "--link",
+   "--output",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.xclbin",
+   "--kernel",
+   "kernel3",
+   "--platform",
+   "xilinx_u250_xdma_201830_2",
+   "--target",
+   "hw",
+   "--report_level",
+   "2",
+   "--temp_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp",
+   "--optimize",
+   "3",
+   "--connectivity.nk",
+   "kernel3:1:kernel3_1",
+   "--max_memory_ports",
+   "kernel3",
+   "--save-temps",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/polysa.xo",
+   "--connectivity.sp",
+   "kernel3_1.A:DDR[0]",
+   "--connectivity.sp",
+   "kernel3_1.B:DDR[1]",
+   "--connectivity.sp",
+   "kernel3_1.C:DDR[3]",
+   "--kernel_frequency",
+   "330",
+   "--vivado.prop",
+   "run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/constraint.tcl"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jun 10 11:58:54 2021",
+ "timestampMillis": "1623319134070",
+ "status": {
+  "cmdId": "31b7b97f-6b1b-4b56-9f29-494d23da7350",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Jun 10 11:59:10 2021",
+ "timestampMillis": "1623319150949",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u250_xdma_201830_2.xpfm",
+  "hardwareDsa": "xilinx_u250_xdma_201830_2.dsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u250_xdma_201830_2",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "kernel3_xilinx_u250_xdma_201830_2",
+    "file": "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.xclbin",
+    "reports": []
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "kernel3",
+     "file": "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/polysa.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/xo/kernel3/kernel3/cpu_sources/kernel_kernel_new.cpp"
+    ],
+    "cuNames": [
+     "kernel3_1"
+    ]
+   }
+  ]
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jun 10 11:59:11 2021",
+ "timestampMillis": "1623319151324",
+ "buildStep": {
+  "cmdId": "dc6c9cee-45ea-46df-939e-9ef74df435c7",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/polysa.xo -keep --config /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm --target hw --output_dir /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/polysa.xo",
+   "-keep",
+   "--config",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int",
+   "--temp_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/sys_link"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jun 10 11:59:11 2021",
+ "timestampMillis": "1623319151324",
+ "status": {
+  "cmdId": "dc6c9cee-45ea-46df-939e-9ef74df435c7",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jun 10 11:59:20 2021",
+ "timestampMillis": "1623319160701",
+ "status": {
+  "cmdId": "dc6c9cee-45ea-46df-939e-9ef74df435c7",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jun 10 11:59:20 2021",
+ "timestampMillis": "1623319160702",
+ "buildStep": {
+  "cmdId": "4386d594-9c93-4c94-8a9f-1534200fab5e",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/sdsl.dat -rtd /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/cf2sw.rtd -xclbin /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/xclbin_orig.xml -o /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/sdsl.dat",
+   "-rtd",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/cf2sw.rtd",
+   "-xclbin",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jun 10 11:59:20 2021",
+ "timestampMillis": "1623319160702",
+ "status": {
+  "cmdId": "4386d594-9c93-4c94-8a9f-1534200fab5e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jun 10 11:59:21 2021",
+ "timestampMillis": "1623319161774",
+ "status": {
+  "cmdId": "4386d594-9c93-4c94-8a9f-1534200fab5e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jun 10 11:59:21 2021",
+ "timestampMillis": "1623319161775",
+ "buildStep": {
+  "cmdId": "a79d956e-3750-4e6d-9a46-3d57baaa55c4",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram --rtdJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/cf2sw.rtd --diagramJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/systemDiagramModel.json --platformFilePath /opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm --generatedByName v++ --generatedByVersion 2019.2.1 --generatedByChangeList 2729669 --generatedByTimeStamp Thu Dec  5 04:48:12 MST 2019 --generatedByOptions /xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ --link --output /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.xclbin --kernel kernel3 --platform xilinx_u250_xdma_201830_2 --target hw --report_level 2 --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp --optimize 3 --connectivity.nk kernel3:1:kernel3_1 --max_memory_ports kernel3 --save-temps /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/polysa.xo --connectivity.sp kernel3_1.A:DDR[0] --connectivity.sp kernel3_1.B:DDR[1] --connectivity.sp kernel3_1.C:DDR[3] --kernel_frequency 330 --vivado.prop run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/constraint.tcl  --generatedByXclbinName kernel3_xilinx_u250_xdma_201830_2 --kernelInfoDataFileName /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/kernel_info.dat",
+  "args": [
+   "--rtdJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/cf2sw.rtd",
+   "--diagramJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/systemDiagramModel.json",
+   "--platformFilePath",
+   "/opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm",
+   "--generatedByName",
+   "v++",
+   "--generatedByVersion",
+   "2019.2.1",
+   "--generatedByChangeList",
+   "2729669",
+   "--generatedByTimeStamp",
+   "Thu Dec  5 04:48:12 MST 2019",
+   "--generatedByOptions",
+   "/xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ --link --output /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.xclbin --kernel kernel3 --platform xilinx_u250_xdma_201830_2 --target hw --report_level 2 --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp --optimize 3 --connectivity.nk kernel3:1:kernel3_1 --max_memory_ports kernel3 --save-temps /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/polysa.xo --connectivity.sp kernel3_1.A:DDR[0] --connectivity.sp kernel3_1.B:DDR[1] --connectivity.sp kernel3_1.C:DDR[3] --kernel_frequency 330 --vivado.prop run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/constraint.tcl ",
+   "--generatedByXclbinName",
+   "kernel3_xilinx_u250_xdma_201830_2",
+   "--kernelInfoDataFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/kernel_info.dat"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jun 10 11:59:21 2021",
+ "timestampMillis": "1623319161775",
+ "status": {
+  "cmdId": "a79d956e-3750-4e6d-9a46-3d57baaa55c4",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jun 10 11:59:23 2021",
+ "timestampMillis": "1623319163601",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jun 10 11:59:23 2021",
+ "timestampMillis": "1623319163608",
+ "status": {
+  "cmdId": "a79d956e-3750-4e6d-9a46-3d57baaa55c4",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jun 10 11:59:23 2021",
+ "timestampMillis": "1623319163609",
+ "buildStep": {
+  "cmdId": "78ce96dc-d5ab-4a41-b9af-bfd822d590c2",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u250_xdma_201830_2 --kernel_frequency 330 -s --output_dir /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int --log_dir /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/logs/link --report_dir /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/reports/link --config /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/vplConfig.ini -k /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link --no-info --tlog_dir /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/.tlog/v++_link_kernel3_xilinx_u250_xdma_201830_2 --iprepo /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/xo/ip_repo/xilinx_com_hls_kernel3_1_0 --messageDb /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/run_link/vpl.pb /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u250_xdma_201830_2",
+   "--kernel_frequency",
+   "330",
+   "-s",
+   "--output_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int",
+   "--log_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/logs/link",
+   "--report_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/reports/link",
+   "--config",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/vplConfig.ini",
+   "-k",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link",
+   "--no-info",
+   "--tlog_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/.tlog/v++_link_kernel3_xilinx_u250_xdma_201830_2",
+   "--iprepo",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/xo/ip_repo/xilinx_com_hls_kernel3_1_0",
+   "--messageDb",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/run_link/vpl.pb",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jun 10 11:59:23 2021",
+ "timestampMillis": "1623319163610",
+ "status": {
+  "cmdId": "78ce96dc-d5ab-4a41-b9af-bfd822d590c2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Jun 10 11:59:25 2021",
+ "timestampMillis": "1623319165102",
+ "buildStep": {
+  "cmdId": "b7fd7b9e-de07-468c-85f9-417a9f4c55be",
+  "name": "vpl",
+  "logFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/link.steps.log",
+  "commandLine": "/xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u250_xdma_201830_2 --kernel_frequency 330 -s --output_dir /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int --log_dir /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/logs/link --report_dir /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/reports/link --config /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/vplConfig.ini -k /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link --no-info --tlog_dir /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/.tlog/v++_link_kernel3_xilinx_u250_xdma_201830_2 --iprepo /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/xo/ip_repo/xilinx_com_hls_kernel3_1_0 --messageDb /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/run_link/vpl.pb /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jun 10 11:59:25 2021",
+ "timestampMillis": "1623319165103",
+ "status": {
+  "cmdId": "b7fd7b9e-de07-468c-85f9-417a9f4c55be",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Jun 10 11:59:38 2021",
+ "timestampMillis": "1623319178217",
+ "buildStep": {
+  "cmdId": "4c7d4645-2f87-4e01-82c0-66f0b2efdc8d",
+  "name": "vivado",
+  "logFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jun 10 11:59:38 2021",
+ "timestampMillis": "1623319178218",
+ "status": {
+  "cmdId": "4c7d4645-2f87-4e01-82c0-66f0b2efdc8d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jun 10 15:29:26 2021",
+ "timestampMillis": "1623331766989",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/link/vivado/vpl/output/systemDiagramModel_synthed.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jun 10 16:34:53 2021",
+ "timestampMillis": "1623335693121",
+ "status": {
+  "cmdId": "4c7d4645-2f87-4e01-82c0-66f0b2efdc8d",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jun 10 16:34:59 2021",
+ "timestampMillis": "1623335699498",
+ "status": {
+  "cmdId": "b7fd7b9e-de07-468c-85f9-417a9f4c55be",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jun 10 16:35:01 2021",
+ "timestampMillis": "1623335701931",
+ "status": {
+  "cmdId": "78ce96dc-d5ab-4a41-b9af-bfd822d590c2",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jun 10 16:35:10 2021",
+ "timestampMillis": "1623335710775",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/reports/link/v++_link_kernel3_xilinx_u250_xdma_201830_2_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jun 10 16:35:10 2021",
+ "timestampMillis": "1623335710895",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/v++_link_kernel3_xilinx_u250_xdma_201830_2_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Jun 10 16:36:04 2021",
+ "timestampMillis": "1623335764153",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/vitis_run/kernel3_xilinx_u250_xdma_201830_2.temp/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Jun 10 16:36:04 2021",
+ "timestampMillis": "1623335764196",
+ "status": {
+  "cmdId": "31b7b97f-6b1b-4b56-9f29-494d23da7350",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>

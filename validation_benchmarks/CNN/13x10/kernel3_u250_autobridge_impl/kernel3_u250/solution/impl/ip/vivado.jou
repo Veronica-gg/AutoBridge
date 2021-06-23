@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Thu Jun 10 11:58:13 2021
+# Process ID: 27045
+# Current directory: /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/kernel3_u250/solution/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/kernel3_u250/solution/impl/ip/vivado.log
+# Journal file: /home/users/veronica.grosso/AutoBridge/benchmarks/CNN/13x10/kernel3_u250_autobridge_impl/kernel3_u250/solution/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

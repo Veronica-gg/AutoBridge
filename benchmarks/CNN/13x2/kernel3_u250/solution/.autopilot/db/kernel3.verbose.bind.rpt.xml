@@ -1,0 +1,133 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'kernel3'" level="0">
+<item name = "Date">Mon Jun 14 18:54:35 2021
+</item>
+<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Project">kernel3_u250</item>
+<item name = "Solution">solution</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu250-figd2104-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 2.433 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">36883, 40989, 0.123 ms, 0.137 ms, 36873, 40968, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_PE_wrapper_0_0_fu_1092">PE_wrapper_0_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_0_1_fu_1101">PE_wrapper_0_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_1_0_fu_1110">PE_wrapper_1_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_1_1_fu_1119">PE_wrapper_1_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_2_0_fu_1128">PE_wrapper_2_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_2_1_fu_1137">PE_wrapper_2_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_3_0_fu_1146">PE_wrapper_3_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_3_1_fu_1155">PE_wrapper_3_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_4_0_fu_1164">PE_wrapper_4_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_4_1_fu_1173">PE_wrapper_4_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_5_0_fu_1182">PE_wrapper_5_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_5_1_fu_1191">PE_wrapper_5_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_6_0_fu_1200">PE_wrapper_6_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_6_1_fu_1209">PE_wrapper_6_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_7_0_fu_1218">PE_wrapper_7_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_7_1_fu_1227">PE_wrapper_7_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_8_0_fu_1236">PE_wrapper_8_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_8_1_fu_1245">PE_wrapper_8_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_9_0_fu_1254">PE_wrapper_9_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_9_1_fu_1263">PE_wrapper_9_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_10_0_fu_1272">PE_wrapper_10_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_10_1_fu_1281">PE_wrapper_10_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_11_0_fu_1290">PE_wrapper_11_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_11_1_fu_1299">PE_wrapper_11_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_12_0_fu_1308">PE_wrapper_12_0, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_PE_wrapper_12_1_fu_1317">PE_wrapper_12_1, 33858, 33858, 0.113 ms, 0.113 ms, 33858, 33858, none</column>
+<column name="grp_A_IO_L3_in_fu_1326">A_IO_L3_in, 6666, 6666, 22.218 us, 22.218 us, 6666, 6666, none</column>
+<column name="grp_B_IO_L3_in_fu_1334">B_IO_L3_in, 4106, 4106, 13.685 us, 13.685 us, 4106, 4106, none</column>
+<column name="grp_C_drain_IO_L3_out_fu_1342">C_drain_IO_L3_out, 13320, 13320, 44.396 us, 44.396 us, 13320, 13320, none</column>
+<column name="grp_C_drain_IO_L1_out240_fu_1350">C_drain_IO_L1_out240, 5127, 5127, 17.088 us, 17.088 us, 5127, 5127, none</column>
+<column name="grp_C_drain_IO_L1_out241_fu_1357">C_drain_IO_L1_out241, 5639, 5639, 18.795 us, 18.795 us, 5639, 5639, none</column>
+<column name="grp_C_drain_IO_L1_out252_fu_1364">C_drain_IO_L1_out252, 5127, 5127, 17.088 us, 17.088 us, 5127, 5127, none</column>
+<column name="grp_C_drain_IO_L1_out242_fu_1371">C_drain_IO_L1_out242, 6151, 6151, 20.501 us, 20.501 us, 6151, 6151, none</column>
+<column name="grp_C_drain_IO_L1_out253_fu_1378">C_drain_IO_L1_out253, 5639, 5639, 18.795 us, 18.795 us, 5639, 5639, none</column>
+<column name="grp_C_drain_IO_L1_out243_fu_1385">C_drain_IO_L1_out243, 6663, 6663, 22.208 us, 22.208 us, 6663, 6663, none</column>
+<column name="grp_C_drain_IO_L1_out254_fu_1392">C_drain_IO_L1_out254, 6151, 6151, 20.501 us, 20.501 us, 6151, 6151, none</column>
+<column name="grp_C_drain_IO_L1_out244_fu_1399">C_drain_IO_L1_out244, 7175, 7175, 23.914 us, 23.914 us, 7175, 7175, none</column>
+<column name="grp_C_drain_IO_L1_out255_fu_1406">C_drain_IO_L1_out255, 6663, 6663, 22.208 us, 22.208 us, 6663, 6663, none</column>
+<column name="grp_C_drain_IO_L1_out245_fu_1413">C_drain_IO_L1_out245, 7687, 7687, 25.621 us, 25.621 us, 7687, 7687, none</column>
+<column name="grp_C_drain_IO_L1_out256_fu_1420">C_drain_IO_L1_out256, 7175, 7175, 23.914 us, 23.914 us, 7175, 7175, none</column>
+<column name="grp_C_drain_IO_L1_out257_fu_1427">C_drain_IO_L1_out257, 7687, 7687, 25.621 us, 25.621 us, 7687, 7687, none</column>
+<column name="grp_C_drain_IO_L1_out236_fu_1434">C_drain_IO_L1_out236, 3079, 3079, 10.262 us, 10.262 us, 3079, 3079, none</column>
+<column name="grp_C_drain_IO_L1_out237_fu_1441">C_drain_IO_L1_out237, 3591, 3591, 11.969 us, 11.969 us, 3591, 3591, none</column>
+<column name="grp_C_drain_IO_L1_out248_fu_1448">C_drain_IO_L1_out248, 3079, 3079, 10.262 us, 10.262 us, 3079, 3079, none</column>
+<column name="grp_C_drain_IO_L1_out238_fu_1455">C_drain_IO_L1_out238, 4103, 4103, 13.675 us, 13.675 us, 4103, 4103, none</column>
+<column name="grp_C_drain_IO_L1_out249_fu_1462">C_drain_IO_L1_out249, 3591, 3591, 11.969 us, 11.969 us, 3591, 3591, none</column>
+<column name="grp_C_drain_IO_L1_out239_fu_1469">C_drain_IO_L1_out239, 4615, 4615, 15.382 us, 15.382 us, 4615, 4615, none</column>
+<column name="grp_C_drain_IO_L1_out250_fu_1476">C_drain_IO_L1_out250, 4103, 4103, 13.675 us, 13.675 us, 4103, 4103, none</column>
+<column name="grp_C_drain_IO_L1_out251_fu_1483">C_drain_IO_L1_out251, 4615, 4615, 15.382 us, 15.382 us, 4615, 4615, none</column>
+<column name="grp_C_drain_IO_L1_out234_fu_1490">C_drain_IO_L1_out234, 2055, 2055, 6.849 us, 6.849 us, 2055, 2055, none</column>
+<column name="grp_C_drain_IO_L1_out235_fu_1497">C_drain_IO_L1_out235, 2567, 2567, 8.556 us, 8.556 us, 2567, 2567, none</column>
+<column name="grp_C_drain_IO_L1_out246_fu_1504">C_drain_IO_L1_out246, 2055, 2055, 6.849 us, 6.849 us, 2055, 2055, none</column>
+<column name="grp_C_drain_IO_L1_out247_fu_1511">C_drain_IO_L1_out247, 2567, 2567, 8.556 us, 8.556 us, 2567, 2567, none</column>
+<column name="grp_B_IO_L2_in_fu_1518">B_IO_L2_in, 36872, 36872, 0.123 ms, 0.123 ms, 36872, 36872, none</column>
+<column name="grp_A_IO_L2_in208_fu_1525">A_IO_L2_in208, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in209_fu_1532">A_IO_L2_in209, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in210_fu_1539">A_IO_L2_in210, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in211_fu_1546">A_IO_L2_in211, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in212_fu_1553">A_IO_L2_in212, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in213_fu_1560">A_IO_L2_in213, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in214_fu_1567">A_IO_L2_in214, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in215_fu_1574">A_IO_L2_in215, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in216_fu_1581">A_IO_L2_in216, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in217_fu_1588">A_IO_L2_in217, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in218_fu_1595">A_IO_L2_in218, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_A_IO_L2_in219_fu_1602">A_IO_L2_in219, 32776, 40967, 0.109 ms, 0.137 ms, 32776, 40967, none</column>
+<column name="grp_B_IO_L2_in_boundary_fu_1609">B_IO_L2_in_boundary, 34824, 34824, 0.116 ms, 0.116 ms, 34824, 34824, none</column>
+<column name="grp_C_drain_IO_L1_out_boundary233_fu_1615">C_drain_IO_L1_out_boundary233, 1542, 1542, 5.139 us, 5.139 us, 1542, 1542, none</column>
+<column name="grp_C_drain_IO_L1_out_boundary_fu_1621">C_drain_IO_L1_out_boundary, 1542, 1542, 5.139 us, 5.139 us, 1542, 1542, none</column>
+<column name="grp_A_IO_L2_in_boundary_fu_1627">A_IO_L2_in_boundary, 33288, 33288, 0.111 ms, 0.111 ms, 33288, 33288, none</column>
+<column name="grp_C_drain_IO_L2_out_fu_1633">C_drain_IO_L2_out, 13315, 13315, 44.379 us, 44.379 us, 13315, 13315, none</column>
+<column name="grp_A_PE_dummy220_fu_1640">A_PE_dummy220, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy221_fu_1645">A_PE_dummy221, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy222_fu_1650">A_PE_dummy222, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy223_fu_1655">A_PE_dummy223, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy224_fu_1660">A_PE_dummy224, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy225_fu_1665">A_PE_dummy225, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy226_fu_1670">A_PE_dummy226, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy227_fu_1675">A_PE_dummy227, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy228_fu_1680">A_PE_dummy228, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy229_fu_1685">A_PE_dummy229, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy230_fu_1690">A_PE_dummy230, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy231_fu_1695">A_PE_dummy231, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_B_PE_dummy232_fu_1700">B_PE_dummy232, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_A_PE_dummy_fu_1705">A_PE_dummy, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_B_PE_dummy_fu_1710">B_PE_dummy, 32770, 32770, 0.109 ms, 0.109 ms, 32770, 32770, none</column>
+<column name="grp_C_drain_IO_L2_out_boundary_fu_1715">C_drain_IO_L2_out_boundary, 6658, 6658, 22.191 us, 22.191 us, 6658, 6658, none</column>
+<column name="call_ln1188_kernel3_entry14_fu_1721">kernel3_entry14, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

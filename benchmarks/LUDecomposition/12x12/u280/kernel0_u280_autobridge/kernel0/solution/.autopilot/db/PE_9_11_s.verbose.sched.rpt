@@ -1,0 +1,418 @@
+
+
+================================================================
+== Vivado HLS Report for 'PE_9_11_s'
+================================================================
+* Date:           Mon Jun 14 19:28:27 2021
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        kernel0
+* Solution:       solution
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 3.33 ns | 2.342 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       30|       30| 99.990 ns | 99.990 ns |   30|   30|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |       28|       28|        27|          1|          1|     3|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 27
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 29
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 27, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 29 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 2 
+29 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.60>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%local_prev_V_0_0_0357 = alloca float"   --->   Operation 30 'alloca' 'local_prev_V_0_0_0357' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%local_U_tmp_0_1_0358 = alloca float"   --->   Operation 31 'alloca' 'local_U_tmp_0_1_0358' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%tmp = alloca float"   --->   Operation 32 'alloca' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%local_L_tmp_1_0_0360 = alloca float"   --->   Operation 33 'alloca' 'local_L_tmp_1_0_0360' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%local_L_tmp_2_0_0361 = alloca float"   --->   Operation 34 'alloca' 'local_L_tmp_2_0_0361' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %fifo_V_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 35 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %fifo_V_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 36 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %fifo_U_tmp_1_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 37 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %fifo_L_drain_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 38 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.60ns)   --->   "br label %1" [src/kernel_kernel.cpp:315]   --->   Operation 39 'br' <Predicate = true> <Delay = 0.60>
+
+State 2 <SV = 1> <Delay = 1.11>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%p_0403_0 = phi i4 [ -7, %0 ], [ %c2_V, %hls_label_113_end ]"   --->   Operation 40 'phi' 'p_0403_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.65ns)   --->   "%icmp_ln315 = icmp eq i4 %p_0403_0, -4" [src/kernel_kernel.cpp:315]   --->   Operation 41 'icmp' 'icmp_ln315' <Predicate = true> <Delay = 0.65> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 42 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "br i1 %icmp_ln315, label %5, label %hls_label_113_begin" [src/kernel_kernel.cpp:315]   --->   Operation 43 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%trunc_ln323 = trunc i4 %p_0403_0 to i2" [src/kernel_kernel.cpp:323]   --->   Operation 44 'trunc' 'trunc_ln323' <Predicate = (!icmp_ln315)> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.65ns)   --->   "%icmp_ln879 = icmp eq i4 %p_0403_0, -7" [src/kernel_kernel.cpp:336]   --->   Operation 45 'icmp' 'icmp_ln879' <Predicate = (!icmp_ln315)> <Delay = 0.65> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "br i1 %icmp_ln879, label %2, label %3" [src/kernel_kernel.cpp:336]   --->   Operation 46 'br' <Predicate = (!icmp_ln315)> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.65ns)   --->   "%icmp_ln341 = icmp eq i4 %p_0403_0, -6" [src/kernel_kernel.cpp:341]   --->   Operation 47 'icmp' 'icmp_ln341' <Predicate = (!icmp_ln315 & !icmp_ln879)> <Delay = 0.65> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 48 [1/1] (0.65ns)   --->   "%icmp_ln891 = icmp ugt i4 %p_0403_0, -7" [src/kernel_kernel.cpp:344]   --->   Operation 48 'icmp' 'icmp_ln891' <Predicate = (!icmp_ln315)> <Delay = 0.65> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "br i1 %icmp_ln891, label %4, label %hls_label_113_end" [src/kernel_kernel.cpp:344]   --->   Operation 49 'br' <Predicate = (!icmp_ln315)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.33ns)   --->   "%c2_V = add i4 %p_0403_0, 1" [src/kernel_kernel.cpp:315]   --->   Operation 50 'add' 'c2_V' <Predicate = (!icmp_ln315)> <Delay = 0.33> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 1.44>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%local_prev_V_0_0_0357_load = load float* %local_prev_V_0_0_0357" [src/kernel_kernel.cpp:323]   --->   Operation 51 'load' 'local_prev_V_0_0_0357_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%local_U_tmp_0_1_0358_load = load float* %local_U_tmp_0_1_0358" [src/kernel_kernel.cpp:333]   --->   Operation 52 'load' 'local_U_tmp_0_1_0358_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (1.21ns)   --->   "%tmp_122 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %fifo_V_in_V)" [src/kernel_kernel.cpp:322]   --->   Operation 53 'read' 'tmp_122' <Predicate = true> <Delay = 1.21> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_3 : Operation 54 [1/1] (0.23ns)   --->   "%add_ln323 = add i2 -1, %trunc_ln323" [src/kernel_kernel.cpp:323]   --->   Operation 54 'add' 'add_ln323' <Predicate = true> <Delay = 0.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 55 [1/1] (0.34ns)   --->   "%icmp_ln323 = icmp eq i2 %add_ln323, 0" [src/kernel_kernel.cpp:323]   --->   Operation 55 'icmp' 'icmp_ln323' <Predicate = true> <Delay = 0.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 56 [1/1] (0.22ns)   --->   "%select_ln323 = select i1 %icmp_ln323, float %tmp_122, float %local_prev_V_0_0_0357_load" [src/kernel_kernel.cpp:323]   --->   Operation 56 'select' 'select_ln323' <Predicate = true> <Delay = 0.22> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 57 [1/1] (1.21ns)   --->   "%tmp_124 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %fifo_U_tmp_1_in_V)" [src/kernel_kernel.cpp:332]   --->   Operation 57 'read' 'tmp_124' <Predicate = true> <Delay = 1.21> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_3 : Operation 58 [1/1] (0.22ns)   --->   "%select_ln333 = select i1 %icmp_ln323, float %tmp_124, float %local_U_tmp_0_1_0358_load" [src/kernel_kernel.cpp:333]   --->   Operation 58 'select' 'select_ln333' <Predicate = true> <Delay = 0.22> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "store float %select_ln333, float* %local_U_tmp_0_1_0358" [src/kernel_kernel.cpp:336]   --->   Operation 59 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "store float %select_ln323, float* %local_prev_V_0_0_0357" [src/kernel_kernel.cpp:336]   --->   Operation 60 'store' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 2.32>
+ST_4 : Operation 61 [12/12] (2.32ns)   --->   "%tmp_5 = fdiv float %select_ln323, %select_ln333" [src/kernel_kernel.cpp:337]   --->   Operation 61 'fdiv' 'tmp_5' <Predicate = (icmp_ln879)> <Delay = 2.32> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 2.32>
+ST_5 : Operation 62 [11/12] (2.32ns)   --->   "%tmp_5 = fdiv float %select_ln323, %select_ln333" [src/kernel_kernel.cpp:337]   --->   Operation 62 'fdiv' 'tmp_5' <Predicate = (icmp_ln879)> <Delay = 2.32> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.32>
+ST_6 : Operation 63 [10/12] (2.32ns)   --->   "%tmp_5 = fdiv float %select_ln323, %select_ln333" [src/kernel_kernel.cpp:337]   --->   Operation 63 'fdiv' 'tmp_5' <Predicate = (icmp_ln879)> <Delay = 2.32> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 2.32>
+ST_7 : Operation 64 [9/12] (2.32ns)   --->   "%tmp_5 = fdiv float %select_ln323, %select_ln333" [src/kernel_kernel.cpp:337]   --->   Operation 64 'fdiv' 'tmp_5' <Predicate = (icmp_ln879)> <Delay = 2.32> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 2.32>
+ST_8 : Operation 65 [8/12] (2.32ns)   --->   "%tmp_5 = fdiv float %select_ln323, %select_ln333" [src/kernel_kernel.cpp:337]   --->   Operation 65 'fdiv' 'tmp_5' <Predicate = (icmp_ln879)> <Delay = 2.32> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 2.32>
+ST_9 : Operation 66 [7/12] (2.32ns)   --->   "%tmp_5 = fdiv float %select_ln323, %select_ln333" [src/kernel_kernel.cpp:337]   --->   Operation 66 'fdiv' 'tmp_5' <Predicate = (icmp_ln879)> <Delay = 2.32> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 2.32>
+ST_10 : Operation 67 [6/12] (2.32ns)   --->   "%tmp_5 = fdiv float %select_ln323, %select_ln333" [src/kernel_kernel.cpp:337]   --->   Operation 67 'fdiv' 'tmp_5' <Predicate = (icmp_ln879)> <Delay = 2.32> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 2.32>
+ST_11 : Operation 68 [5/12] (2.32ns)   --->   "%tmp_5 = fdiv float %select_ln323, %select_ln333" [src/kernel_kernel.cpp:337]   --->   Operation 68 'fdiv' 'tmp_5' <Predicate = (icmp_ln879)> <Delay = 2.32> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 2.32>
+ST_12 : Operation 69 [4/12] (2.32ns)   --->   "%tmp_5 = fdiv float %select_ln323, %select_ln333" [src/kernel_kernel.cpp:337]   --->   Operation 69 'fdiv' 'tmp_5' <Predicate = (icmp_ln879)> <Delay = 2.32> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 2.32>
+ST_13 : Operation 70 [3/12] (2.32ns)   --->   "%tmp_5 = fdiv float %select_ln323, %select_ln333" [src/kernel_kernel.cpp:337]   --->   Operation 70 'fdiv' 'tmp_5' <Predicate = (icmp_ln879)> <Delay = 2.32> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 2.32>
+ST_14 : Operation 71 [2/12] (2.32ns)   --->   "%tmp_5 = fdiv float %select_ln323, %select_ln333" [src/kernel_kernel.cpp:337]   --->   Operation 71 'fdiv' 'tmp_5' <Predicate = (icmp_ln879)> <Delay = 2.32> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 2.32>
+ST_15 : Operation 72 [1/1] (0.00ns)   --->   "%local_L_tmp_0_0_0359_load = load float* %tmp" [src/kernel_kernel.cpp:341]   --->   Operation 72 'load' 'local_L_tmp_0_0_0359_load' <Predicate = (!icmp_ln879 & icmp_ln341)> <Delay = 0.00>
+ST_15 : Operation 73 [1/1] (0.00ns)   --->   "%local_L_tmp_1_0_0360_load = load float* %local_L_tmp_1_0_0360" [src/kernel_kernel.cpp:341]   --->   Operation 73 'load' 'local_L_tmp_1_0_0360_load' <Predicate = (!icmp_ln879)> <Delay = 0.00>
+ST_15 : Operation 74 [1/1] (0.00ns)   --->   "%local_L_tmp_2_0_0361_load = load float* %local_L_tmp_2_0_0361" [src/kernel_kernel.cpp:341]   --->   Operation 74 'load' 'local_L_tmp_2_0_0361_load' <Predicate = (!icmp_ln879)> <Delay = 0.00>
+ST_15 : Operation 75 [1/1] (0.22ns)   --->   "%select_ln341 = select i1 %icmp_ln341, float %local_L_tmp_0_0_0359_load, float %local_L_tmp_1_0_0360_load" [src/kernel_kernel.cpp:341]   --->   Operation 75 'select' 'select_ln341' <Predicate = (!icmp_ln879)> <Delay = 0.22> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 76 [1/1] (0.34ns)   --->   "%icmp_ln341_1 = icmp eq i2 %add_ln323, 1" [src/kernel_kernel.cpp:341]   --->   Operation 76 'icmp' 'icmp_ln341_1' <Predicate = (!icmp_ln879)> <Delay = 0.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 77 [1/1] (0.22ns)   --->   "%select_ln341_1 = select i1 %icmp_ln341_1, float %local_L_tmp_2_0_0361_load, float %select_ln341" [src/kernel_kernel.cpp:341]   --->   Operation 77 'select' 'select_ln341_1' <Predicate = (!icmp_ln879)> <Delay = 0.22> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 78 [1/1] (0.22ns)   --->   "%select_ln341_2 = select i1 %icmp_ln341_1, float %select_ln341, float %local_L_tmp_1_0_0360_load" [src/kernel_kernel.cpp:341]   --->   Operation 78 'select' 'select_ln341_2' <Predicate = (!icmp_ln879)> <Delay = 0.22> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 79 [1/1] (0.00ns)   --->   "store float %select_ln341_1, float* %local_L_tmp_2_0_0361" [src/kernel_kernel.cpp:341]   --->   Operation 79 'store' <Predicate = (!icmp_ln879)> <Delay = 0.00>
+ST_15 : Operation 80 [1/1] (0.00ns)   --->   "store float %select_ln341_2, float* %local_L_tmp_1_0_0360" [src/kernel_kernel.cpp:341]   --->   Operation 80 'store' <Predicate = (!icmp_ln879)> <Delay = 0.00>
+ST_15 : Operation 81 [1/12] (2.32ns)   --->   "%tmp_5 = fdiv float %select_ln323, %select_ln333" [src/kernel_kernel.cpp:337]   --->   Operation 81 'fdiv' 'tmp_5' <Predicate = (icmp_ln879)> <Delay = 2.32> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 82 [1/1] (0.00ns)   --->   "store float %tmp_5, float* %tmp" [src/kernel_kernel.cpp:340]   --->   Operation 82 'store' <Predicate = (icmp_ln879)> <Delay = 0.00>
+ST_15 : Operation 83 [1/1] (0.34ns)   --->   "%icmp_ln343 = icmp eq i2 %add_ln323, 1" [src/kernel_kernel.cpp:343]   --->   Operation 83 'icmp' 'icmp_ln343' <Predicate = true> <Delay = 0.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 1.21>
+ST_16 : Operation 84 [1/1] (1.21ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %fifo_L_drain_out_V, float %tmp_5)" [src/kernel_kernel.cpp:339]   --->   Operation 84 'write' <Predicate = (icmp_ln879)> <Delay = 1.21> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_16 : Operation 85 [1/1] (0.00ns)   --->   "%local_L_tmp_0_0_0359_load3 = load float* %tmp" [src/kernel_kernel.cpp:343]   --->   Operation 85 'load' 'local_L_tmp_0_0_0359_load3' <Predicate = (icmp_ln323 & !icmp_ln343)> <Delay = 0.00>
+ST_16 : Operation 86 [1/1] (0.00ns)   --->   "%local_L_tmp_1_0_0360_load_1 = load float* %local_L_tmp_1_0_0360" [src/kernel_kernel.cpp:343]   --->   Operation 86 'load' 'local_L_tmp_1_0_0360_load_1' <Predicate = (icmp_ln343)> <Delay = 0.00>
+ST_16 : Operation 87 [1/1] (0.00ns)   --->   "%local_L_tmp_2_0_0361_load_1 = load float* %local_L_tmp_2_0_0361" [src/kernel_kernel.cpp:343]   --->   Operation 87 'load' 'local_L_tmp_2_0_0361_load_1' <Predicate = (!icmp_ln323 & !icmp_ln343)> <Delay = 0.00>
+ST_16 : Operation 88 [1/1] (0.00ns) (grouped into LUT with out node select_ln343_1)   --->   "%select_ln343 = select i1 %icmp_ln323, float %local_L_tmp_0_0_0359_load3, float %local_L_tmp_2_0_0361_load_1" [src/kernel_kernel.cpp:343]   --->   Operation 88 'select' 'select_ln343' <Predicate = (!icmp_ln343)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 89 [1/1] (0.22ns) (out node of the LUT)   --->   "%select_ln343_1 = select i1 %icmp_ln343, float %local_L_tmp_1_0_0360_load_1, float %select_ln343" [src/kernel_kernel.cpp:343]   --->   Operation 89 'select' 'select_ln343_1' <Predicate = true> <Delay = 0.22> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 2.32>
+ST_17 : Operation 90 [4/4] (2.32ns)   --->   "%tmp_s = fmul float %select_ln343_1, %tmp_124" [src/kernel_kernel.cpp:343]   --->   Operation 90 'fmul' 'tmp_s' <Predicate = true> <Delay = 2.32> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 2.32>
+ST_18 : Operation 91 [3/4] (2.32ns)   --->   "%tmp_s = fmul float %select_ln343_1, %tmp_124" [src/kernel_kernel.cpp:343]   --->   Operation 91 'fmul' 'tmp_s' <Predicate = true> <Delay = 2.32> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 2.32>
+ST_19 : Operation 92 [2/4] (2.32ns)   --->   "%tmp_s = fmul float %select_ln343_1, %tmp_124" [src/kernel_kernel.cpp:343]   --->   Operation 92 'fmul' 'tmp_s' <Predicate = true> <Delay = 2.32> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 2.32>
+ST_20 : Operation 93 [1/4] (2.32ns)   --->   "%tmp_s = fmul float %select_ln343_1, %tmp_124" [src/kernel_kernel.cpp:343]   --->   Operation 93 'fmul' 'tmp_s' <Predicate = true> <Delay = 2.32> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 2.34>
+ST_21 : Operation 94 [7/7] (2.34ns)   --->   "%tmp_1 = fsub float %tmp_122, %tmp_s" [src/kernel_kernel.cpp:343]   --->   Operation 94 'fsub' 'tmp_1' <Predicate = true> <Delay = 2.34> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 2.34>
+ST_22 : Operation 95 [6/7] (2.34ns)   --->   "%tmp_1 = fsub float %tmp_122, %tmp_s" [src/kernel_kernel.cpp:343]   --->   Operation 95 'fsub' 'tmp_1' <Predicate = true> <Delay = 2.34> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 2.34>
+ST_23 : Operation 96 [5/7] (2.34ns)   --->   "%tmp_1 = fsub float %tmp_122, %tmp_s" [src/kernel_kernel.cpp:343]   --->   Operation 96 'fsub' 'tmp_1' <Predicate = true> <Delay = 2.34> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 2.34>
+ST_24 : Operation 97 [4/7] (2.34ns)   --->   "%tmp_1 = fsub float %tmp_122, %tmp_s" [src/kernel_kernel.cpp:343]   --->   Operation 97 'fsub' 'tmp_1' <Predicate = true> <Delay = 2.34> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 2.34>
+ST_25 : Operation 98 [3/7] (2.34ns)   --->   "%tmp_1 = fsub float %tmp_122, %tmp_s" [src/kernel_kernel.cpp:343]   --->   Operation 98 'fsub' 'tmp_1' <Predicate = true> <Delay = 2.34> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 2.34>
+ST_26 : Operation 99 [2/7] (2.34ns)   --->   "%tmp_1 = fsub float %tmp_122, %tmp_s" [src/kernel_kernel.cpp:343]   --->   Operation 99 'fsub' 'tmp_1' <Predicate = true> <Delay = 2.34> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 2.34>
+ST_27 : Operation 100 [1/7] (2.34ns)   --->   "%tmp_1 = fsub float %tmp_122, %tmp_s" [src/kernel_kernel.cpp:343]   --->   Operation 100 'fsub' 'tmp_1' <Predicate = true> <Delay = 2.34> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 1.21>
+ST_28 : Operation 101 [1/1] (0.00ns)   --->   "%tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([14 x i8]* @p_str160)" [src/kernel_kernel.cpp:315]   --->   Operation 101 'specregionbegin' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 102 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [src/kernel_kernel.cpp:316]   --->   Operation 102 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 103 [1/1] (0.00ns)   --->   "br label %branch12"   --->   Operation 103 'br' <Predicate = (!icmp_ln879)> <Delay = 0.00>
+ST_28 : Operation 104 [1/1] (0.00ns)   --->   "br label %branch12" [src/kernel_kernel.cpp:340]   --->   Operation 104 'br' <Predicate = (icmp_ln879)> <Delay = 0.00>
+ST_28 : Operation 105 [1/1] (1.21ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %fifo_V_out_V, float %tmp_1)" [src/kernel_kernel.cpp:345]   --->   Operation 105 'write' <Predicate = (icmp_ln891)> <Delay = 1.21> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.45> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_28 : Operation 106 [1/1] (0.00ns)   --->   "br label %hls_label_113_end" [src/kernel_kernel.cpp:345]   --->   Operation 106 'br' <Predicate = (icmp_ln891)> <Delay = 0.00>
+ST_28 : Operation 107 [1/1] (0.00ns)   --->   "%empty_450 = call i32 (...)* @_ssdm_op_SpecRegionEnd([14 x i8]* @p_str160, i32 %tmp_4)" [src/kernel_kernel.cpp:348]   --->   Operation 107 'specregionend' 'empty_450' <Predicate = (!icmp_ln315)> <Delay = 0.00>
+ST_28 : Operation 108 [1/1] (0.00ns)   --->   "br label %1" [src/kernel_kernel.cpp:315]   --->   Operation 108 'br' <Predicate = (!icmp_ln315)> <Delay = 0.00>
+
+State 29 <SV = 2> <Delay = 0.00>
+ST_29 : Operation 109 [1/1] (0.00ns)   --->   "ret void" [src/kernel_kernel.cpp:349]   --->   Operation 109 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 0.603ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('c2.V') with incoming values : ('c2.V', src/kernel_kernel.cpp:315) [16]  (0.603 ns)
+
+ <State 2>: 1.11ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln315', src/kernel_kernel.cpp:315) [17]  (0.656 ns)
+	blocking operation 0.456 ns on control path)
+
+ <State 3>: 1.44ns
+The critical path consists of the following:
+	fifo read on port 'fifo_V_in_V' (src/kernel_kernel.cpp:322) [25]  (1.22 ns)
+	'select' operation ('select_ln323', src/kernel_kernel.cpp:323) [29]  (0.227 ns)
+
+ <State 4>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', src/kernel_kernel.cpp:337) [49]  (2.33 ns)
+
+ <State 5>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', src/kernel_kernel.cpp:337) [49]  (2.33 ns)
+
+ <State 6>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', src/kernel_kernel.cpp:337) [49]  (2.33 ns)
+
+ <State 7>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', src/kernel_kernel.cpp:337) [49]  (2.33 ns)
+
+ <State 8>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', src/kernel_kernel.cpp:337) [49]  (2.33 ns)
+
+ <State 9>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', src/kernel_kernel.cpp:337) [49]  (2.33 ns)
+
+ <State 10>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', src/kernel_kernel.cpp:337) [49]  (2.33 ns)
+
+ <State 11>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', src/kernel_kernel.cpp:337) [49]  (2.33 ns)
+
+ <State 12>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', src/kernel_kernel.cpp:337) [49]  (2.33 ns)
+
+ <State 13>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', src/kernel_kernel.cpp:337) [49]  (2.33 ns)
+
+ <State 14>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', src/kernel_kernel.cpp:337) [49]  (2.33 ns)
+
+ <State 15>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp', src/kernel_kernel.cpp:337) [49]  (2.33 ns)
+
+ <State 16>: 1.22ns
+The critical path consists of the following:
+	fifo write on port 'fifo_L_drain_out_V' (src/kernel_kernel.cpp:339) [50]  (1.22 ns)
+
+ <State 17>: 2.32ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', src/kernel_kernel.cpp:343) [60]  (2.32 ns)
+
+ <State 18>: 2.32ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', src/kernel_kernel.cpp:343) [60]  (2.32 ns)
+
+ <State 19>: 2.32ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', src/kernel_kernel.cpp:343) [60]  (2.32 ns)
+
+ <State 20>: 2.32ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', src/kernel_kernel.cpp:343) [60]  (2.32 ns)
+
+ <State 21>: 2.34ns
+The critical path consists of the following:
+	'fsub' operation ('tmp', src/kernel_kernel.cpp:343) [61]  (2.34 ns)
+
+ <State 22>: 2.34ns
+The critical path consists of the following:
+	'fsub' operation ('tmp', src/kernel_kernel.cpp:343) [61]  (2.34 ns)
+
+ <State 23>: 2.34ns
+The critical path consists of the following:
+	'fsub' operation ('tmp', src/kernel_kernel.cpp:343) [61]  (2.34 ns)
+
+ <State 24>: 2.34ns
+The critical path consists of the following:
+	'fsub' operation ('tmp', src/kernel_kernel.cpp:343) [61]  (2.34 ns)
+
+ <State 25>: 2.34ns
+The critical path consists of the following:
+	'fsub' operation ('tmp', src/kernel_kernel.cpp:343) [61]  (2.34 ns)
+
+ <State 26>: 2.34ns
+The critical path consists of the following:
+	'fsub' operation ('tmp', src/kernel_kernel.cpp:343) [61]  (2.34 ns)
+
+ <State 27>: 2.34ns
+The critical path consists of the following:
+	'fsub' operation ('tmp', src/kernel_kernel.cpp:343) [61]  (2.34 ns)
+
+ <State 28>: 1.22ns
+The critical path consists of the following:
+	fifo write on port 'fifo_V_out_V' (src/kernel_kernel.cpp:345) [65]  (1.22 ns)
+
+ <State 29>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

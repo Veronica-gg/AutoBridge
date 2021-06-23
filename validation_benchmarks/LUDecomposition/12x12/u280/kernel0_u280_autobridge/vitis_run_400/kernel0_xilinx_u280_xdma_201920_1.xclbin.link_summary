@@ -1,0 +1,1930 @@
+<ENTRY>
+{
+ "session": {
+  "name": "v++_link_kernel0_xilinx_u280_xdma_201920_1",
+  "pid": "0",
+  "uuid": "068a455e-3cc3-4cc0-8312-d419daa60c81",
+  "description": "",
+  "timestamp": "0",
+  "outputFiles": [
+   {
+    "type": "JSON",
+    "mode": "CLIENT_ONLY",
+    "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/.tlog/v++_link_kernel0_xilinx_u280_xdma_201920_1.xtl",
+    "continuous": true
+   },
+   {
+    "type": "JSON",
+    "mode": "LOCAL_IF_NO_CONNECT",
+    "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.xclbin.link_summary",
+    "continuous": true
+   },
+   {
+    "type": "BINARY_PROTOBUF",
+    "mode": "LOCAL_IF_NO_CONNECT",
+    "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.xclbin.link_summary.pb",
+    "continuous": true
+   }
+  ]
+ },
+ "thisFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Apr 14 12:01:11 2021",
+ "timestampMillis": "1618394471548",
+ "buildStep": {
+  "cmdId": "0ab2d4fd-6180-462a-b280-977b561c13d5",
+  "name": "v++",
+  "logFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/link.steps.log",
+  "commandLine": "/xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"vivado_prop:run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --xp vivado_prop:run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --xp vivado_prop:run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --xp vivado_param:project.writeIntermediateCheckpoints=1 --xp \"misc:report=type report_utilization name synth_report_utilization_summary steps {synth_design} runs {__KERNEL__} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_init_design_summary steps {init_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_init_design_summary steps {init_design} runs {impl_1} options {-max_paths 10}\" --xp \"param:compiler.reportFailfast=pre_opt_design {__KERNEL_NAMES__} post_opt_design {__OCL_TOP__} post_route_design {__SLR__}\" --xp \"misc:report=type report_io name impl_report_io_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_control_sets name impl_report_control_sets_place_design_summary steps {place_design} runs {impl_1} options {-verbose}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_place_design_summary steps {place_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_drc name impl_report_drc_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_methodology name impl_report_methodology_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_power name impl_report_power_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_route_status name impl_report_route_status_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_clock_utilization name impl_report_clock_utilization_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_bus_skew name impl_report_bus_skew_route_design_summary steps {route_design} runs {impl_1} options {-warn_on_violation}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --link --output /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.xclbin --kernel kernel0 --platform xilinx_u280_xdma_201920_1 --target hw --report_level 2 --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp --optimize 3 --connectivity.nk kernel0:1:kernel0_1 --max_memory_ports kernel0 --save-temps /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/kernel0.xo --connectivity.sp kernel0_1.A:HBM[0] --connectivity.sp kernel0_1.L:HBM[1] --connectivity.sp kernel0_1.U:HBM[2] --kernel_frequency 400 --vivado.prop run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/constraint.tcl ",
+  "args": [
+   "--link",
+   "--output",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.xclbin",
+   "--kernel",
+   "kernel0",
+   "--platform",
+   "xilinx_u280_xdma_201920_1",
+   "--target",
+   "hw",
+   "--report_level",
+   "2",
+   "--temp_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp",
+   "--optimize",
+   "3",
+   "--connectivity.nk",
+   "kernel0:1:kernel0_1",
+   "--max_memory_ports",
+   "kernel0",
+   "--save-temps",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/kernel0.xo",
+   "--connectivity.sp",
+   "kernel0_1.A:HBM[0]",
+   "--connectivity.sp",
+   "kernel0_1.L:HBM[1]",
+   "--connectivity.sp",
+   "kernel0_1.U:HBM[2]",
+   "--kernel_frequency",
+   "400",
+   "--vivado.prop",
+   "run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/constraint.tcl"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 12:01:11 2021",
+ "timestampMillis": "1618394471549",
+ "status": {
+  "cmdId": "0ab2d4fd-6180-462a-b280-977b561c13d5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Apr 14 12:01:26 2021",
+ "timestampMillis": "1618394486671",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_xdma_201920_1.xpfm",
+  "hardwareDsa": "xilinx_u280_xdma_201920_1.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_xdma_201920_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "kernel0_xilinx_u280_xdma_201920_1",
+    "file": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.xclbin",
+    "reports": []
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "kernel0",
+     "file": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/kernel0.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/xo/kernel0/kernel0/cpu_sources/kernel_kernel.cpp"
+    ],
+    "cuNames": [
+     "kernel0_1"
+    ]
+   }
+  ]
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 14 12:01:27 2021",
+ "timestampMillis": "1618394487010",
+ "buildStep": {
+  "cmdId": "540b1a2b-547a-4cc7-a87f-f64cbd77fa2a",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/kernel0.xo -keep --config /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_xdma_201920_1/xilinx_u280_xdma_201920_1.xpfm --target hw --output_dir /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/kernel0.xo",
+   "-keep",
+   "--config",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u280_xdma_201920_1/xilinx_u280_xdma_201920_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int",
+   "--temp_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/sys_link"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 12:01:27 2021",
+ "timestampMillis": "1618394487010",
+ "status": {
+  "cmdId": "540b1a2b-547a-4cc7-a87f-f64cbd77fa2a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 12:01:40 2021",
+ "timestampMillis": "1618394500116",
+ "status": {
+  "cmdId": "540b1a2b-547a-4cc7-a87f-f64cbd77fa2a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 14 12:01:40 2021",
+ "timestampMillis": "1618394500117",
+ "buildStep": {
+  "cmdId": "cabe968f-596c-4910-87ff-34815824d320",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/sdsl.dat -rtd /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/cf2sw.rtd -xclbin /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/xclbin_orig.xml -o /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/sdsl.dat",
+   "-rtd",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/cf2sw.rtd",
+   "-xclbin",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 12:01:40 2021",
+ "timestampMillis": "1618394500117",
+ "status": {
+  "cmdId": "cabe968f-596c-4910-87ff-34815824d320",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 12:01:41 2021",
+ "timestampMillis": "1618394501675",
+ "status": {
+  "cmdId": "cabe968f-596c-4910-87ff-34815824d320",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 14 12:01:41 2021",
+ "timestampMillis": "1618394501676",
+ "buildStep": {
+  "cmdId": "63eca658-eb77-4a71-9524-8b1924b52917",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram --rtdJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/cf2sw.rtd --diagramJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModel.json --platformFilePath /opt/xilinx/platforms/xilinx_u280_xdma_201920_1/xilinx_u280_xdma_201920_1.xpfm --generatedByName v++ --generatedByVersion 2019.2.1 --generatedByChangeList 2729669 --generatedByTimeStamp Thu Dec  5 04:48:12 MST 2019 --generatedByOptions /xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ --link --output /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.xclbin --kernel kernel0 --platform xilinx_u280_xdma_201920_1 --target hw --report_level 2 --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp --optimize 3 --connectivity.nk kernel0:1:kernel0_1 --max_memory_ports kernel0 --save-temps /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/kernel0.xo --connectivity.sp kernel0_1.A:HBM[0] --connectivity.sp kernel0_1.L:HBM[1] --connectivity.sp kernel0_1.U:HBM[2] --kernel_frequency 400 --vivado.prop run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/constraint.tcl  --generatedByXclbinName kernel0_xilinx_u280_xdma_201920_1 --kernelInfoDataFileName /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel_info.dat",
+  "args": [
+   "--rtdJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/cf2sw.rtd",
+   "--diagramJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModel.json",
+   "--platformFilePath",
+   "/opt/xilinx/platforms/xilinx_u280_xdma_201920_1/xilinx_u280_xdma_201920_1.xpfm",
+   "--generatedByName",
+   "v++",
+   "--generatedByVersion",
+   "2019.2.1",
+   "--generatedByChangeList",
+   "2729669",
+   "--generatedByTimeStamp",
+   "Thu Dec  5 04:48:12 MST 2019",
+   "--generatedByOptions",
+   "/xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ --link --output /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.xclbin --kernel kernel0 --platform xilinx_u280_xdma_201920_1 --target hw --report_level 2 --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp --optimize 3 --connectivity.nk kernel0:1:kernel0_1 --max_memory_ports kernel0 --save-temps /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/kernel0.xo --connectivity.sp kernel0_1.A:HBM[0] --connectivity.sp kernel0_1.L:HBM[1] --connectivity.sp kernel0_1.U:HBM[2] --kernel_frequency 400 --vivado.prop run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/constraint.tcl ",
+   "--generatedByXclbinName",
+   "kernel0_xilinx_u280_xdma_201920_1",
+   "--kernelInfoDataFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel_info.dat"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 12:01:41 2021",
+ "timestampMillis": "1618394501676",
+ "status": {
+  "cmdId": "63eca658-eb77-4a71-9524-8b1924b52917",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 12:01:43 2021",
+ "timestampMillis": "1618394503404",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 12:01:43 2021",
+ "timestampMillis": "1618394503411",
+ "status": {
+  "cmdId": "63eca658-eb77-4a71-9524-8b1924b52917",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 14 12:01:43 2021",
+ "timestampMillis": "1618394503412",
+ "buildStep": {
+  "cmdId": "4be270f4-1bde-4f99-9d53-7a03715c5419",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u280_xdma_201920_1 --kernel_frequency 400 -s --output_dir /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int --log_dir /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/logs/link --report_dir /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link --config /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/vplConfig.ini -k /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link --no-info --tlog_dir /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/.tlog/v++_link_kernel0_xilinx_u280_xdma_201920_1 --iprepo /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/xo/ip_repo/xilinx_com_hls_kernel0_1_0 --messageDb /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/run_link/vpl.pb /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u280_xdma_201920_1",
+   "--kernel_frequency",
+   "400",
+   "-s",
+   "--output_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int",
+   "--log_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/logs/link",
+   "--report_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link",
+   "--config",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/vplConfig.ini",
+   "-k",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link",
+   "--no-info",
+   "--tlog_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/.tlog/v++_link_kernel0_xilinx_u280_xdma_201920_1",
+   "--iprepo",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/xo/ip_repo/xilinx_com_hls_kernel0_1_0",
+   "--messageDb",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/run_link/vpl.pb",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 12:01:43 2021",
+ "timestampMillis": "1618394503413",
+ "status": {
+  "cmdId": "4be270f4-1bde-4f99-9d53-7a03715c5419",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Apr 14 12:01:44 2021",
+ "timestampMillis": "1618394504873",
+ "buildStep": {
+  "cmdId": "cc7e93fb-cbb6-4f8d-9e2d-8cfa391c38fd",
+  "name": "vpl",
+  "logFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/link.steps.log",
+  "commandLine": "/xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u280_xdma_201920_1 --kernel_frequency 400 -s --output_dir /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int --log_dir /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/logs/link --report_dir /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link --config /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/vplConfig.ini -k /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link --no-info --tlog_dir /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/.tlog/v++_link_kernel0_xilinx_u280_xdma_201920_1 --iprepo /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/xo/ip_repo/xilinx_com_hls_kernel0_1_0 --messageDb /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/run_link/vpl.pb /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 12:01:44 2021",
+ "timestampMillis": "1618394504873",
+ "status": {
+  "cmdId": "cc7e93fb-cbb6-4f8d-9e2d-8cfa391c38fd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 14 12:01:55 2021",
+ "timestampMillis": "1618394515990",
+ "buildStep": {
+  "cmdId": "e304b4d2-c15f-4af5-933f-4cd27811176d",
+  "name": "vivado",
+  "logFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 12:01:55 2021",
+ "timestampMillis": "1618394515991",
+ "status": {
+  "cmdId": "e304b4d2-c15f-4af5-933f-4cd27811176d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 13:37:16 2021",
+ "timestampMillis": "1618400236099",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/vivado/vpl/output/systemDiagramModel_synthed.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 14:26:59 2021",
+ "timestampMillis": "1618403219232",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/vivado/vpl/output/systemDiagramModel_placed.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:24:26 2021",
+ "timestampMillis": "1618406666646",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/vivado/vpl/output/systemDiagramModel_routed.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471668",
+ "status": {
+  "cmdId": "e304b4d2-c15f-4af5-933f-4cd27811176d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471756",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471757",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471757",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471757",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471758",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471796",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_debug_bridge_xsdbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471812",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_hmss_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471830",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_axilite_user_input_reg_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471842",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_axi_vip_ctrl_userpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471855",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_axi_vip_data_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471867",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_util_and2_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471882",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_data_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471903",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_dataclk_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471922",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_axi_gpio_null_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471936",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_regslice_pipe_ctrl_mgntpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471951",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_regslice_pipe_ctrl_hbm_mgntpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471965",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_init_combine_mss_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471978",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_memory_subsystem_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:31 2021",
+ "timestampMillis": "1618408471997",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472011",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_control_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472019",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472029",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_logic_reset_op_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472039",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_axi_vip_ctrl_hbm_mgntpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472040",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_axi_cdc_xdma_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472049",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_control_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472067",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_data_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472082",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_dataclk_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472099",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472115",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel2_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472135",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_sdx_mss_regslice_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472151",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_logic_reset_op_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472152",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_control_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472163",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_data_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472179",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_dataclk_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472200",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472215",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel2_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472226",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_freq_counter_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472227",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_xdma_smartconnect_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472240",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_ebbe_xsdbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472253",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_ebbe_lut_buffer_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472265",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_xbar_4_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472274",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_kernel0_1_0_utilization_synth.rpt",
+  "name": "kernel0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472289",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_xbar_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472301",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_xbar_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472309",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_psr_aclk1_SLR2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472324",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_interconnect_ddrmem_ctrl_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472341",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_psr_ctrl_interconnect_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472356",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_S00_AXI_mmu_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472374",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect3_2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472390",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_slice3_2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472402",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect0_3_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472415",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_slice0_3_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472432",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect2_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472450",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_axi_apb_bridge_inst_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472459",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_interconnect1_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472470",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_s00_regslice_17_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472481",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_auto_cc_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472495",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_m01_regslice_12_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472508",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_m01_regslice_11_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472510",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_m01_regslice_10_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472519",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/pfm_dynamic_auto_cc_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472536",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_init_reduce_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472552",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_psr_aclk_SLR1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472566",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_psr_aclk_SLR2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472583",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_psr_aclk1_SLR0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472599",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_psr_aclk1_SLR1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472615",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_d216_psr_aclk_SLR0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472631",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_vip_S00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472642",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_hbm_inst_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472642",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/syn/bd_5dca_hbm_reset_sync_SLR0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472651",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/init_report_utilization_0.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472730",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_timing_summary_init.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472730",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_io_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_IO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472731",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_utilization_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472731",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_utilization_placed.rpt",
+  "name": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472736",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_control_sets_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_CONTROL_SETS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472743",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_timing_summary_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472744",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_drc_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_DRC"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472744",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_methodology_drc_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_METHODOLOGY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472744",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_power_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_POWER"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472745",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_route_status.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_ROUTE_STATUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472751",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472751",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_clock_utilization_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_CLOCK_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472752",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_clock_utilization_routed.rpt",
+  "name": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_clock",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472754",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_bus_skew_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_BUS_SKEW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472760",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/imp/xilinx_u280_xdma_201920_1_bb_locked_timing_summary_postroute_physopted.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472802",
+ "status": {
+  "cmdId": "cc7e93fb-cbb6-4f8d-9e2d-8cfa391c38fd",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472818",
+ "status": {
+  "cmdId": "4be270f4-1bde-4f99-9d53-7a03715c5419",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472819",
+ "buildStep": {
+  "cmdId": "a083a278-8c3f-46ce-95e2-ba34f3c0b081",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472819",
+ "status": {
+  "cmdId": "a083a278-8c3f-46ce-95e2-ba34f3c0b081",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472824",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472824",
+ "buildStep": {
+  "cmdId": "84e481f2-21e5-425a-8eb1-24984c2402cb",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/address_map.xml -sdsl /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/sdsl.dat -xclbin /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/xclbin_orig.xml -rtd /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.rtd -o /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.xml",
+  "args": [
+   "-a",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/address_map.xml",
+   "-sdsl",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.rtd",
+   "-o",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.xml"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 15:54:32 2021",
+ "timestampMillis": "1618408472825",
+ "status": {
+  "cmdId": "84e481f2-21e5-425a-8eb1-24984c2402cb",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 15:54:34 2021",
+ "timestampMillis": "1618408474545",
+ "status": {
+  "cmdId": "84e481f2-21e5-425a-8eb1-24984c2402cb",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 14 15:54:34 2021",
+ "timestampMillis": "1618408474546",
+ "buildStep": {
+  "cmdId": "fb8878ee-571a-4018-a137-d2372fb87230",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram --rtdJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.rtd --diagramJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModel_resource_use.json --diagramWithAddressesAndSlrsJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModelSlrBaseAddress.json",
+  "args": [
+   "--rtdJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.rtd",
+   "--diagramJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModel_resource_use.json",
+   "--diagramWithAddressesAndSlrsJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 15:54:34 2021",
+ "timestampMillis": "1618408474546",
+ "status": {
+  "cmdId": "fb8878ee-571a-4018-a137-d2372fb87230",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:36 2021",
+ "timestampMillis": "1618408476189",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 15:54:36 2021",
+ "timestampMillis": "1618408476195",
+ "status": {
+  "cmdId": "fb8878ee-571a-4018-a137-d2372fb87230",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 15:54:36 2021",
+ "timestampMillis": "1618408476195",
+ "status": {
+  "cmdId": "a083a278-8c3f-46ce-95e2-ba34f3c0b081",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 14 15:54:36 2021",
+ "timestampMillis": "1618408476196",
+ "buildStep": {
+  "cmdId": "be313bff-de29-4072-b7cc-0516ddcd5d9c",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section BITSTREAM:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/partial.bit --force --key-value SYS:mode:hw_pr --add-section :JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.rtd --append-section :JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1_xml.rtd --add-section BUILD_METADATA:JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.xml --add-section SYSTEM_METADATA:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModelSlrBaseAddress.json --output /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/partial.bit",
+   "--force",
+   "--key-value",
+   "SYS:mode:hw_pr",
+   "--add-section",
+   ":JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.rtd",
+   "--append-section",
+   ":JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--output",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.xclbin"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 15:54:36 2021",
+ "timestampMillis": "1618408476197",
+ "status": {
+  "cmdId": "be313bff-de29-4072-b7cc-0516ddcd5d9c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 15:54:36 2021",
+ "timestampMillis": "1618408476301",
+ "status": {
+  "cmdId": "be313bff-de29-4072-b7cc-0516ddcd5d9c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Apr 14 15:54:36 2021",
+ "timestampMillis": "1618408476302",
+ "buildStep": {
+  "cmdId": "2921674b-a194-40d0-86dc-c4d75ead65cb",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --info /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.xclbin.info --input /home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.xclbin",
+  "args": [
+   "--quiet",
+   "--info",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.xclbin.info",
+   "--input",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/link/int/kernel0_xilinx_u280_xdma_201920_1.xclbin"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 15:54:36 2021",
+ "timestampMillis": "1618408476302",
+ "status": {
+  "cmdId": "2921674b-a194-40d0-86dc-c4d75ead65cb",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 15:54:36 2021",
+ "timestampMillis": "1618408476640",
+ "status": {
+  "cmdId": "2921674b-a194-40d0-86dc-c4d75ead65cb",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:36 2021",
+ "timestampMillis": "1618408476710",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/system_estimate_kernel0_xilinx_u280_xdma_201920_1.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:36 2021",
+ "timestampMillis": "1618408476767",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/reports/link/v++_link_kernel0_xilinx_u280_xdma_201920_1_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:36 2021",
+ "timestampMillis": "1618408476768",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/v++_link_kernel0_xilinx_u280_xdma_201920_1_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Apr 14 15:54:37 2021",
+ "timestampMillis": "1618408477173",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/LUDecomposition/12x12/u280/kernel0_u280_autobridge/vitis_run_400/kernel0_xilinx_u280_xdma_201920_1.temp/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Apr 14 15:54:37 2021",
+ "timestampMillis": "1618408477174",
+ "status": {
+  "cmdId": "0ab2d4fd-6180-462a-b280-977b561c13d5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

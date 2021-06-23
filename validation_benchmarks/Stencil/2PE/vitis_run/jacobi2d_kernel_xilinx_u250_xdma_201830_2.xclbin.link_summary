@@ -1,0 +1,1813 @@
+<ENTRY>
+{
+ "session": {
+  "name": "v++_link_jacobi2d_kernel_xilinx_u250_xdma_201830_2",
+  "pid": "0",
+  "uuid": "ed1382f3-cb45-48d8-9493-2998190f4217",
+  "description": "",
+  "timestamp": "0",
+  "outputFiles": [
+   {
+    "type": "JSON",
+    "mode": "CLIENT_ONLY",
+    "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/.tlog/v++_link_jacobi2d_kernel_xilinx_u250_xdma_201830_2.xtl",
+    "continuous": true
+   },
+   {
+    "type": "JSON",
+    "mode": "LOCAL_IF_NO_CONNECT",
+    "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xclbin.link_summary",
+    "continuous": true
+   },
+   {
+    "type": "BINARY_PROTOBUF",
+    "mode": "LOCAL_IF_NO_CONNECT",
+    "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xclbin.link_summary.pb",
+    "continuous": true
+   }
+  ]
+ },
+ "thisFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Apr  4 09:36:41 2021",
+ "timestampMillis": "1617521801531",
+ "buildStep": {
+  "cmdId": "e7e921b6-e791-46eb-a7da-907f0c808bde",
+  "name": "v++",
+  "logFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/link.steps.log",
+  "commandLine": "/xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"vivado_prop:run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --xp vivado_prop:run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --xp vivado_prop:run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --xp vivado_param:project.writeIntermediateCheckpoints=1 --xp \"misc:report=type report_utilization name synth_report_utilization_summary steps {synth_design} runs {__KERNEL__} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_init_design_summary steps {init_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_init_design_summary steps {init_design} runs {impl_1} options {-max_paths 10}\" --xp \"param:compiler.reportFailfast=pre_opt_design {__KERNEL_NAMES__} post_opt_design {__OCL_TOP__} post_route_design {__SLR__}\" --xp \"misc:report=type report_io name impl_report_io_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_utilization name impl_report_utilization_place_design_summary steps {place_design} runs {impl_1} options {}\" --xp \"misc:report=type report_control_sets name impl_report_control_sets_place_design_summary steps {place_design} runs {impl_1} options {-verbose}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_place_design_summary steps {place_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_drc name impl_report_drc_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_methodology name impl_report_methodology_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_power name impl_report_power_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_route_status name impl_report_route_status_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_clock_utilization name impl_report_clock_utilization_route_design_summary steps {route_design} runs {impl_1} options {}\" --xp \"misc:report=type report_bus_skew name impl_report_bus_skew_route_design_summary steps {route_design} runs {impl_1} options {-warn_on_violation}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --link --output /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xclbin --kernel jacobi2d_kernel --platform xilinx_u250_xdma_201830_2 --target hw --report_level 2 --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp --optimize 3 --connectivity.nk jacobi2d_kernel:1:jacobi2d_kernel --max_memory_ports jacobi2d_kernel --save-temps /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/soda_jacobi2d_iter2.xo --connectivity.sp jacobi2d_kernel.var_input_0_0:DDR[0] --connectivity.sp jacobi2d_kernel.var_output_0_0:DDR[3] --kernel_frequency 300 --vivado.prop run.impl_1.STEPS.PLACE_DESIGN.ARGS.DIRECTIVE=Default --vivado.prop run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/constraint_ref.tcl ",
+  "args": [
+   "--link",
+   "--output",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xclbin",
+   "--kernel",
+   "jacobi2d_kernel",
+   "--platform",
+   "xilinx_u250_xdma_201830_2",
+   "--target",
+   "hw",
+   "--report_level",
+   "2",
+   "--temp_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp",
+   "--optimize",
+   "3",
+   "--connectivity.nk",
+   "jacobi2d_kernel:1:jacobi2d_kernel",
+   "--max_memory_ports",
+   "jacobi2d_kernel",
+   "--save-temps",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/soda_jacobi2d_iter2.xo",
+   "--connectivity.sp",
+   "jacobi2d_kernel.var_input_0_0:DDR[0]",
+   "--connectivity.sp",
+   "jacobi2d_kernel.var_output_0_0:DDR[3]",
+   "--kernel_frequency",
+   "300",
+   "--vivado.prop",
+   "run.impl_1.STEPS.PLACE_DESIGN.ARGS.DIRECTIVE=Default",
+   "--vivado.prop",
+   "run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/constraint_ref.tcl"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 09:36:41 2021",
+ "timestampMillis": "1617521801532",
+ "status": {
+  "cmdId": "e7e921b6-e791-46eb-a7da-907f0c808bde",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sun Apr  4 09:36:50 2021",
+ "timestampMillis": "1617521810704",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u250_xdma_201830_2.xpfm",
+  "hardwareDsa": "xilinx_u250_xdma_201830_2.dsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u250_xdma_201830_2",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "jacobi2d_kernel_xilinx_u250_xdma_201830_2",
+    "file": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xclbin",
+    "reports": []
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "jacobi2d_kernel",
+     "file": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/soda_jacobi2d_iter2.xo",
+     "reports": []
+    },
+    "sources": [],
+    "cuNames": [
+     "jacobi2d_kernel"
+    ]
+   }
+  ]
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Apr  4 09:36:50 2021",
+ "timestampMillis": "1617521810843",
+ "buildStep": {
+  "cmdId": "b14129a4-dfca-4cd7-b2dc-1ca5ce9c5c8b",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/soda_jacobi2d_iter2.xo -keep --config /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm --target hw --output_dir /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/soda_jacobi2d_iter2.xo",
+   "-keep",
+   "--config",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int",
+   "--temp_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/sys_link"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 09:36:50 2021",
+ "timestampMillis": "1617521810844",
+ "status": {
+  "cmdId": "b14129a4-dfca-4cd7-b2dc-1ca5ce9c5c8b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 09:36:59 2021",
+ "timestampMillis": "1617521819409",
+ "status": {
+  "cmdId": "b14129a4-dfca-4cd7-b2dc-1ca5ce9c5c8b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Apr  4 09:36:59 2021",
+ "timestampMillis": "1617521819409",
+ "buildStep": {
+  "cmdId": "ea1e2413-5dc9-4e8e-9833-a0be38302857",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/sdsl.dat -rtd /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/cf2sw.rtd -xclbin /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/xclbin_orig.xml -o /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/sdsl.dat",
+   "-rtd",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/cf2sw.rtd",
+   "-xclbin",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 09:36:59 2021",
+ "timestampMillis": "1617521819410",
+ "status": {
+  "cmdId": "ea1e2413-5dc9-4e8e-9833-a0be38302857",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 09:37:00 2021",
+ "timestampMillis": "1617521820422",
+ "status": {
+  "cmdId": "ea1e2413-5dc9-4e8e-9833-a0be38302857",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Apr  4 09:37:00 2021",
+ "timestampMillis": "1617521820423",
+ "buildStep": {
+  "cmdId": "92d08aac-4933-4bac-829c-71841616ad25",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram --rtdJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/cf2sw.rtd --diagramJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/systemDiagramModel.json --platformFilePath /opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm --generatedByName v++ --generatedByVersion 2019.2.1 --generatedByChangeList 2729669 --generatedByTimeStamp Thu Dec  5 04:48:12 MST 2019 --generatedByOptions /xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ --link --output /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xclbin --kernel jacobi2d_kernel --platform xilinx_u250_xdma_201830_2 --target hw --report_level 2 --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp --optimize 3 --connectivity.nk jacobi2d_kernel:1:jacobi2d_kernel --max_memory_ports jacobi2d_kernel --save-temps /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/soda_jacobi2d_iter2.xo --connectivity.sp jacobi2d_kernel.var_input_0_0:DDR[0] --connectivity.sp jacobi2d_kernel.var_output_0_0:DDR[3] --kernel_frequency 300 --vivado.prop run.impl_1.STEPS.PLACE_DESIGN.ARGS.DIRECTIVE=Default --vivado.prop run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/constraint_ref.tcl  --generatedByXclbinName jacobi2d_kernel_xilinx_u250_xdma_201830_2 --kernelInfoDataFileName /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/kernel_info.dat",
+  "args": [
+   "--rtdJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/cf2sw.rtd",
+   "--diagramJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/systemDiagramModel.json",
+   "--platformFilePath",
+   "/opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm",
+   "--generatedByName",
+   "v++",
+   "--generatedByVersion",
+   "2019.2.1",
+   "--generatedByChangeList",
+   "2729669",
+   "--generatedByTimeStamp",
+   "Thu Dec  5 04:48:12 MST 2019",
+   "--generatedByOptions",
+   "/xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ --link --output /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xclbin --kernel jacobi2d_kernel --platform xilinx_u250_xdma_201830_2 --target hw --report_level 2 --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp --optimize 3 --connectivity.nk jacobi2d_kernel:1:jacobi2d_kernel --max_memory_ports jacobi2d_kernel --save-temps /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/soda_jacobi2d_iter2.xo --connectivity.sp jacobi2d_kernel.var_input_0_0:DDR[0] --connectivity.sp jacobi2d_kernel.var_output_0_0:DDR[3] --kernel_frequency 300 --vivado.prop run.impl_1.STEPS.PLACE_DESIGN.ARGS.DIRECTIVE=Default --vivado.prop run.impl_1.STEPS.OPT_DESIGN.TCL.PRE=/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/constraint_ref.tcl ",
+   "--generatedByXclbinName",
+   "jacobi2d_kernel_xilinx_u250_xdma_201830_2",
+   "--kernelInfoDataFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/kernel_info.dat"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 09:37:00 2021",
+ "timestampMillis": "1617521820424",
+ "status": {
+  "cmdId": "92d08aac-4933-4bac-829c-71841616ad25",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 09:37:02 2021",
+ "timestampMillis": "1617521822088",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 09:37:02 2021",
+ "timestampMillis": "1617521822094",
+ "status": {
+  "cmdId": "92d08aac-4933-4bac-829c-71841616ad25",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Apr  4 09:37:02 2021",
+ "timestampMillis": "1617521822095",
+ "buildStep": {
+  "cmdId": "331aef56-27c5-4fec-ab9a-09592c78c4f1",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u250_xdma_201830_2 --kernel_frequency 300 -s --output_dir /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int --log_dir /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/logs/link --report_dir /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link --config /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/vplConfig.ini -k /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link --no-info --tlog_dir /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/.tlog/v++_link_jacobi2d_kernel_xilinx_u250_xdma_201830_2 --iprepo /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/xo/ip_repo/haoda_xrtl_jacobi2d_kernel_1_0 --messageDb /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/run_link/vpl.pb /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u250_xdma_201830_2",
+   "--kernel_frequency",
+   "300",
+   "-s",
+   "--output_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int",
+   "--log_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/logs/link",
+   "--report_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link",
+   "--config",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/vplConfig.ini",
+   "-k",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link",
+   "--no-info",
+   "--tlog_dir",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/.tlog/v++_link_jacobi2d_kernel_xilinx_u250_xdma_201830_2",
+   "--iprepo",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/xo/ip_repo/haoda_xrtl_jacobi2d_kernel_1_0",
+   "--messageDb",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/run_link/vpl.pb",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 09:37:02 2021",
+ "timestampMillis": "1617521822095",
+ "status": {
+  "cmdId": "331aef56-27c5-4fec-ab9a-09592c78c4f1",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Apr  4 09:37:03 2021",
+ "timestampMillis": "1617521823563",
+ "buildStep": {
+  "cmdId": "d2ccadf0-825b-4561-9094-c98b3581fd83",
+  "name": "vpl",
+  "logFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/link.steps.log",
+  "commandLine": "/xilinx/software/Vitis/2019.2/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u250_xdma_201830_2 --kernel_frequency 300 -s --output_dir /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int --log_dir /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/logs/link --report_dir /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link --config /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/vplConfig.ini -k /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link --no-info --tlog_dir /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/.tlog/v++_link_jacobi2d_kernel_xilinx_u250_xdma_201830_2 --iprepo /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/xo/ip_repo/haoda_xrtl_jacobi2d_kernel_1_0 --messageDb /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/run_link/vpl.pb /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 09:37:03 2021",
+ "timestampMillis": "1617521823563",
+ "status": {
+  "cmdId": "d2ccadf0-825b-4561-9094-c98b3581fd83",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Apr  4 09:37:16 2021",
+ "timestampMillis": "1617521836529",
+ "buildStep": {
+  "cmdId": "b170c24a-2b66-4396-8100-cb65b2447002",
+  "name": "vivado",
+  "logFile": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 09:37:16 2021",
+ "timestampMillis": "1617521836530",
+ "status": {
+  "cmdId": "b170c24a-2b66-4396-8100-cb65b2447002",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 15:30:56 2021",
+ "timestampMillis": "1617543056768",
+ "status": {
+  "cmdId": "b170c24a-2b66-4396-8100-cb65b2447002",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058571",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_axi_vip_data_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058605",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_axi_user_slrcrossing_mi_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058614",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_axi_user_slrcrossing_si_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058627",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_regslice_control_mgntpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058638",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_data_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058652",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_axi_cdc_data_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058667",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058679",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_regslice_data_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058693",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_axi_gpio_null_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058713",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058713",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_control_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058732",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058737",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_regslice_data_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058753",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_control_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058771",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_data_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058772",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_axi_cdc_data_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058791",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_regslice_data_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058807",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_control_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058820",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_data_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058832",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058843",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel2_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058864",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_axi_cdc_data_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058879",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel2_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058888",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_freq_counter_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058900",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_axi_vip_ctrl_userpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058902",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_axi_cdc_data_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058921",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_memory_subsystem_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058935",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_regslice_periph_null_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058949",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_logic_reset_op_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058970",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_debug_bridge_xsdbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:58 2021",
+ "timestampMillis": "1617543058988",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_regslice_data_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059008",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_control_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059019",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_data_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059020",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059036",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_psreset_gate_pr_kernel2_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059053",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_xbar_6_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059065",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_xbar_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059067",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_ebbe_xsdbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059078",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_xbar_4_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059078",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_xbar_5_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059092",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_jacobi2d_kernel_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059105",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_ebbe_lut_buffer_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059121",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_psr_ddr4_mem00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059136",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_ddr4_mem00_ctrl_cc_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059152",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_calib_reduce_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059153",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_psr_ctrl_interconnect_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059168",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_interconnect_ddrmem_ctrl_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059181",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_vip_DDR4_MEM03_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059194",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_vip_ui_clk_DDR4_MEM03_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059213",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_vip_ui_rst_DDR4_MEM03_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059228",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_vip_ctrl_DDR4_MEM03_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059231",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_s00_regslice_18_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059245",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_interconnect_DDR4_MEM03_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059246",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_ddr4_mem00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059267",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_vip_S00_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059283",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_vip_S04_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059296",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_ddr4_mem03_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059307",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_s00_regslice_19_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059318",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_m00_regslice_7_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059321",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_m01_regslice_10_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059340",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/pfm_dynamic_auto_cc_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059344",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_psr_aclk_SLR0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059359",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_psr_aclk_SLR3_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059368",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/syn/bd_d216_interconnect_DDR4_MEM00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059380",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/init_report_utilization_0.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059476",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_timing_summary_init.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059484",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_io_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_IO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059493",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_utilization_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059493",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_utilization_placed.rpt",
+  "name": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059577",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_control_sets_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_CONTROL_SETS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059680",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_timing_summary_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059714",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_drc_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_DRC"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059714",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_methodology_drc_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_METHODOLOGY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059715",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_power_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_POWER"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059715",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_route_status.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_ROUTE_STATUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059723",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059723",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_clock_utilization_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_CLOCK_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059724",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_clock_utilization_routed.rpt",
+  "name": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_clock",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059727",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_bus_skew_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_BUS_SKEW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:30:59 2021",
+ "timestampMillis": "1617543059735",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_timing_summary_postroute_physopted.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 15:31:00 2021",
+ "timestampMillis": "1617543060034",
+ "status": {
+  "cmdId": "d2ccadf0-825b-4561-9094-c98b3581fd83",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 15:31:01 2021",
+ "timestampMillis": "1617543061061",
+ "status": {
+  "cmdId": "331aef56-27c5-4fec-ab9a-09592c78c4f1",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Apr  4 15:31:01 2021",
+ "timestampMillis": "1617543061176",
+ "buildStep": {
+  "cmdId": "98750006-0a78-482e-8682-96fdba393260",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 15:31:01 2021",
+ "timestampMillis": "1617543061177",
+ "status": {
+  "cmdId": "98750006-0a78-482e-8682-96fdba393260",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:31:01 2021",
+ "timestampMillis": "1617543061253",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Apr  4 15:31:01 2021",
+ "timestampMillis": "1617543061395",
+ "buildStep": {
+  "cmdId": "5d11a71d-b8f3-41b5-8a0e-0f7b18fd4d0c",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/address_map.xml -sdsl /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/sdsl.dat -xclbin /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/xclbin_orig.xml -rtd /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.rtd -o /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xml",
+  "args": [
+   "-a",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/address_map.xml",
+   "-sdsl",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.rtd",
+   "-o",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xml"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 15:31:01 2021",
+ "timestampMillis": "1617543061403",
+ "status": {
+  "cmdId": "5d11a71d-b8f3-41b5-8a0e-0f7b18fd4d0c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 15:31:02 2021",
+ "timestampMillis": "1617543062742",
+ "status": {
+  "cmdId": "5d11a71d-b8f3-41b5-8a0e-0f7b18fd4d0c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Apr  4 15:31:02 2021",
+ "timestampMillis": "1617543062774",
+ "buildStep": {
+  "cmdId": "684a02c7-211e-4cb4-9373-4b2248a34a72",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram --rtdJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.rtd --diagramJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/systemDiagramModel.json --diagramWithAddressesAndSlrsJsonFileName /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/systemDiagramModelSlrBaseAddress.json",
+  "args": [
+   "--rtdJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.rtd",
+   "--diagramJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/systemDiagramModel.json",
+   "--diagramWithAddressesAndSlrsJsonFileName",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 15:31:02 2021",
+ "timestampMillis": "1617543062775",
+ "status": {
+  "cmdId": "684a02c7-211e-4cb4-9373-4b2248a34a72",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:31:04 2021",
+ "timestampMillis": "1617543064340",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 15:31:04 2021",
+ "timestampMillis": "1617543064403",
+ "status": {
+  "cmdId": "684a02c7-211e-4cb4-9373-4b2248a34a72",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 15:31:04 2021",
+ "timestampMillis": "1617543064403",
+ "status": {
+  "cmdId": "98750006-0a78-482e-8682-96fdba393260",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Apr  4 15:31:04 2021",
+ "timestampMillis": "1617543064430",
+ "buildStep": {
+  "cmdId": "aab1d99b-ebdc-4cf7-b2e1-1185ec499162",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/partial.bit --force --key-value SYS:mode:hw_pr --add-section :JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.rtd --append-section :JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2_xml.rtd --add-section BUILD_METADATA:JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xml --add-section SYSTEM_METADATA:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/systemDiagramModelSlrBaseAddress.json --output /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/partial.bit",
+   "--force",
+   "--key-value",
+   "SYS:mode:hw_pr",
+   "--add-section",
+   ":JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.rtd",
+   "--append-section",
+   ":JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--output",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xclbin"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 15:31:04 2021",
+ "timestampMillis": "1617543064446",
+ "status": {
+  "cmdId": "aab1d99b-ebdc-4cf7-b2e1-1185ec499162",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 15:31:04 2021",
+ "timestampMillis": "1617543064568",
+ "status": {
+  "cmdId": "aab1d99b-ebdc-4cf7-b2e1-1185ec499162",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Apr  4 15:31:04 2021",
+ "timestampMillis": "1617543064569",
+ "buildStep": {
+  "cmdId": "05124ab2-8993-4a79-9b10-7533f631cf8f",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --info /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xclbin.info --input /home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xclbin",
+  "args": [
+   "--quiet",
+   "--info",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xclbin.info",
+   "--input",
+   "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/link/int/jacobi2d_kernel_xilinx_u250_xdma_201830_2.xclbin"
+  ],
+  "iniFiles": []
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 15:31:04 2021",
+ "timestampMillis": "1617543064570",
+ "status": {
+  "cmdId": "05124ab2-8993-4a79-9b10-7533f631cf8f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 15:31:05 2021",
+ "timestampMillis": "1617543065028",
+ "status": {
+  "cmdId": "05124ab2-8993-4a79-9b10-7533f631cf8f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:31:05 2021",
+ "timestampMillis": "1617543065110",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/system_estimate_jacobi2d_kernel_xilinx_u250_xdma_201830_2.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:31:05 2021",
+ "timestampMillis": "1617543065365",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/reports/link/v++_link_jacobi2d_kernel_xilinx_u250_xdma_201830_2_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:31:05 2021",
+ "timestampMillis": "1617543065365",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/v++_link_jacobi2d_kernel_xilinx_u250_xdma_201830_2_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Apr  4 15:31:05 2021",
+ "timestampMillis": "1617543065758",
+ "report": {
+  "path": "/home/users/veronica.grosso/AutoBridge/benchmarks/Stencil/2PE/vitis_run/jacobi2d_kernel_xilinx_u250_xdma_201830_2.temp/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Apr  4 15:31:05 2021",
+ "timestampMillis": "1617543065759",
+ "status": {
+  "cmdId": "e7e921b6-e791-46eb-a7da-907f0c808bde",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
