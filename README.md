@@ -1,3 +1,14 @@
+# HPPS Project 2020/2021 - AutoBridge analysis and extension to another FPGA board
+
+This forked repository is part of the HPPS research project, in collaboration with Politecnico di Milano and NECST.
+
+## Project description
+
+AutoBridge is an automated framework that helps HLS-based designs reach the timing quality and the clock frequency of handcrafted RTL ones. By coupling coarse-grained floorplanning with pipelining during HLS compilation, AutoBridge achieves a remarkable reduction of the local routing congestion and a relevant increase in the clock frequency of the overall design.
+
+The research approach of this project is focused on two main goals: firstly, to test the tool and validate the benchmarks provided by the authors of AutoBridge. Then, the purpose is to extend the tool methodology, in order to include another FPGA board. Up to now, the tool supports the FPGAs Alveo u250 and Alveo u280. The efforts are aimed to include a third board, specifically the Alveo u200.
+
+
 # Latest
 
 - We are in transition to our new code base in the "in-develop" directory. We hope to make the tool flexible regarding the target device, the optimization methods, which front-end HLS to use, etc. Please let me know if you have any suggestions!
